@@ -50,6 +50,10 @@ namespace ADMshop
             homeDAO.RegisterUser(newlogin, newuser);
 
             MessageBox.Show("Successfuly created account! Go back to Log In!");
+
+            SignUp.ActiveForm.Close();
+            LogIn log = new LogIn();
+            log.Activate(); log.Show();
         }
 
         private static int ID;

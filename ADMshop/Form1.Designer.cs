@@ -62,6 +62,7 @@ namespace ADMshop
             this.LogInBtn.Text = "Log In";
             this.LogInBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
             this.LogInBtn.UseVisualStyleBackColor = false;
+            this.LogInBtn.Click += new System.EventHandler(this.LogInBtn_Click);
             // 
             // textBoxPassword
             // 
