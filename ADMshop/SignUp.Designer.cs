@@ -39,6 +39,7 @@ namespace ADMshop
             this.tboxLast = new System.Windows.Forms.TextBox();
             this.tboxName = new System.Windows.Forms.TextBox();
             this.registerBtn = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // comboCountry
@@ -159,6 +160,17 @@ namespace ADMshop
             this.registerBtn.UseVisualStyleBackColor = false;
             this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(43, 15);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "            ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // SignUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -166,6 +178,7 @@ namespace ADMshop
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(349, 591);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboCountry);
             this.Controls.Add(this.comboTown);
             this.Controls.Add(this.tboxYears);
@@ -194,5 +207,6 @@ namespace ADMshop
         private System.Windows.Forms.TextBox tboxLast;
         private System.Windows.Forms.TextBox tboxName;
         private System.Windows.Forms.Button registerBtn;
+        private System.Windows.Forms.Label label1;
     }
 }

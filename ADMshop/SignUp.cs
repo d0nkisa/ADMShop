@@ -20,13 +20,6 @@ namespace ADMshop
             ID = this.homeDAO.GetID(context);
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            SignUp.ActiveForm.Close();
-            LogIn log = new LogIn();
-            log.Activate(); log.Show();
-        }
-
         private void registerBtn_Click(object sender, EventArgs e)
         {
             Users newuser = new Users(); 
@@ -114,6 +107,13 @@ namespace ADMshop
                 tboxPassword.Text = "";
                 tboxPassword.ForeColor = Color.Black;
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            SignUp.ActiveForm.Close();
+            LogIn log = new LogIn();
+            log.Activate(); log.Show();
         }
     }
 }
