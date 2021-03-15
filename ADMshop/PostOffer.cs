@@ -12,6 +12,11 @@ namespace ADMshop
 {
     public partial class PostOffer : Form
     {
+        public  byte[] ImageToByte(PictureBox img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }
 
         public PostOffer()
         {
@@ -28,6 +33,7 @@ namespace ADMshop
             {
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBox1.Image = new Bitmap(open.FileName);
+                picture = pictureBox1;
                 
             }
         }
@@ -40,9 +46,10 @@ namespace ADMshop
             newoffer.Town = this.townDAO.GetTown(comboCategory.SelectedItem.ToString());
             if (radioButton1.Checked == true) newoffer.ItemState = true;
             else newoffer.ItemState = false;
-
+            
             newoffer.Category = this.categoryDAO.GetCategory(comboCategory.SelectedItem.ToString()).Id;
             newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
+            newoffer.Image = ImageToByte(picture);
             this.offerDAO.CreateOffer(newoffer);
 
         }
@@ -50,5 +57,6 @@ namespace ADMshop
         private HomeDAO homeDAO;
         private TownDAO townDAO;
         private CategoryDAO categoryDAO;
+        private PictureBox picture;
     }
 }
