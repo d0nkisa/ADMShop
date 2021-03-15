@@ -16,11 +16,12 @@ namespace ADMshop
 
         private OfferDAO offerDAO;
 
-        Offers[] SuggestedOfers = new Offers[4];
-        Offers[] CarOffers = new Offers[4];
-        Offers[] SportOffers = new Offers[4];
-        Offers[] ElectronicsOffers = new Offers[4];
-        Offers[] FurnitureOffers = new Offers[4];
+        Offers offer = new Offers();
+        List<Offers> SuggestedOfers = new List<Offers>();
+        List<Offers> CarOffers = new List<Offers>();
+        List<Offers> SportOffers = new List<Offers>();
+        List<Offers> ElectronicsOffers = new List<Offers>();
+        List<Offers> FurnitureOffers = new List<Offers>();
 
         private void SearchByCategoryBtn_Click(object sender, EventArgs e)
         {
@@ -28,34 +29,34 @@ namespace ADMshop
             {
                 headerLabel.Text = "Cars";
 
-                for (int i = 0; i < CarOffers.Length-1; i++)
+                for (int i = 0; i < CarOffers.Count-1; i++)
                 {
 
                 }
             }
-            if (radioSports.Checked == true)
+            else if (radioSports.Checked == true)
             {
                 headerLabel.Text = "Sports";
 
-                for (int i = 0; i < SportOffers.Length - 1; i++)
+                for (int i = 0; i < SportOffers.Count - 1; i++)
                 {
 
                 }
             }
-            if (radioElectronics.Checked == true)
+            else if (radioElectronics.Checked == true)
             {
                 headerLabel.Text = "Electronics";
 
-                for (int i = 0; i < ElectronicsOffers.Length - 1; i++)
+                for (int i = 0; i < ElectronicsOffers.Count - 1; i++)
                 {
 
                 }
             }
-            if (radioFurniture.Checked == true)
+            else if (radioFurniture.Checked == true)
             {
                 headerLabel.Text = "Furniture";
 
-                for (int i = 0; i < FurnitureOffers.Length - 1; i++)
+                for (int i = 0; i < FurnitureOffers.Count - 1; i++)
                 {
 
                 }
