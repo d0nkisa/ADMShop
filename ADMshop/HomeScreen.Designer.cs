@@ -31,45 +31,49 @@ namespace ADMshop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeScreen));
             this.searchBar = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioCars = new System.Windows.Forms.RadioButton();
+            this.radioElectronics = new System.Windows.Forms.RadioButton();
+            this.radioSports = new System.Windows.Forms.RadioButton();
+            this.radioFurniture = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.headerLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.OfferOnePrice = new System.Windows.Forms.Label();
+            this.OfferOneTitle = new System.Windows.Forms.Label();
+            this.picBoxOfferOne = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.OfferTwoPrice = new System.Windows.Forms.Label();
+            this.OfferTwoTitle = new System.Windows.Forms.Label();
+            this.picBoxOfferTwo = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.OfferFourPrice = new System.Windows.Forms.Label();
+            this.OfferFourTitle = new System.Windows.Forms.Label();
+            this.picBoxOfferFour = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.OfferThreePrice = new System.Windows.Forms.Label();
+            this.OfferThreeTitle = new System.Windows.Forms.Label();
+            this.picBoxOfferThree = new System.Windows.Forms.PictureBox();
+            this.SearchByCategoryBtn = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferOne)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferTwo)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferFour)).BeginInit();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferThree)).BeginInit();
             this.SuspendLayout();
             // 
             // searchBar
@@ -82,57 +86,57 @@ namespace ADMshop
             this.searchBar.TabIndex = 0;
             this.searchBar.Text = "Search ...";
             // 
-            // radioButton1
+            // radioCars
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton1.Location = new System.Drawing.Point(41, 112);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(52, 21);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Cars";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioCars.AutoSize = true;
+            this.radioCars.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioCars.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radioCars.Location = new System.Drawing.Point(41, 112);
+            this.radioCars.Name = "radioCars";
+            this.radioCars.Size = new System.Drawing.Size(52, 21);
+            this.radioCars.TabIndex = 1;
+            this.radioCars.TabStop = true;
+            this.radioCars.Text = "Cars";
+            this.radioCars.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioElectronics
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton2.Location = new System.Drawing.Point(200, 112);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(92, 21);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Electronics";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioElectronics.AutoSize = true;
+            this.radioElectronics.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioElectronics.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radioElectronics.Location = new System.Drawing.Point(200, 112);
+            this.radioElectronics.Name = "radioElectronics";
+            this.radioElectronics.Size = new System.Drawing.Size(92, 21);
+            this.radioElectronics.TabIndex = 2;
+            this.radioElectronics.TabStop = true;
+            this.radioElectronics.Text = "Electronics";
+            this.radioElectronics.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // radioSports
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton3.Location = new System.Drawing.Point(41, 146);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(153, 21);
-            this.radioButton3.TabIndex = 3;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Sport, Books, Hobby";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioSports.AutoSize = true;
+            this.radioSports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioSports.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radioSports.Location = new System.Drawing.Point(41, 146);
+            this.radioSports.Name = "radioSports";
+            this.radioSports.Size = new System.Drawing.Size(153, 21);
+            this.radioSports.TabIndex = 3;
+            this.radioSports.TabStop = true;
+            this.radioSports.Text = "Sport, Books, Hobby";
+            this.radioSports.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // radioFurniture
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioButton4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton4.Location = new System.Drawing.Point(200, 146);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(83, 21);
-            this.radioButton4.TabIndex = 4;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Furniture";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.radioFurniture.AutoSize = true;
+            this.radioFurniture.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.radioFurniture.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.radioFurniture.Location = new System.Drawing.Point(200, 146);
+            this.radioFurniture.Name = "radioFurniture";
+            this.radioFurniture.Size = new System.Drawing.Size(83, 21);
+            this.radioFurniture.TabIndex = 4;
+            this.radioFurniture.TabStop = true;
+            this.radioFurniture.Text = "Furniture";
+            this.radioFurniture.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -145,16 +149,16 @@ namespace ADMshop
             this.label1.TabIndex = 5;
             this.label1.Text = "Search by category";
             // 
-            // label2
+            // headerLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(12, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 21);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Suggested items";
+            this.headerLabel.AutoSize = true;
+            this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.headerLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.headerLabel.Location = new System.Drawing.Point(12, 193);
+            this.headerLabel.Name = "headerLabel";
+            this.headerLabel.Size = new System.Drawing.Size(136, 21);
+            this.headerLabel.TabIndex = 6;
+            this.headerLabel.Text = "Suggested items";
             // 
             // button1
             // 
@@ -171,7 +175,7 @@ namespace ADMshop
             // panel1
             // 
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.picBoxOfferOne);
             this.panel1.Location = new System.Drawing.Point(12, 236);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 163);
@@ -179,46 +183,46 @@ namespace ADMshop
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.OfferOnePrice);
+            this.panel2.Controls.Add(this.OfferOneTitle);
             this.panel2.Location = new System.Drawing.Point(1, 122);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(155, 41);
             this.panel2.TabIndex = 1;
             // 
-            // label4
+            // OfferOnePrice
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(94, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 15);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "1000 lv.";
+            this.OfferOnePrice.AutoSize = true;
+            this.OfferOnePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferOnePrice.Location = new System.Drawing.Point(94, 13);
+            this.OfferOnePrice.Name = "OfferOnePrice";
+            this.OfferOnePrice.Size = new System.Drawing.Size(46, 15);
+            this.OfferOnePrice.TabIndex = 1;
+            this.OfferOnePrice.Text = "1000 lv.";
             // 
-            // label3
+            // OfferOneTitle
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(5, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 17);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Title";
+            this.OfferOneTitle.AutoSize = true;
+            this.OfferOneTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OfferOneTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferOneTitle.Location = new System.Drawing.Point(5, 13);
+            this.OfferOneTitle.Name = "OfferOneTitle";
+            this.OfferOneTitle.Size = new System.Drawing.Size(36, 17);
+            this.OfferOneTitle.TabIndex = 0;
+            this.OfferOneTitle.Text = "Title";
             // 
-            // pictureBox1
+            // picBoxOfferOne
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(155, 123);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.picBoxOfferOne.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferOne.Name = "picBoxOfferOne";
+            this.picBoxOfferOne.Size = new System.Drawing.Size(155, 123);
+            this.picBoxOfferOne.TabIndex = 0;
+            this.picBoxOfferOne.TabStop = false;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel4);
-            this.panel3.Controls.Add(this.pictureBox2);
+            this.panel3.Controls.Add(this.picBoxOfferTwo);
             this.panel3.Location = new System.Drawing.Point(181, 236);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(156, 163);
@@ -226,46 +230,46 @@ namespace ADMshop
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label6);
+            this.panel4.Controls.Add(this.OfferTwoPrice);
+            this.panel4.Controls.Add(this.OfferTwoTitle);
             this.panel4.Location = new System.Drawing.Point(1, 122);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(155, 41);
             this.panel4.TabIndex = 1;
             // 
-            // label5
+            // OfferTwoPrice
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(94, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(46, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "1000 lv.";
+            this.OfferTwoPrice.AutoSize = true;
+            this.OfferTwoPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferTwoPrice.Location = new System.Drawing.Point(94, 13);
+            this.OfferTwoPrice.Name = "OfferTwoPrice";
+            this.OfferTwoPrice.Size = new System.Drawing.Size(46, 15);
+            this.OfferTwoPrice.TabIndex = 1;
+            this.OfferTwoPrice.Text = "1000 lv.";
             // 
-            // label6
+            // OfferTwoTitle
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(5, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(36, 17);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Title";
+            this.OfferTwoTitle.AutoSize = true;
+            this.OfferTwoTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OfferTwoTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferTwoTitle.Location = new System.Drawing.Point(5, 13);
+            this.OfferTwoTitle.Name = "OfferTwoTitle";
+            this.OfferTwoTitle.Size = new System.Drawing.Size(36, 17);
+            this.OfferTwoTitle.TabIndex = 0;
+            this.OfferTwoTitle.Text = "Title";
             // 
-            // pictureBox2
+            // picBoxOfferTwo
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(155, 123);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.picBoxOfferTwo.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferTwo.Name = "picBoxOfferTwo";
+            this.picBoxOfferTwo.Size = new System.Drawing.Size(155, 123);
+            this.picBoxOfferTwo.TabIndex = 0;
+            this.picBoxOfferTwo.TabStop = false;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.pictureBox3);
+            this.panel5.Controls.Add(this.picBoxOfferFour);
             this.panel5.Location = new System.Drawing.Point(181, 408);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(156, 163);
@@ -273,46 +277,46 @@ namespace ADMshop
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Controls.Add(this.label8);
+            this.panel6.Controls.Add(this.OfferFourPrice);
+            this.panel6.Controls.Add(this.OfferFourTitle);
             this.panel6.Location = new System.Drawing.Point(1, 122);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(155, 41);
             this.panel6.TabIndex = 1;
             // 
-            // label7
+            // OfferFourPrice
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(94, 13);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 15);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "1000 lv.";
+            this.OfferFourPrice.AutoSize = true;
+            this.OfferFourPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferFourPrice.Location = new System.Drawing.Point(94, 13);
+            this.OfferFourPrice.Name = "OfferFourPrice";
+            this.OfferFourPrice.Size = new System.Drawing.Size(46, 15);
+            this.OfferFourPrice.TabIndex = 1;
+            this.OfferFourPrice.Text = "1000 lv.";
             // 
-            // label8
+            // OfferFourTitle
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(5, 13);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(36, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Title";
+            this.OfferFourTitle.AutoSize = true;
+            this.OfferFourTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OfferFourTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferFourTitle.Location = new System.Drawing.Point(5, 13);
+            this.OfferFourTitle.Name = "OfferFourTitle";
+            this.OfferFourTitle.Size = new System.Drawing.Size(36, 17);
+            this.OfferFourTitle.TabIndex = 0;
+            this.OfferFourTitle.Text = "Title";
             // 
-            // pictureBox3
+            // picBoxOfferFour
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(155, 123);
-            this.pictureBox3.TabIndex = 0;
-            this.pictureBox3.TabStop = false;
+            this.picBoxOfferFour.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferFour.Name = "picBoxOfferFour";
+            this.picBoxOfferFour.Size = new System.Drawing.Size(155, 123);
+            this.picBoxOfferFour.TabIndex = 0;
+            this.picBoxOfferFour.TabStop = false;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.panel8);
-            this.panel7.Controls.Add(this.pictureBox4);
+            this.panel7.Controls.Add(this.picBoxOfferThree);
             this.panel7.Location = new System.Drawing.Point(12, 408);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(156, 163);
@@ -320,79 +324,127 @@ namespace ADMshop
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.label9);
-            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.OfferThreePrice);
+            this.panel8.Controls.Add(this.OfferThreeTitle);
             this.panel8.Location = new System.Drawing.Point(1, 122);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(155, 41);
             this.panel8.TabIndex = 1;
             // 
-            // label9
+            // OfferThreePrice
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
-            this.label9.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Location = new System.Drawing.Point(94, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 15);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "1000 lv.";
+            this.OfferThreePrice.AutoSize = true;
+            this.OfferThreePrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
+            this.OfferThreePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferThreePrice.Location = new System.Drawing.Point(94, 13);
+            this.OfferThreePrice.Name = "OfferThreePrice";
+            this.OfferThreePrice.Size = new System.Drawing.Size(46, 15);
+            this.OfferThreePrice.TabIndex = 1;
+            this.OfferThreePrice.Text = "1000 lv.";
             // 
-            // label10
+            // OfferThreeTitle
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Location = new System.Drawing.Point(5, 13);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 17);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Title";
+            this.OfferThreeTitle.AutoSize = true;
+            this.OfferThreeTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OfferThreeTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferThreeTitle.Location = new System.Drawing.Point(5, 13);
+            this.OfferThreeTitle.Name = "OfferThreeTitle";
+            this.OfferThreeTitle.Size = new System.Drawing.Size(36, 17);
+            this.OfferThreeTitle.TabIndex = 0;
+            this.OfferThreeTitle.Text = "Title";
             // 
-            // pictureBox4
+            // picBoxOfferThree
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(155, 123);
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
+            this.picBoxOfferThree.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferThree.Name = "picBoxOfferThree";
+            this.picBoxOfferThree.Size = new System.Drawing.Size(155, 123);
+            this.picBoxOfferThree.TabIndex = 0;
+            this.picBoxOfferThree.TabStop = false;
+            // 
+            // SearchByCategoryBtn
+            // 
+            this.SearchByCategoryBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.SearchByCategoryBtn.Location = new System.Drawing.Point(270, 70);
+            this.SearchByCategoryBtn.Name = "SearchByCategoryBtn";
+            this.SearchByCategoryBtn.Size = new System.Drawing.Size(67, 31);
+            this.SearchByCategoryBtn.TabIndex = 14;
+            this.SearchByCategoryBtn.Text = "Search";
+            this.SearchByCategoryBtn.UseVisualStyleBackColor = true;
+            this.SearchByCategoryBtn.Click += new System.EventHandler(this.SearchByCategoryBtn_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
+            this.label2.Location = new System.Drawing.Point(13, 597);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 25);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "HOME";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label3.Location = new System.Drawing.Point(138, 597);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "SELL +";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label4.Location = new System.Drawing.Point(253, 597);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "PROFILE";
             // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(349, 591);
+            this.ClientSize = new System.Drawing.Size(349, 638);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.SearchByCategoryBtn);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.headerLabel);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioFurniture);
+            this.Controls.Add(this.radioSports);
+            this.Controls.Add(this.radioElectronics);
+            this.Controls.Add(this.radioCars);
             this.Controls.Add(this.searchBar);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferOne)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferTwo)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferFour)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferThree)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -401,32 +453,36 @@ namespace ADMshop
         #endregion
 
         private System.Windows.Forms.TextBox searchBar;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioCars;
+        private System.Windows.Forms.RadioButton radioElectronics;
+        private System.Windows.Forms.RadioButton radioSports;
+        private System.Windows.Forms.RadioButton radioFurniture;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label OfferOnePrice;
+        private System.Windows.Forms.Label OfferOneTitle;
+        private System.Windows.Forms.PictureBox picBoxOfferOne;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label OfferTwoPrice;
+        private System.Windows.Forms.Label OfferTwoTitle;
+        private System.Windows.Forms.PictureBox picBoxOfferTwo;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label OfferFourPrice;
+        private System.Windows.Forms.Label OfferFourTitle;
+        private System.Windows.Forms.PictureBox picBoxOfferFour;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label OfferThreePrice;
+        private System.Windows.Forms.Label OfferThreeTitle;
+        private System.Windows.Forms.PictureBox picBoxOfferThree;
+        private System.Windows.Forms.Button SearchByCategoryBtn;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
