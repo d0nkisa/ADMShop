@@ -27,6 +27,10 @@ namespace ADMshop
         {
             string username = textBoxEmail.Text, password = textBoxPassword.Text;
             this.homeDAO.LogIn(username, password);
+
+            LogIn.ActiveForm.Hide();
+            HomeScreen home = new HomeScreen();
+            home.Activate(); home.Show();
         }
     }
 }

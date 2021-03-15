@@ -29,7 +29,7 @@ namespace ADMshop.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("Server=127.0.0.1;Database=adm_db; uID=root; pwd=root; persistsecurityinfo=True");
+                optionsBuilder.UseMySQL("Server=127.0.0.1;Database=adm_db; uID=test; pwd=ecse40e3; persistsecurityinfo=True");
             }
         }
 
@@ -112,6 +112,11 @@ namespace ADMshop.Models
                 entity.Property(e => e.OfferId).HasColumnName("offer_id");
 
                 entity.Property(e => e.Category).HasColumnName("category");
+
+                entity.Property(e => e.Image)
+                    .IsRequired()
+                    .HasColumnName("image")
+                    .HasColumnType("blob");
 
                 entity.Property(e => e.ItemState).HasColumnName("item_state");
 

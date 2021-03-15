@@ -14,6 +14,7 @@ namespace ADMshop.Models
         public bool? ItemState { get; set; }
         public int Phone { get; set; }
         public int Category { get; set; }
+        public byte[] Image { get; set; }
 
         public virtual Category CategoryNavigation { get; set; }
         public virtual Towns Town { get; set; }
