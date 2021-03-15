@@ -17,7 +17,7 @@ namespace ADMshop
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PostOffer());
+            Application.Run(new LogIn());
 
         }
     }

@@ -68,6 +68,7 @@ namespace ADMshop
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(239, 378);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(60, 24);
@@ -126,7 +127,7 @@ namespace ADMshop
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(237, 299);
+            this.comboBox2.Location = new System.Drawing.Point(237, 295);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(131, 28);
             this.comboBox2.TabIndex = 0;
@@ -146,6 +147,7 @@ namespace ADMshop
             this.button1.TabIndex = 8;
             this.button1.Text = "Post";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
