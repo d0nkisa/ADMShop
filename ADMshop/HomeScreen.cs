@@ -9,9 +9,11 @@ namespace ADMshop
 {
     public partial class HomeScreen : Form
     {
-        public HomeScreen()
+        Users currentuser;
+        public HomeScreen(Users Currentuser)
         {
             InitializeComponent();
+            currentuser = Currentuser;
         }
 
         private OfferDAO offerDAO;
@@ -60,6 +62,13 @@ namespace ADMshop
 
                 }
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            HomeScreen.ActiveForm.Hide();
+            PostOffer postOffer = new PostOffer(currentuser);
+            postOffer.Activate();postOffer.Show();
         }
     }
 }

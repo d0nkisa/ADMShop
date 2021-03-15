@@ -26,10 +26,8 @@ namespace ADMshop
         private void LogInBtn_Click(object sender, EventArgs e)
         {
             string username = textBoxEmail.Text, password = textBoxPassword.Text;
-            this.homeDAO.LogIn(username, password);
-
             LogIn.ActiveForm.Hide();
-            HomeScreen home = new HomeScreen();
+            HomeScreen home = new HomeScreen(this.homeDAO.LogIn(username, password));
             home.Activate(); home.Show();
         }
     }

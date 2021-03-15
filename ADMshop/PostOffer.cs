@@ -12,13 +12,14 @@ namespace ADMshop
 {
     public partial class PostOffer : Form
     {
+        Users currentuser;
         public  byte[] ImageToByte(PictureBox img)
         {
             ImageConverter converter = new ImageConverter();
             return (byte[])converter.ConvertTo(img, typeof(byte[]));
         }
 
-        public PostOffer()
+        public PostOffer(Users Currentuser)
         {
             InitializeComponent();
             adm_dbContext context = new adm_dbContext();
