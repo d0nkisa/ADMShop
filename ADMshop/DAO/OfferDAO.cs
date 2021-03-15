@@ -7,20 +7,9 @@ namespace ADMshop.DAO
 {
     class OfferDAO
     {
-        public int CreateOffer(string name,string description, int userId, int category, decimal price,int town,int phone, byte[] image)
+        public int CreateOffer(Offers newoffer)
         {
-            Offers offer = new Offers();
-            offer.OfferHeading = name;
-            offer.OfferDescription = description;
-            offer.UserId = userId;
-            offer.ItemState = true; //novo
-            offer.Category = category;
-            offer.OfferPrice = price;
-            offer.TownId = town;
-            offer.Phone = phone;
-            offer.Image = image;
-
-            this.context.Offers.Add(offer);
+            this.context.Offers.Add(newoffer);
             return this.context.SaveChanges();
         }
 

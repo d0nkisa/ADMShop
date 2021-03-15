@@ -30,16 +30,16 @@ namespace ADMshop
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PostOffer));
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboCategory = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboTown = new System.Windows.Forms.ComboBox();
+            this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,13 +47,13 @@ namespace ADMshop
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // comboCategory
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(30, 371);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(184, 28);
-            this.comboBox1.TabIndex = 0;
+            this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Location = new System.Drawing.Point(30, 371);
+            this.comboCategory.Name = "comboCategory";
+            this.comboCategory.Size = new System.Drawing.Size(184, 28);
+            this.comboCategory.TabIndex = 0;
             // 
             // pictureBox1
             // 
@@ -88,13 +88,13 @@ namespace ADMshop
             this.radioButton2.Text = "Used";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(30, 295);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(184, 31);
-            this.textBox1.TabIndex = 3;
+            this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxName.Location = new System.Drawing.Point(30, 295);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(184, 31);
+            this.textBoxName.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -124,20 +124,20 @@ namespace ADMshop
             this.label1.TabIndex = 6;
             this.label1.Text = "Item state";
             // 
-            // comboBox2
+            // comboTown
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(237, 295);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(131, 28);
-            this.comboBox2.TabIndex = 0;
+            this.comboTown.FormattingEnabled = true;
+            this.comboTown.Location = new System.Drawing.Point(237, 295);
+            this.comboTown.Name = "comboTown";
+            this.comboTown.Size = new System.Drawing.Size(131, 28);
+            this.comboTown.TabIndex = 0;
             // 
-            // textBox2
+            // textBoxPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(36, 741);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(74, 27);
-            this.textBox2.TabIndex = 7;
+            this.textBoxPrice.Location = new System.Drawing.Point(36, 741);
+            this.textBoxPrice.Name = "textBoxPrice";
+            this.textBoxPrice.Size = new System.Drawing.Size(74, 27);
+            this.textBoxPrice.TabIndex = 7;
             // 
             // button1
             // 
@@ -175,15 +175,15 @@ namespace ADMshop
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboTown);
+            this.Controls.Add(this.comboCategory);
             this.Name = "PostOffer";
             this.Text = "PostOffer";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -195,16 +195,16 @@ namespace ADMshop
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboCategory;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxName;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboTown;
+        private System.Windows.Forms.TextBox textBoxPrice;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
