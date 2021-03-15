@@ -35,10 +35,20 @@ namespace ADMshop
         private void button1_Click(object sender, EventArgs e)
         {
             Offers newoffer = new Offers();
-            newoffer.OfferHeading = textBox1.Text;
+            newoffer.OfferHeading = textBoxName.Text;
             newoffer.OfferDescription = richTextBox1.Text;
-            
+            newoffer.Town = this.townDAO.GetTown(comboCategory.SelectedItem.ToString());
+            if (radioButton1.Checked == true) newoffer.ItemState = true;
+            else newoffer.ItemState = false;
+
+            newoffer.Category = this.categoryDAO.GetCategory(comboCategory.SelectedItem.ToString()).Id;
+            newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
+            this.offerDAO.CreateOffer(newoffer);
 
         }
+        private OfferDAO offerDAO;
+        private HomeDAO homeDAO;
+        private TownDAO townDAO;
+        private CategoryDAO categoryDAO;
     }
 }
