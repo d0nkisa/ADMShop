@@ -191,6 +191,7 @@ namespace ADMshop
             this.DoubleBuffered = true;
             this.Name = "SignUp";
             this.Text = "SignUp";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignUp_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

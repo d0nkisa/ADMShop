@@ -39,9 +39,10 @@ namespace ADMshop
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 25);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(375, 339);
+            this.pictureBox1.Size = new System.Drawing.Size(328, 254);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -49,18 +50,18 @@ namespace ADMshop
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(24, 393);
+            this.label1.Location = new System.Drawing.Point(21, 295);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 38);
+            this.label1.Size = new System.Drawing.Size(71, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(65, 686);
+            this.label2.Location = new System.Drawing.Point(57, 514);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(50, 20);
+            this.label2.Size = new System.Drawing.Size(38, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
@@ -68,9 +69,9 @@ namespace ADMshop
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(301, 448);
+            this.label3.Location = new System.Drawing.Point(263, 336);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 31);
+            this.label3.Size = new System.Drawing.Size(63, 25);
             this.label3.TabIndex = 1;
             this.label3.Text = "label1";
             // 
@@ -78,24 +79,26 @@ namespace ADMshop
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(24, 537);
+            this.label4.Location = new System.Drawing.Point(21, 403);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 28);
+            this.label4.Size = new System.Drawing.Size(52, 21);
             this.label4.TabIndex = 3;
             this.label4.Text = "label4";
             // 
             // OfferForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 788);
+            this.ClientSize = new System.Drawing.Size(349, 591);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OfferForm";
             this.Text = "Offer";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.OfferForm_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

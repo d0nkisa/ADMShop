@@ -114,5 +114,10 @@ namespace ADMshop
             LogIn log = new LogIn();
             log.Activate(); log.Show();
         }
+
+        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

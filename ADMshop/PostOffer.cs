@@ -59,5 +59,17 @@ namespace ADMshop
         private TownDAO townDAO;
         private CategoryDAO categoryDAO;
         private PictureBox picture;
+
+        private void PostOffer_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+        }
+
+        private void homeLabel_Click(object sender, EventArgs e)
+        {
+            PostOffer.ActiveForm.Close();
+            HomeScreen home = new HomeScreen(currentuser);
+            home.Activate(); home.Show();
+        }
     }
 }
