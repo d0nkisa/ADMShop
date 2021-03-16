@@ -37,5 +37,19 @@ namespace ADMshop
             HomeScreen home = new HomeScreen(currentuser);
             home.Activate(); home.Show();
         }
+
+        private void sellLabel_Click(object sender, EventArgs e)
+        {
+            ProfileForm.ActiveForm.Hide();
+            PostOffer postOffer = new PostOffer(currentuser);
+            postOffer.Activate(); postOffer.Show();
+        }
+
+        private void sellBtn_Click(object sender, EventArgs e)
+        {
+            ProfileForm.ActiveForm.Hide();
+            PostOffer postOffer = new PostOffer(currentuser);
+            postOffer.Activate(); postOffer.Show();
+        }
     }
 }

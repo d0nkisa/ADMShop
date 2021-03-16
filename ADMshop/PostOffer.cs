@@ -71,5 +71,12 @@ namespace ADMshop
             HomeScreen home = new HomeScreen(currentuser);
             home.Activate(); home.Show();
         }
+
+        private void profileLabel_Click(object sender, EventArgs e)
+        {
+            PostOffer.ActiveForm.Close();
+            ProfileForm profile = new ProfileForm(currentuser);
+            profile.Activate(); profile.Show();
+        }
     }
 }

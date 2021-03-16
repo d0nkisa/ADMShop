@@ -210,6 +210,7 @@ namespace ADMshop
             this.profileLabel.Size = new System.Drawing.Size(84, 25);
             this.profileLabel.TabIndex = 20;
             this.profileLabel.Text = "PROFILE";
+            this.profileLabel.Click += new System.EventHandler(this.profileLabel_Click);
             // 
             // sellLabel
             // 

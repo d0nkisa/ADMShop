@@ -60,8 +60,8 @@ namespace ADMshop
             this.picBoxOfferThree = new System.Windows.Forms.PictureBox();
             this.SearchByCategoryBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.sellLabel = new System.Windows.Forms.Label();
+            this.profileLabel = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -175,7 +175,6 @@ namespace ADMshop
             this.button1.Size = new System.Drawing.Size(36, 34);
             this.button1.TabIndex = 9;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -391,28 +390,29 @@ namespace ADMshop
             this.label2.TabIndex = 15;
             this.label2.Text = "HOME";
             // 
-            // label3
+            // sellLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(138, 602);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "SELL +";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.sellLabel.AutoSize = true;
+            this.sellLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.sellLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.sellLabel.Location = new System.Drawing.Point(138, 602);
+            this.sellLabel.Name = "sellLabel";
+            this.sellLabel.Size = new System.Drawing.Size(68, 25);
+            this.sellLabel.TabIndex = 16;
+            this.sellLabel.Text = "SELL +";
+            this.sellLabel.Click += new System.EventHandler(this.sellLabel_Click);
             // 
-            // label4
+            // profileLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(253, 602);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "PROFILE";
+            this.profileLabel.AutoSize = true;
+            this.profileLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.profileLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.profileLabel.Location = new System.Drawing.Point(253, 602);
+            this.profileLabel.Name = "profileLabel";
+            this.profileLabel.Size = new System.Drawing.Size(84, 25);
+            this.profileLabel.TabIndex = 17;
+            this.profileLabel.Text = "PROFILE";
+            this.profileLabel.Click += new System.EventHandler(this.profileLabel_Click);
             // 
             // button2
             // 
@@ -460,8 +460,8 @@ namespace ADMshop
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.profileLabel);
+            this.Controls.Add(this.sellLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.SearchByCategoryBtn);
             this.Controls.Add(this.panel5);
@@ -532,8 +532,8 @@ namespace ADMshop
         private System.Windows.Forms.PictureBox picBoxOfferThree;
         private System.Windows.Forms.Button SearchByCategoryBtn;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label sellLabel;
+        private System.Windows.Forms.Label profileLabel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;

@@ -209,6 +209,7 @@ namespace ADMshop
             this.sellBtn.TabIndex = 27;
             this.sellBtn.Text = "Sell new item";
             this.sellBtn.UseVisualStyleBackColor = false;
+            this.sellBtn.Click += new System.EventHandler(this.sellBtn_Click);
             // 
             // logOutLabel
             // 
@@ -227,7 +228,7 @@ namespace ADMshop
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(-5, 352);
+            this.label4.Location = new System.Drawing.Point(-5, 584);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(358, 21);
             this.label4.TabIndex = 32;
@@ -254,6 +255,7 @@ namespace ADMshop
             this.sellLabel.Size = new System.Drawing.Size(68, 25);
             this.sellLabel.TabIndex = 30;
             this.sellLabel.Text = "SELL +";
+            this.sellLabel.Click += new System.EventHandler(this.sellLabel_Click);
             // 
             // homeLabel
             // 

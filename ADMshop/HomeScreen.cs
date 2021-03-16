@@ -40,21 +40,23 @@ namespace ADMshop
             }
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-            HomeScreen.ActiveForm.Hide();
-            PostOffer postOffer = new PostOffer(currentuser);
-            postOffer.Activate();postOffer.Show();
-        }
-
         private void HomeScreen_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(1);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void sellLabel_Click(object sender, EventArgs e)
         {
+            HomeScreen.ActiveForm.Hide();
+            PostOffer postOffer = new PostOffer(currentuser);
+            postOffer.Activate(); postOffer.Show();
+        }
 
+        private void profileLabel_Click(object sender, EventArgs e)
+        {
+            HomeScreen.ActiveForm.Close();
+            ProfileForm profile = new ProfileForm(currentuser);
+            profile.Activate(); profile.Show();
         }
     }
 }
