@@ -254,6 +254,12 @@ namespace ADMshop.Models
                     .HasForeignKey(d => d.TownId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("fk_users_towns");
+
+                entity.HasOne(d => d.User)
+                    .WithOne(p => p.Users)
+                    .HasForeignKey<Users>(d => d.UserId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_users_login");
             });
 
             OnModelCreatingPartial(modelBuilder);

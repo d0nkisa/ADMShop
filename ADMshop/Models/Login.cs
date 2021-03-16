@@ -9,6 +9,6 @@ namespace ADMshop.Models
         public string Username { get; set; }
         public string Pasword { get; set; }
 
-        public Users Users { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

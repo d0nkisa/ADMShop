@@ -55,10 +55,9 @@ namespace ADMshop
             "France",
             "England",
             "Greece"});
-            this.comboCountry.Location = new System.Drawing.Point(62, 456);
-            this.comboCountry.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboCountry.Location = new System.Drawing.Point(54, 342);
             this.comboCountry.Name = "comboCountry";
-            this.comboCountry.Size = new System.Drawing.Size(114, 30);
+            this.comboCountry.Size = new System.Drawing.Size(100, 28);
             this.comboCountry.TabIndex = 16;
             this.comboCountry.Text = "Country";
             // 
@@ -76,10 +75,9 @@ namespace ADMshop
             "Plovdiv",
             "Kragujevac",
             "Birmingham"});
-            this.comboTown.Location = new System.Drawing.Point(225, 455);
-            this.comboTown.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboTown.Location = new System.Drawing.Point(197, 341);
             this.comboTown.Name = "comboTown";
-            this.comboTown.Size = new System.Drawing.Size(114, 30);
+            this.comboTown.Size = new System.Drawing.Size(100, 28);
             this.comboTown.TabIndex = 15;
             this.comboTown.Text = "Town";
             // 
@@ -87,10 +85,9 @@ namespace ADMshop
             // 
             this.tboxYears.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tboxYears.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tboxYears.Location = new System.Drawing.Point(58, 380);
-            this.tboxYears.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tboxYears.Location = new System.Drawing.Point(49, 285);
             this.tboxYears.Name = "tboxYears";
-            this.tboxYears.Size = new System.Drawing.Size(75, 30);
+            this.tboxYears.Size = new System.Drawing.Size(66, 26);
             this.tboxYears.TabIndex = 14;
             this.tboxYears.Text = "Age...";
             this.tboxYears.Enter += new System.EventHandler(this.tboxYears_Enter);
@@ -99,10 +96,9 @@ namespace ADMshop
             // 
             this.tboxPassword.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tboxPassword.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tboxPassword.Location = new System.Drawing.Point(62, 612);
-            this.tboxPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tboxPassword.Location = new System.Drawing.Point(54, 459);
             this.tboxPassword.Name = "tboxPassword";
-            this.tboxPassword.Size = new System.Drawing.Size(277, 30);
+            this.tboxPassword.Size = new System.Drawing.Size(243, 26);
             this.tboxPassword.TabIndex = 13;
             this.tboxPassword.Text = "Password...";
             this.tboxPassword.Enter += new System.EventHandler(this.tboxPassword_Enter);
@@ -111,10 +107,9 @@ namespace ADMshop
             // 
             this.tboxUsername.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tboxUsername.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tboxUsername.Location = new System.Drawing.Point(62, 535);
-            this.tboxUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tboxUsername.Location = new System.Drawing.Point(54, 401);
             this.tboxUsername.Name = "tboxUsername";
-            this.tboxUsername.Size = new System.Drawing.Size(277, 30);
+            this.tboxUsername.Size = new System.Drawing.Size(243, 26);
             this.tboxUsername.TabIndex = 11;
             this.tboxUsername.Text = "Username...";
             this.tboxUsername.Enter += new System.EventHandler(this.tboxUsername_Enter);
@@ -123,10 +118,9 @@ namespace ADMshop
             // 
             this.tboxPhone.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tboxPhone.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tboxPhone.Location = new System.Drawing.Point(181, 380);
-            this.tboxPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tboxPhone.Location = new System.Drawing.Point(158, 285);
             this.tboxPhone.Name = "tboxPhone";
-            this.tboxPhone.Size = new System.Drawing.Size(158, 30);
+            this.tboxPhone.Size = new System.Drawing.Size(139, 26);
             this.tboxPhone.TabIndex = 12;
             this.tboxPhone.Text = "Phone number...";
             this.tboxPhone.Enter += new System.EventHandler(this.tboxPhone_Enter);
@@ -135,10 +129,9 @@ namespace ADMshop
             // 
             this.tboxLast.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tboxLast.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tboxLast.Location = new System.Drawing.Point(225, 304);
-            this.tboxLast.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tboxLast.Location = new System.Drawing.Point(197, 228);
             this.tboxLast.Name = "tboxLast";
-            this.tboxLast.Size = new System.Drawing.Size(114, 30);
+            this.tboxLast.Size = new System.Drawing.Size(100, 26);
             this.tboxLast.TabIndex = 10;
             this.tboxLast.Text = "Last Name...";
             this.tboxLast.Enter += new System.EventHandler(this.tboxLast_Enter);
@@ -147,10 +140,9 @@ namespace ADMshop
             // 
             this.tboxName.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tboxName.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.tboxName.Location = new System.Drawing.Point(62, 304);
-            this.tboxName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tboxName.Location = new System.Drawing.Point(54, 228);
             this.tboxName.Name = "tboxName";
-            this.tboxName.Size = new System.Drawing.Size(114, 30);
+            this.tboxName.Size = new System.Drawing.Size(100, 26);
             this.tboxName.TabIndex = 9;
             this.tboxName.Text = "First Name...";
             this.tboxName.Enter += new System.EventHandler(this.tboxName_Enter);
@@ -160,10 +152,9 @@ namespace ADMshop
             this.registerBtn.BackColor = System.Drawing.Color.LimeGreen;
             this.registerBtn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.registerBtn.ForeColor = System.Drawing.Color.White;
-            this.registerBtn.Location = new System.Drawing.Point(123, 696);
-            this.registerBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.registerBtn.Location = new System.Drawing.Point(108, 522);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(147, 56);
+            this.registerBtn.Size = new System.Drawing.Size(129, 42);
             this.registerBtn.TabIndex = 8;
             this.registerBtn.Text = "Register";
             this.registerBtn.UseVisualStyleBackColor = false;
@@ -173,20 +164,20 @@ namespace ADMshop
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(14, 12);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 20);
+            this.label1.Size = new System.Drawing.Size(43, 15);
             this.label1.TabIndex = 17;
             this.label1.Text = "            ";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(399, 788);
+            this.ClientSize = new System.Drawing.Size(349, 591);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboCountry);
             this.Controls.Add(this.comboTown);
@@ -198,7 +189,6 @@ namespace ADMshop
             this.Controls.Add(this.tboxName);
             this.Controls.Add(this.registerBtn);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "SignUp";
             this.Text = "SignUp";
             this.ResumeLayout(false);

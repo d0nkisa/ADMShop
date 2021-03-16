@@ -12,7 +12,15 @@ namespace ADMshop.DAO
             this.context.Offers.Add(newoffer);
             return this.context.SaveChanges();
         }
-
+        public Offers GetOfferById(int id)
+        {
+            return this.context.Offers
+                 .Include(o => o.OfferPrice)
+                 .Include(o => o.OfferHeading)
+                 .Include(o => o.Image)
+                 .Where(o => o.OfferId.Equals(id))
+                 .FirstOrDefault();
+        }
         public int DeleteOffer()
         {
             throw new NotImplementedException();
@@ -26,9 +34,7 @@ namespace ADMshop.DAO
                         .ThenInclude(ja => ja.User)
                         .Where(j => j.UserId.Equals(userId))
                         .ToList();
-           
             return offers;
-            
         }
 
         private adm_dbContext context;

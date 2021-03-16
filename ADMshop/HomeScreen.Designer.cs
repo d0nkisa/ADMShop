@@ -80,10 +80,9 @@ namespace ADMshop
             // 
             this.searchBar.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.searchBar.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.searchBar.Location = new System.Drawing.Point(14, 32);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.searchBar.Location = new System.Drawing.Point(12, 24);
             this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(371, 42);
+            this.searchBar.Size = new System.Drawing.Size(325, 35);
             this.searchBar.TabIndex = 0;
             this.searchBar.Text = "Search ...";
             // 
@@ -92,10 +91,9 @@ namespace ADMshop
             this.radioCars.AutoSize = true;
             this.radioCars.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioCars.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioCars.Location = new System.Drawing.Point(47, 149);
-            this.radioCars.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioCars.Location = new System.Drawing.Point(41, 112);
             this.radioCars.Name = "radioCars";
-            this.radioCars.Size = new System.Drawing.Size(65, 27);
+            this.radioCars.Size = new System.Drawing.Size(52, 21);
             this.radioCars.TabIndex = 1;
             this.radioCars.TabStop = true;
             this.radioCars.Text = "Cars";
@@ -106,10 +104,9 @@ namespace ADMshop
             this.radioElectronics.AutoSize = true;
             this.radioElectronics.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioElectronics.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioElectronics.Location = new System.Drawing.Point(229, 149);
-            this.radioElectronics.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioElectronics.Location = new System.Drawing.Point(200, 112);
             this.radioElectronics.Name = "radioElectronics";
-            this.radioElectronics.Size = new System.Drawing.Size(116, 27);
+            this.radioElectronics.Size = new System.Drawing.Size(92, 21);
             this.radioElectronics.TabIndex = 2;
             this.radioElectronics.TabStop = true;
             this.radioElectronics.Text = "Electronics";
@@ -120,10 +117,9 @@ namespace ADMshop
             this.radioSports.AutoSize = true;
             this.radioSports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioSports.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioSports.Location = new System.Drawing.Point(47, 195);
-            this.radioSports.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioSports.Location = new System.Drawing.Point(41, 146);
             this.radioSports.Name = "radioSports";
-            this.radioSports.Size = new System.Drawing.Size(198, 27);
+            this.radioSports.Size = new System.Drawing.Size(153, 21);
             this.radioSports.TabIndex = 3;
             this.radioSports.TabStop = true;
             this.radioSports.Text = "Sport, Books, Hobby";
@@ -134,10 +130,9 @@ namespace ADMshop
             this.radioFurniture.AutoSize = true;
             this.radioFurniture.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioFurniture.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioFurniture.Location = new System.Drawing.Point(229, 195);
-            this.radioFurniture.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioFurniture.Location = new System.Drawing.Point(200, 146);
             this.radioFurniture.Name = "radioFurniture";
-            this.radioFurniture.Size = new System.Drawing.Size(105, 27);
+            this.radioFurniture.Size = new System.Drawing.Size(83, 21);
             this.radioFurniture.TabIndex = 4;
             this.radioFurniture.TabStop = true;
             this.radioFurniture.Text = "Furniture";
@@ -148,9 +143,9 @@ namespace ADMshop
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(14, 97);
+            this.label1.Location = new System.Drawing.Point(12, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(194, 28);
+            this.label1.Size = new System.Drawing.Size(156, 21);
             this.label1.TabIndex = 5;
             this.label1.Text = "Search by category";
             // 
@@ -159,9 +154,9 @@ namespace ADMshop
             this.headerLabel.AutoSize = true;
             this.headerLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.headerLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.headerLabel.Location = new System.Drawing.Point(14, 257);
+            this.headerLabel.Location = new System.Drawing.Point(12, 193);
             this.headerLabel.Name = "headerLabel";
-            this.headerLabel.Size = new System.Drawing.Size(168, 28);
+            this.headerLabel.Size = new System.Drawing.Size(136, 21);
             this.headerLabel.TabIndex = 6;
             this.headerLabel.Text = "Suggested items";
             // 
@@ -171,10 +166,9 @@ namespace ADMshop
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(346, 33);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Location = new System.Drawing.Point(303, 25);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(39, 44);
+            this.button1.Size = new System.Drawing.Size(34, 33);
             this.button1.TabIndex = 9;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -182,29 +176,27 @@ namespace ADMshop
             // 
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.picBoxOfferOne);
-            this.panel1.Location = new System.Drawing.Point(14, 315);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(12, 236);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(178, 217);
+            this.panel1.Size = new System.Drawing.Size(156, 163);
             this.panel1.TabIndex = 10;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.OfferOnePrice);
             this.panel2.Controls.Add(this.OfferOneTitle);
-            this.panel2.Location = new System.Drawing.Point(1, 163);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(1, 122);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 55);
+            this.panel2.Size = new System.Drawing.Size(155, 41);
             this.panel2.TabIndex = 1;
             // 
             // OfferOnePrice
             // 
             this.OfferOnePrice.AutoSize = true;
             this.OfferOnePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferOnePrice.Location = new System.Drawing.Point(107, 17);
+            this.OfferOnePrice.Location = new System.Drawing.Point(94, 13);
             this.OfferOnePrice.Name = "OfferOnePrice";
-            this.OfferOnePrice.Size = new System.Drawing.Size(59, 20);
+            this.OfferOnePrice.Size = new System.Drawing.Size(46, 15);
             this.OfferOnePrice.TabIndex = 1;
             this.OfferOnePrice.Text = "1000 lv.";
             // 
@@ -213,18 +205,17 @@ namespace ADMshop
             this.OfferOneTitle.AutoSize = true;
             this.OfferOneTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OfferOneTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferOneTitle.Location = new System.Drawing.Point(6, 17);
+            this.OfferOneTitle.Location = new System.Drawing.Point(5, 13);
             this.OfferOneTitle.Name = "OfferOneTitle";
-            this.OfferOneTitle.Size = new System.Drawing.Size(46, 23);
+            this.OfferOneTitle.Size = new System.Drawing.Size(36, 17);
             this.OfferOneTitle.TabIndex = 0;
             this.OfferOneTitle.Text = "Title";
             // 
             // picBoxOfferOne
             // 
             this.picBoxOfferOne.Location = new System.Drawing.Point(1, 0);
-            this.picBoxOfferOne.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferOne.Name = "picBoxOfferOne";
-            this.picBoxOfferOne.Size = new System.Drawing.Size(177, 164);
+            this.picBoxOfferOne.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferOne.TabIndex = 0;
             this.picBoxOfferOne.TabStop = false;
             // 
@@ -232,29 +223,27 @@ namespace ADMshop
             // 
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.picBoxOfferTwo);
-            this.panel3.Location = new System.Drawing.Point(207, 315);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(181, 236);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(178, 217);
+            this.panel3.Size = new System.Drawing.Size(156, 163);
             this.panel3.TabIndex = 11;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.OfferTwoPrice);
             this.panel4.Controls.Add(this.OfferTwoTitle);
-            this.panel4.Location = new System.Drawing.Point(1, 163);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(1, 122);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(177, 55);
+            this.panel4.Size = new System.Drawing.Size(155, 41);
             this.panel4.TabIndex = 1;
             // 
             // OfferTwoPrice
             // 
             this.OfferTwoPrice.AutoSize = true;
             this.OfferTwoPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferTwoPrice.Location = new System.Drawing.Point(107, 17);
+            this.OfferTwoPrice.Location = new System.Drawing.Point(94, 13);
             this.OfferTwoPrice.Name = "OfferTwoPrice";
-            this.OfferTwoPrice.Size = new System.Drawing.Size(59, 20);
+            this.OfferTwoPrice.Size = new System.Drawing.Size(46, 15);
             this.OfferTwoPrice.TabIndex = 1;
             this.OfferTwoPrice.Text = "1000 lv.";
             // 
@@ -263,18 +252,17 @@ namespace ADMshop
             this.OfferTwoTitle.AutoSize = true;
             this.OfferTwoTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OfferTwoTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferTwoTitle.Location = new System.Drawing.Point(6, 17);
+            this.OfferTwoTitle.Location = new System.Drawing.Point(5, 13);
             this.OfferTwoTitle.Name = "OfferTwoTitle";
-            this.OfferTwoTitle.Size = new System.Drawing.Size(46, 23);
+            this.OfferTwoTitle.Size = new System.Drawing.Size(36, 17);
             this.OfferTwoTitle.TabIndex = 0;
             this.OfferTwoTitle.Text = "Title";
             // 
             // picBoxOfferTwo
             // 
             this.picBoxOfferTwo.Location = new System.Drawing.Point(1, 0);
-            this.picBoxOfferTwo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferTwo.Name = "picBoxOfferTwo";
-            this.picBoxOfferTwo.Size = new System.Drawing.Size(177, 164);
+            this.picBoxOfferTwo.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferTwo.TabIndex = 0;
             this.picBoxOfferTwo.TabStop = false;
             // 
@@ -282,29 +270,27 @@ namespace ADMshop
             // 
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.picBoxOfferFour);
-            this.panel5.Location = new System.Drawing.Point(207, 544);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(181, 408);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(178, 217);
+            this.panel5.Size = new System.Drawing.Size(156, 163);
             this.panel5.TabIndex = 13;
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.OfferFourPrice);
             this.panel6.Controls.Add(this.OfferFourTitle);
-            this.panel6.Location = new System.Drawing.Point(1, 163);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Location = new System.Drawing.Point(1, 122);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(177, 55);
+            this.panel6.Size = new System.Drawing.Size(155, 41);
             this.panel6.TabIndex = 1;
             // 
             // OfferFourPrice
             // 
             this.OfferFourPrice.AutoSize = true;
             this.OfferFourPrice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferFourPrice.Location = new System.Drawing.Point(107, 17);
+            this.OfferFourPrice.Location = new System.Drawing.Point(94, 13);
             this.OfferFourPrice.Name = "OfferFourPrice";
-            this.OfferFourPrice.Size = new System.Drawing.Size(59, 20);
+            this.OfferFourPrice.Size = new System.Drawing.Size(46, 15);
             this.OfferFourPrice.TabIndex = 1;
             this.OfferFourPrice.Text = "1000 lv.";
             // 
@@ -313,18 +299,17 @@ namespace ADMshop
             this.OfferFourTitle.AutoSize = true;
             this.OfferFourTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OfferFourTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferFourTitle.Location = new System.Drawing.Point(6, 17);
+            this.OfferFourTitle.Location = new System.Drawing.Point(5, 13);
             this.OfferFourTitle.Name = "OfferFourTitle";
-            this.OfferFourTitle.Size = new System.Drawing.Size(46, 23);
+            this.OfferFourTitle.Size = new System.Drawing.Size(36, 17);
             this.OfferFourTitle.TabIndex = 0;
             this.OfferFourTitle.Text = "Title";
             // 
             // picBoxOfferFour
             // 
             this.picBoxOfferFour.Location = new System.Drawing.Point(1, 0);
-            this.picBoxOfferFour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferFour.Name = "picBoxOfferFour";
-            this.picBoxOfferFour.Size = new System.Drawing.Size(177, 164);
+            this.picBoxOfferFour.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferFour.TabIndex = 0;
             this.picBoxOfferFour.TabStop = false;
             // 
@@ -332,20 +317,18 @@ namespace ADMshop
             // 
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.picBoxOfferThree);
-            this.panel7.Location = new System.Drawing.Point(14, 544);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Location = new System.Drawing.Point(12, 408);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(178, 217);
+            this.panel7.Size = new System.Drawing.Size(156, 163);
             this.panel7.TabIndex = 12;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.OfferThreePrice);
             this.panel8.Controls.Add(this.OfferThreeTitle);
-            this.panel8.Location = new System.Drawing.Point(1, 163);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Location = new System.Drawing.Point(1, 122);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(177, 55);
+            this.panel8.Size = new System.Drawing.Size(155, 41);
             this.panel8.TabIndex = 1;
             // 
             // OfferThreePrice
@@ -353,9 +336,9 @@ namespace ADMshop
             this.OfferThreePrice.AutoSize = true;
             this.OfferThreePrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
             this.OfferThreePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferThreePrice.Location = new System.Drawing.Point(107, 17);
+            this.OfferThreePrice.Location = new System.Drawing.Point(94, 13);
             this.OfferThreePrice.Name = "OfferThreePrice";
-            this.OfferThreePrice.Size = new System.Drawing.Size(59, 20);
+            this.OfferThreePrice.Size = new System.Drawing.Size(46, 15);
             this.OfferThreePrice.TabIndex = 1;
             this.OfferThreePrice.Text = "1000 lv.";
             // 
@@ -364,28 +347,26 @@ namespace ADMshop
             this.OfferThreeTitle.AutoSize = true;
             this.OfferThreeTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.OfferThreeTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferThreeTitle.Location = new System.Drawing.Point(6, 17);
+            this.OfferThreeTitle.Location = new System.Drawing.Point(5, 13);
             this.OfferThreeTitle.Name = "OfferThreeTitle";
-            this.OfferThreeTitle.Size = new System.Drawing.Size(46, 23);
+            this.OfferThreeTitle.Size = new System.Drawing.Size(36, 17);
             this.OfferThreeTitle.TabIndex = 0;
             this.OfferThreeTitle.Text = "Title";
             // 
             // picBoxOfferThree
             // 
             this.picBoxOfferThree.Location = new System.Drawing.Point(1, 0);
-            this.picBoxOfferThree.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferThree.Name = "picBoxOfferThree";
-            this.picBoxOfferThree.Size = new System.Drawing.Size(177, 164);
+            this.picBoxOfferThree.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferThree.TabIndex = 0;
             this.picBoxOfferThree.TabStop = false;
             // 
             // SearchByCategoryBtn
             // 
             this.SearchByCategoryBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SearchByCategoryBtn.Location = new System.Drawing.Point(309, 93);
-            this.SearchByCategoryBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.SearchByCategoryBtn.Location = new System.Drawing.Point(270, 70);
             this.SearchByCategoryBtn.Name = "SearchByCategoryBtn";
-            this.SearchByCategoryBtn.Size = new System.Drawing.Size(77, 41);
+            this.SearchByCategoryBtn.Size = new System.Drawing.Size(67, 31);
             this.SearchByCategoryBtn.TabIndex = 14;
             this.SearchByCategoryBtn.Text = "Search";
             this.SearchByCategoryBtn.UseVisualStyleBackColor = true;
@@ -396,9 +377,9 @@ namespace ADMshop
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(15, 796);
+            this.label2.Location = new System.Drawing.Point(13, 597);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 32);
+            this.label2.Size = new System.Drawing.Size(68, 25);
             this.label2.TabIndex = 15;
             this.label2.Text = "HOME";
             // 
@@ -407,9 +388,9 @@ namespace ADMshop
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(158, 796);
+            this.label3.Location = new System.Drawing.Point(138, 597);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(87, 32);
+            this.label3.Size = new System.Drawing.Size(68, 25);
             this.label3.TabIndex = 16;
             this.label3.Text = "SELL +";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -419,18 +400,18 @@ namespace ADMshop
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label4.Location = new System.Drawing.Point(289, 796);
+            this.label4.Location = new System.Drawing.Point(253, 597);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 32);
+            this.label4.Size = new System.Drawing.Size(84, 25);
             this.label4.TabIndex = 17;
             this.label4.Text = "PROFILE";
             // 
             // HomeScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(399, 851);
+            this.ClientSize = new System.Drawing.Size(349, 638);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -447,7 +428,6 @@ namespace ADMshop
             this.Controls.Add(this.radioElectronics);
             this.Controls.Add(this.radioCars);
             this.Controls.Add(this.searchBar);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
             this.panel1.ResumeLayout(false);

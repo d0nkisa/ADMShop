@@ -8,7 +8,6 @@ namespace ADMshop
 {
     public partial class SignUp : Form
     {
-
         public SignUp()
         {
             InitializeComponent();
