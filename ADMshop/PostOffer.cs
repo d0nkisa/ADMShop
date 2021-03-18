@@ -95,5 +95,10 @@ namespace ADMshop
         {
 
         }
+
+        private void comboCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
