@@ -51,10 +51,8 @@ namespace ADMshop
             "Bulgaria",
             "Spain",
             "Germany",
-            "Serbia",
             "France",
-            "England",
-            "Greece"});
+            "England"});
             this.comboCountry.Location = new System.Drawing.Point(54, 342);
             this.comboCountry.Name = "comboCountry";
             this.comboCountry.Size = new System.Drawing.Size(100, 28);
@@ -68,13 +66,22 @@ namespace ADMshop
             this.comboTown.FormattingEnabled = true;
             this.comboTown.Items.AddRange(new object[] {
             "Sofia",
-            "Ruse",
-            "Berlin",
-            "Volos",
-            "Serres",
             "Plovdiv",
-            "Kragujevac",
-            "Birmingham"});
+            "Varna",
+            "Ruse",
+            "Madrid",
+            "Barcelona",
+            "Valencia",
+            "Seville",
+            "Berlin",
+            "Hamburg",
+            "Munchen",
+            "Paris",
+            "Lion",
+            "Nice",
+            "London",
+            "Manchester",
+            "Shcefield"});
             this.comboTown.Location = new System.Drawing.Point(197, 341);
             this.comboTown.Name = "comboTown";
             this.comboTown.Size = new System.Drawing.Size(100, 28);
@@ -98,6 +105,7 @@ namespace ADMshop
             this.tboxPassword.ForeColor = System.Drawing.SystemColors.GrayText;
             this.tboxPassword.Location = new System.Drawing.Point(54, 459);
             this.tboxPassword.Name = "tboxPassword";
+            this.tboxPassword.PasswordChar = '*';
             this.tboxPassword.Size = new System.Drawing.Size(243, 26);
             this.tboxPassword.TabIndex = 13;
             this.tboxPassword.Text = "Password...";

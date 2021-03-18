@@ -307,7 +307,6 @@ namespace ADMshop
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PostOffer";
             this.Text = "PostOffer";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PostOffer_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);

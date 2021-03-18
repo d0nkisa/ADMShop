@@ -40,11 +40,6 @@ namespace ADMshop
             }
         }
 
-        private void HomeScreen_FormClosing_1(object sender, FormClosingEventArgs e)
-        {
-            Environment.Exit(1);
-        }
-
         private void sellLabel_Click(object sender, EventArgs e)
         {
             HomeScreen.ActiveForm.Hide();
@@ -57,11 +52,6 @@ namespace ADMshop
             HomeScreen.ActiveForm.Close();
             ProfileForm profile = new ProfileForm(currentuser);
             profile.Activate(); profile.Show();
-        }
-
-        private void HomeScreen_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

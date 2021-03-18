@@ -478,7 +478,6 @@ namespace ADMshop
             this.Controls.Add(this.searchBar);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HomeScreen_FormClosing_1);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
