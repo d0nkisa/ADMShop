@@ -58,5 +58,10 @@ namespace ADMshop
             ProfileForm profile = new ProfileForm(currentuser);
             profile.Activate(); profile.Show();
         }
+
+        private void HomeScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

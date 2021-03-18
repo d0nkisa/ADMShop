@@ -21,9 +21,11 @@ namespace ADMshop.DAO
                  .Where(o => o.OfferId.Equals(id))
                  .FirstOrDefault();
         }
-        public int DeleteOffer()
+        public int DeleteOffer(int id)
         {
-            throw new NotImplementedException();
+            this.context.Offers.Remove(GetOfferById(id));
+            return this.context.SaveChanges();
+
         }
 
         public List<Users> GetAllOffersByUserId(int userId)
