@@ -1,10 +1,5 @@
 ﻿using ADMshop.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace ADMshop
@@ -16,6 +11,8 @@ namespace ADMshop
         {
             InitializeComponent();
             currentuser = Currentuser;
+            usernameLabel.Text = Currentuser.Firstname + " " + Currentuser.Lastname;
+            postedCountLabel.Text = Currentuser.Offers.Count.ToString();
         }
 
         private void logOutLabel_Click(object sender, EventArgs e)

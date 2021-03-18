@@ -68,6 +68,7 @@ namespace ADMshop
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(87, 426);
             this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
             this.textBoxPassword.Size = new System.Drawing.Size(209, 23);
             this.textBoxPassword.TabIndex = 7;
             // 

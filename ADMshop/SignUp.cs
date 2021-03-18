@@ -45,7 +45,8 @@ namespace ADMshop
 
             SignUp.ActiveForm.Close();
             LogIn log = new LogIn();
-            log.Activate(); log.Show();
+            log.Activate();
+            log.Show();
         }
 
         private static int ID;
@@ -117,7 +118,12 @@ namespace ADMshop
 
         private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Environment.Exit(1);
+            //Environment.Exit(1);
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
