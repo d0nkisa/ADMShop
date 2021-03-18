@@ -20,7 +20,6 @@ namespace ADMshop.DAO
                 .ThenInclude(u => u.Role)
                 .Where(u => u.Username.Equals(username) && u.Pasword.Equals(HashPassword(password)))
                 .FirstOrDefault().Users;
-                MessageBox.Show("Successfuly logged into your account!");
 
                 return null;
             }

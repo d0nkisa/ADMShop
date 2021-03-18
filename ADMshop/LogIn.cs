@@ -30,5 +30,10 @@ namespace ADMshop
             HomeScreen home = new HomeScreen(this.homeDAO.LogIn(username, password));
             home.Activate(); home.Show();
         }
+
+        private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

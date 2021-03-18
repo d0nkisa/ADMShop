@@ -14,5 +14,10 @@ namespace ADMshop
         {
             InitializeComponent();
         }
+
+        private void OfferForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Environment.Exit(1);
+        }
     }
 }

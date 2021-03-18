@@ -93,6 +93,7 @@ namespace ADMshop
             this.DoubleBuffered = true;
             this.Name = "LogIn";
             this.Text = "Log In";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogIn_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
