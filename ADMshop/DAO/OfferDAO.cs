@@ -27,6 +27,8 @@ namespace ADMshop.DAO
             return this.context.SaveChanges();
 
         }
+        public int OfferCount(adm_dbContext context)
+        { return context.Offers.Count(); }
 
         public List<Users> GetAllOffersByUserId(int userId)
         {

@@ -36,7 +36,7 @@ namespace ADMshop
             this.townDAO = new TownDAO(context);
             this.offerDAO = new OfferDAO(context);
             this.categoryDAO = new CategoryDAO(context);
-
+            ID = this.offerDAO.OfferCount(context);
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -51,7 +51,8 @@ namespace ADMshop
                 
             }
         }
-         private OfferDAO offerDAO;
+        private static int ID;
+        private OfferDAO offerDAO;
         private TownDAO townDAO;
         private CategoryDAO categoryDAO;
         private PictureBox picture;
@@ -62,9 +63,11 @@ namespace ADMshop
             newoffer.OfferDescription = richTextBox1.Text;
             if (radioButton1.Checked == true) newoffer.ItemState = true;
             else newoffer.ItemState = false;
+            newoffer.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
             newoffer.Category = this.categoryDAO.GetCategory(getCtg(comboCategory.SelectedItem.ToString())).Id;
             newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
-            newoffer.User = currentuser;
+            newoffer.UserId = currentuser.UserId;
+            newoffer.OfferId = ID+1;
             newoffer.Image = ImageToByte(picture);
             
             offerDAO.CreateOffer(newoffer);
@@ -87,6 +90,10 @@ namespace ADMshop
 
             }
         }
-       
+
+        private void PostOffer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
