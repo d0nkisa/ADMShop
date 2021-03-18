@@ -12,18 +12,31 @@ namespace ADMshop
 {
     public partial class PostOffer : Form
     {
+        
         Users currentuser;
         public  byte[] ImageToByte(PictureBox img)
-        {
-            ImageConverter converter = new ImageConverter();
-            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        {ImageConverter converter = new ImageConverter();
+            Bitmap bmp=default;
+            try
+            {
+                 bmp = (Bitmap)img.Image;
+
+            }
+            catch {
+                MessageBox.Show("Please insert image");
+            }
+            return (byte[])converter.ConvertTo(bmp, typeof(byte[]));
         }
 
         public PostOffer(Users Currentuser)
         {
             InitializeComponent();
+            currentuser = Currentuser;
             adm_dbContext context = new adm_dbContext();
-            
+            this.townDAO = new TownDAO(context);
+            this.offerDAO = new OfferDAO(context);
+            this.categoryDAO = new CategoryDAO(context);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -38,26 +51,42 @@ namespace ADMshop
                 
             }
         }
-
+         private OfferDAO offerDAO;
+        private TownDAO townDAO;
+        private CategoryDAO categoryDAO;
+        private PictureBox picture;
         private void button1_Click(object sender, EventArgs e)
         {
             Offers newoffer = new Offers();
             newoffer.OfferHeading = textBoxName.Text;
             newoffer.OfferDescription = richTextBox1.Text;
-            newoffer.Town = this.townDAO.GetTown(comboCategory.SelectedItem.ToString());
             if (radioButton1.Checked == true) newoffer.ItemState = true;
             else newoffer.ItemState = false;
-            
-            newoffer.Category = this.categoryDAO.GetCategory(comboCategory.SelectedItem.ToString()).Id;
+            newoffer.Category = this.categoryDAO.GetCategory(getCtg(comboCategory.SelectedItem.ToString())).Id;
             newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
+            newoffer.User = currentuser;
             newoffer.Image = ImageToByte(picture);
-            this.offerDAO.CreateOffer(newoffer);
+            
+            offerDAO.CreateOffer(newoffer);
 
         }
-        private OfferDAO offerDAO;
-        private HomeDAO homeDAO;
-        private TownDAO townDAO;
-        private CategoryDAO categoryDAO;
-        private PictureBox picture;
+        private string getCtg(string name)
+        {
+            switch (name)
+            {
+                case "Cars & Parts":
+                    return "Koli";
+                case "Electronics":
+                    return "Elektronika";
+                case "Sport items":
+                    return "Sport";
+                case "Furniture":
+                    return "Mebeli";
+
+                default: return "Koli";
+
+            }
+        }
+       
     }
 }

@@ -46,5 +46,10 @@ namespace ADMshop
             PostOffer postOffer = new PostOffer(currentuser);
             postOffer.Activate();postOffer.Show();
         }
+
+        private void HomeScreen_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

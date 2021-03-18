@@ -23,7 +23,6 @@ namespace ADMshop.Models
         public virtual Roles Role { get; set; }
         public virtual Towns Town { get; set; }
         public virtual Login User { get; set; }
-        public virtual Admins Admins { get; set; }
         public virtual ICollection<Offers> Offers { get; set; }
     }
 }

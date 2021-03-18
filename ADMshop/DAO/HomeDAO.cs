@@ -17,12 +17,11 @@ namespace ADMshop.DAO
             {
                 var user = this.context.Login
                 .Include(u => u.Users)
-                .ThenInclude(u => u.Role)
                 .Where(u => u.Username.Equals(username) && u.Pasword.Equals(HashPassword(password)))
                 .FirstOrDefault().Users;
                 MessageBox.Show("Successfuly logged into your account!");
 
-                return null;
+                return user;
             }
             catch (Exception)
             {
@@ -31,6 +30,7 @@ namespace ADMshop.DAO
 
             return default;
         }
+
         public string HashPassword(string password)
         {
             var provider = new SHA1CryptoServiceProvider();
