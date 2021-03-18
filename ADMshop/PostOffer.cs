@@ -66,7 +66,7 @@ namespace ADMshop
             newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
             newoffer.User = currentuser;
             newoffer.Image = ImageToByte(picture);
-                  
+            
             offerDAO.CreateOffer(newoffer);
 
         }
