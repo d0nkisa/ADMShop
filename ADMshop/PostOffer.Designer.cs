@@ -57,19 +57,22 @@ namespace ADMshop
             // comboCategory
             // 
             this.comboCategory.FormattingEnabled = true;
-            this.comboCategory.Location = new System.Drawing.Point(26, 301);
-            this.comboCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboCategory.Items.AddRange(new object[] {
+            "Cars & Parts",
+            "Electronics",
+            "Sport items",
+            "Furniture"});
+            this.comboCategory.Location = new System.Drawing.Point(30, 401);
             this.comboCategory.Name = "comboCategory";
-            this.comboCategory.Size = new System.Drawing.Size(162, 23);
+            this.comboCategory.Size = new System.Drawing.Size(185, 28);
             this.comboCategory.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 45);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 60);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 172);
+            this.pictureBox1.Size = new System.Drawing.Size(339, 229);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
@@ -80,10 +83,9 @@ namespace ADMshop
             this.radioButton1.Checked = true;
             this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton1.Location = new System.Drawing.Point(208, 302);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton1.Location = new System.Drawing.Point(238, 403);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(51, 19);
+            this.radioButton1.Size = new System.Drawing.Size(62, 24);
             this.radioButton1.TabIndex = 2;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "New";
@@ -94,10 +96,9 @@ namespace ADMshop
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.radioButton2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioButton2.Location = new System.Drawing.Point(270, 302);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.radioButton2.Location = new System.Drawing.Point(309, 403);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(53, 19);
+            this.radioButton2.Size = new System.Drawing.Size(65, 24);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Used";
@@ -106,10 +107,9 @@ namespace ADMshop
             // textBoxName
             // 
             this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxName.Location = new System.Drawing.Point(26, 241);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxName.Location = new System.Drawing.Point(30, 321);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(162, 27);
+            this.textBoxName.Size = new System.Drawing.Size(185, 31);
             this.textBoxName.TabIndex = 3;
             // 
             // groupBox1
@@ -117,21 +117,18 @@ namespace ADMshop
             this.groupBox1.Controls.Add(this.richTextBox1);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.groupBox1.Location = new System.Drawing.Point(26, 351);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Location = new System.Drawing.Point(30, 468);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(297, 217);
+            this.groupBox1.Size = new System.Drawing.Size(339, 289);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Description";
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(5, 20);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.richTextBox1.Location = new System.Drawing.Point(6, 27);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(287, 189);
+            this.richTextBox1.Size = new System.Drawing.Size(327, 251);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
             // 
@@ -140,27 +137,41 @@ namespace ADMshop
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(208, 275);
+            this.label1.Location = new System.Drawing.Point(238, 367);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 20);
+            this.label1.Size = new System.Drawing.Size(99, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Item state";
             // 
             // comboTown
             // 
             this.comboTown.FormattingEnabled = true;
-            this.comboTown.Location = new System.Drawing.Point(208, 244);
-            this.comboTown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboTown.Items.AddRange(new object[] {
+            "Sofia",
+            "Ruse",
+            "Berlin",
+            "Volos",
+            "Serres",
+            "Plovdiv",
+            "Kragujevac",
+            "Birmingham",
+            "Bulgaria",
+            "Spain",
+            "Germany",
+            "Serbia",
+            "France",
+            "England",
+            "Greece"});
+            this.comboTown.Location = new System.Drawing.Point(238, 325);
             this.comboTown.Name = "comboTown";
-            this.comboTown.Size = new System.Drawing.Size(115, 23);
+            this.comboTown.Size = new System.Drawing.Size(131, 28);
             this.comboTown.TabIndex = 0;
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(26, 592);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxPrice.Location = new System.Drawing.Point(30, 789);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(65, 23);
+            this.textBoxPrice.Size = new System.Drawing.Size(74, 27);
             this.textBoxPrice.TabIndex = 7;
             // 
             // button1
@@ -169,10 +180,9 @@ namespace ADMshop
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(233, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(266, 764);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 42);
+            this.button1.Size = new System.Drawing.Size(103, 56);
             this.button1.TabIndex = 8;
             this.button1.Text = "Post!";
             this.button1.UseVisualStyleBackColor = false;
@@ -183,9 +193,9 @@ namespace ADMshop
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label2.Location = new System.Drawing.Point(26, 573);
+            this.label2.Location = new System.Drawing.Point(30, 764);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 17);
+            this.label2.Size = new System.Drawing.Size(49, 23);
             this.label2.TabIndex = 9;
             this.label2.Text = "Price";
             // 
@@ -194,9 +204,9 @@ namespace ADMshop
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(108, 9);
+            this.label3.Location = new System.Drawing.Point(123, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(160, 30);
+            this.label3.Size = new System.Drawing.Size(209, 37);
             this.label3.TabIndex = 10;
             this.label3.Text = "Post your offer";
             // 
@@ -205,21 +215,20 @@ namespace ADMshop
             this.profileLabel.AutoSize = true;
             this.profileLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.profileLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.profileLabel.Location = new System.Drawing.Point(239, 635);
+            this.profileLabel.Location = new System.Drawing.Point(273, 847);
             this.profileLabel.Name = "profileLabel";
-            this.profileLabel.Size = new System.Drawing.Size(84, 25);
+            this.profileLabel.Size = new System.Drawing.Size(104, 32);
             this.profileLabel.TabIndex = 20;
             this.profileLabel.Text = "PROFILE";
-            this.profileLabel.Click += new System.EventHandler(this.profileLabel_Click);
             // 
             // sellLabel
             // 
             this.sellLabel.AutoSize = true;
             this.sellLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.sellLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
-            this.sellLabel.Location = new System.Drawing.Point(132, 635);
+            this.sellLabel.Location = new System.Drawing.Point(151, 847);
             this.sellLabel.Name = "sellLabel";
-            this.sellLabel.Size = new System.Drawing.Size(68, 25);
+            this.sellLabel.Size = new System.Drawing.Size(87, 32);
             this.sellLabel.TabIndex = 19;
             this.sellLabel.Text = "SELL +";
             // 
@@ -228,21 +237,20 @@ namespace ADMshop
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.homeLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.homeLabel.Location = new System.Drawing.Point(26, 635);
+            this.homeLabel.Location = new System.Drawing.Point(30, 847);
             this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(68, 25);
+            this.homeLabel.Size = new System.Drawing.Size(84, 32);
             this.homeLabel.TabIndex = 18;
             this.homeLabel.Text = "HOME";
-            this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(26, 275);
+            this.label7.Location = new System.Drawing.Point(30, 367);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(73, 20);
+            this.label7.Size = new System.Drawing.Size(94, 25);
             this.label7.TabIndex = 21;
             this.label7.Text = "Category";
             // 
@@ -251,9 +259,9 @@ namespace ADMshop
             this.Title.AutoSize = true;
             this.Title.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Title.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Title.Location = new System.Drawing.Point(26, 219);
+            this.Title.Location = new System.Drawing.Point(30, 292);
             this.Title.Name = "Title";
-            this.Title.Size = new System.Drawing.Size(40, 20);
+            this.Title.Size = new System.Drawing.Size(50, 25);
             this.Title.TabIndex = 22;
             this.Title.Text = "Title";
             // 
@@ -262,9 +270,9 @@ namespace ADMshop
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(-4, 617);
+            this.label4.Location = new System.Drawing.Point(-5, 823);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(358, 21);
+            this.label4.Size = new System.Drawing.Size(476, 28);
             this.label4.TabIndex = 23;
             this.label4.Text = "----------------------------------------------------------";
             // 
@@ -273,18 +281,18 @@ namespace ADMshop
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(208, 219);
+            this.label5.Location = new System.Drawing.Point(238, 292);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 20);
+            this.label5.Size = new System.Drawing.Size(60, 25);
             this.label5.TabIndex = 24;
             this.label5.Text = "Town";
             // 
             // PostOffer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(349, 669);
+            this.ClientSize = new System.Drawing.Size(399, 892);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.Title);
@@ -304,10 +312,9 @@ namespace ADMshop
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboTown);
             this.Controls.Add(this.comboCategory);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PostOffer";
             this.Text = "PostOffer";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PostOffer_FormClosing);
+            this.Load += new System.EventHandler(this.PostOffer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
