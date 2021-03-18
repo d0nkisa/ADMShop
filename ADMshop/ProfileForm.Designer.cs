@@ -54,17 +54,16 @@ namespace ADMshop
             // 
             // usernameLabel
             // 
-            this.usernameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.usernameLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.usernameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.usernameLabel.Location = new System.Drawing.Point(118, 181);
+            this.usernameLabel.Location = new System.Drawing.Point(94, 181);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(108, 30);
+            this.usernameLabel.Size = new System.Drawing.Size(159, 30);
             this.usernameLabel.TabIndex = 0;
-            this.usernameLabel.Text = "username";
+            this.usernameLabel.Text = "firstname lastn";
+            this.usernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profilePicBox
             // 

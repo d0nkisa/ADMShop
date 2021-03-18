@@ -104,10 +104,5 @@ namespace ADMshop
 
             }
         }
-
-        private void PostOffer_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

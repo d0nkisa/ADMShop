@@ -39,9 +39,6 @@ namespace ADMshop
             this.headerLabel = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.OfferOnePrice = new System.Windows.Forms.Label();
-            this.OfferOneTitle = new System.Windows.Forms.Label();
             this.picBoxOfferOne = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -65,8 +62,10 @@ namespace ADMshop
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.OfferOneTitle = new System.Windows.Forms.Label();
+            this.OfferOnePrice = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferOne)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -77,6 +76,7 @@ namespace ADMshop
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferThree)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchBar
@@ -184,36 +184,6 @@ namespace ADMshop
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(156, 163);
             this.panel1.TabIndex = 10;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.OfferOnePrice);
-            this.panel2.Controls.Add(this.OfferOneTitle);
-            this.panel2.Location = new System.Drawing.Point(1, 122);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(155, 41);
-            this.panel2.TabIndex = 1;
-            // 
-            // OfferOnePrice
-            // 
-            this.OfferOnePrice.AutoSize = true;
-            this.OfferOnePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferOnePrice.Location = new System.Drawing.Point(94, 13);
-            this.OfferOnePrice.Name = "OfferOnePrice";
-            this.OfferOnePrice.Size = new System.Drawing.Size(46, 15);
-            this.OfferOnePrice.TabIndex = 1;
-            this.OfferOnePrice.Text = "1000 lv.";
-            // 
-            // OfferOneTitle
-            // 
-            this.OfferOneTitle.AutoSize = true;
-            this.OfferOneTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.OfferOneTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OfferOneTitle.Location = new System.Drawing.Point(5, 13);
-            this.OfferOneTitle.Name = "OfferOneTitle";
-            this.OfferOneTitle.Size = new System.Drawing.Size(36, 17);
-            this.OfferOneTitle.TabIndex = 0;
-            this.OfferOneTitle.Text = "Title";
             // 
             // picBoxOfferOne
             // 
@@ -451,6 +421,36 @@ namespace ADMshop
             this.label5.TabIndex = 24;
             this.label5.Text = "----------------------------------------------------------";
             // 
+            // OfferOneTitle
+            // 
+            this.OfferOneTitle.AutoSize = true;
+            this.OfferOneTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OfferOneTitle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferOneTitle.Location = new System.Drawing.Point(5, 13);
+            this.OfferOneTitle.Name = "OfferOneTitle";
+            this.OfferOneTitle.Size = new System.Drawing.Size(36, 17);
+            this.OfferOneTitle.TabIndex = 0;
+            this.OfferOneTitle.Text = "Title";
+            // 
+            // OfferOnePrice
+            // 
+            this.OfferOnePrice.AutoSize = true;
+            this.OfferOnePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OfferOnePrice.Location = new System.Drawing.Point(94, 13);
+            this.OfferOnePrice.Name = "OfferOnePrice";
+            this.OfferOnePrice.Size = new System.Drawing.Size(46, 15);
+            this.OfferOnePrice.TabIndex = 1;
+            this.OfferOnePrice.Text = "1000 lv.";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.OfferOnePrice);
+            this.panel2.Controls.Add(this.OfferOneTitle);
+            this.panel2.Location = new System.Drawing.Point(1, 122);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(155, 41);
+            this.panel2.TabIndex = 1;
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -479,8 +479,6 @@ namespace ADMshop
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferOne)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
@@ -494,6 +492,8 @@ namespace ADMshop
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferThree)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -510,9 +510,6 @@ namespace ADMshop
         private System.Windows.Forms.Label headerLabel;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label OfferOnePrice;
-        private System.Windows.Forms.Label OfferOneTitle;
         private System.Windows.Forms.PictureBox picBoxOfferOne;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
@@ -536,5 +533,8 @@ namespace ADMshop
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label OfferOnePrice;
+        private System.Windows.Forms.Label OfferOneTitle;
     }
 }
