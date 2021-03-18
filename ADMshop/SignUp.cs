@@ -120,5 +120,10 @@ namespace ADMshop
         {
             //Environment.Exit(1);
         }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

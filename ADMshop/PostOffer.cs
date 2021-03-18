@@ -12,7 +12,21 @@ namespace ADMshop
 {
     public partial class PostOffer : Form
     {
-        
+        private void homeLabel_Click(object sender, EventArgs e)
+        {
+            PostOffer.ActiveForm.Close();
+            HomeScreen home = new HomeScreen(currentuser);
+            home.Activate();
+            home.Show();
+        }
+
+        private void profileLabel_Click(object sender, EventArgs e)
+        {
+            PostOffer.ActiveForm.Close();
+            ProfileForm prof = new ProfileForm(currentuser);
+            prof.Activate();
+            prof.Show();
+        }
         Users currentuser;
         public  byte[] ImageToByte(PictureBox img)
         {ImageConverter converter = new ImageConverter();

@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace ADMshop
 {
     partial class PostOffer
@@ -313,6 +315,8 @@ namespace ADMshop
             this.PerformLayout();
 
         }
+
+      
 
         #endregion
 
