@@ -36,7 +36,6 @@ namespace ADMshop
             this.townDAO = new TownDAO(context);
             this.offerDAO = new OfferDAO(context);
             this.categoryDAO = new CategoryDAO(context);
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -51,7 +50,7 @@ namespace ADMshop
                 
             }
         }
-         private OfferDAO offerDAO;
+        private OfferDAO offerDAO;
         private TownDAO townDAO;
         private CategoryDAO categoryDAO;
         private PictureBox picture;
@@ -87,6 +86,21 @@ namespace ADMshop
 
             }
         }
-       
+
+        private void homeLabel_Click(object sender, EventArgs e)
+        {
+            PostOffer.ActiveForm.Close();
+            HomeScreen home = new HomeScreen(currentuser);
+            home.Activate();
+            home.Show();
+        }
+
+        private void profileLabel_Click(object sender, EventArgs e)
+        {
+            PostOffer.ActiveForm.Close();
+            ProfileForm prof = new ProfileForm(currentuser);
+            prof.Activate();
+            prof.Show();
+        }
     }
 }

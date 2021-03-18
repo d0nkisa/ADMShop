@@ -61,7 +61,7 @@
   <data name="profilePicBox.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAIN1JREFUeF7tnW3QHlV5x3UcP/AhH/zEF2b4ZERNa6PSUawMkyGQFyCFcVJGTG10
+        DAAACwwBP0AiyAAAIN1JREFUeF7tnW3QHlV5x3UcP/AhH/zEF2b4ZERNa6PSUawMkyGQFyCFcVJGTG10
         Us0ULG0jiUapBs1DQyCUqAXLm04w4yg0OI0MVohVItVUY8yE6BRQWm2NRRs1vITos73+++w+nPvc/917
         d+993//O/Gae57r35ZxzXdfZ83Kdsy+58OqLRIdZujU4bdUtwUJjpbHW2GDMGHcYe4z9xhHjCeOYcdx4
         1gg8IMNvOAfn4hpci3vgXtsN3BvPwLMW4dksTaI7UKFoF5GTLzauMODcuw04J5zVd+S6QRqQFqQJaUMa
@@ -207,7 +207,7 @@
   <data name="profilePicBox.ErrorImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAIN1JREFUeF7tnW3QHlV5x3UcP/AhH/zEF2b4ZERNa6PSUawMkyGQFyCFcVJGTG10
+        DAAACwwBP0AiyAAAIN1JREFUeF7tnW3QHlV5x3UcP/AhH/zEF2b4ZERNa6PSUawMkyGQFyCFcVJGTG10
         Us0ULG0jiUapBs1DQyCUqAXLm04w4yg0OI0MVohVItVUY8yE6BRQWm2NRRs1vITos73+++w+nPvc/917
         d+993//O/Gae57r35ZxzXdfZ83Kdsy+58OqLRIdZujU4bdUtwUJjpbHW2GDMGHcYe4z9xhHjCeOYcdx4
         1gg8IMNvOAfn4hpci3vgXtsN3BvPwLMW4dksTaI7UKFoF5GTLzauMODcuw04J5zVd+S6QRqQFqQJaUMa
@@ -353,7 +353,7 @@
   <data name="profilePicBox.InitialImage" type="System.Drawing.Bitmap, System.Drawing.Common" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAYAAABccqhmAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAIN1JREFUeF7tnW3QHlV5x3UcP/AhH/zEF2b4ZERNa6PSUawMkyGQFyCFcVJGTG10
+        DAAACwwBP0AiyAAAIN1JREFUeF7tnW3QHlV5x3UcP/AhH/zEF2b4ZERNa6PSUawMkyGQFyCFcVJGTG10
         Us0ULG0jiUapBs1DQyCUqAXLm04w4yg0OI0MVohVItVUY8yE6BRQWm2NRRs1vITos73+++w+nPvc/917
         d+993//O/Gae57r35ZxzXdfZ83Kdsy+58OqLRIdZujU4bdUtwUJjpbHW2GDMGHcYe4z9xhHjCeOYcdx4
         1gg8IMNvOAfn4hpci3vgXtsN3BvPwLMW4dksTaI7UKFoF5GTLzauMODcuw04J5zVd+S6QRqQFqQJaUMa
