@@ -27,32 +27,56 @@ namespace ADMshop
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Users newuser = new Users();
-            Login newlogin = new Login();
+            try
+            {
+                Users newuser = new Users();
+                Login newlogin = new Login();
 
-            newuser.Firstname = tboxName.Text;
-            newuser.Lastname = tboxLast.Text;
-            newuser.Age = int.Parse(tboxYears.Text);
-            newuser.Phone = int.Parse(tboxPhone.Text);
-            newuser.Country = this.countryDAO.GetCoutry(comboCountry.SelectedItem.ToString());
-            newuser.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
-            newuser.Role = this.roleDAO.GetRole("user");
-            newlogin.Username = tboxUsername.Text;
-            newlogin.Pasword = this.homeDAO.HashPassword(tboxPassword.Text);
+                newuser.Firstname = tboxName.Text;
+                newuser.Lastname = tboxLast.Text;
+                newuser.Age = int.Parse(tboxYears.Text);
+                newuser.Phone = int.Parse(tboxPhone.Text);
+                newuser.Country = this.countryDAO.GetCoutry(comboCountry.SelectedItem.ToString());
+                newuser.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
+                newuser.Role = this.roleDAO.GetRole("user");
+                newlogin.Username = tboxUsername.Text;
+                newlogin.Pasword = this.homeDAO.HashPassword(tboxPassword.Text);
 
-            newlogin.Users = newuser;
+                newlogin.Users = newuser;
 
-            newlogin.LoginId = ID + 1;
-            newlogin.Users.UserId = ID + 1;
+                newlogin.LoginId = ID + 1;
+                newlogin.Users.UserId = ID + 1;
 
-            homeDAO.RegisterUser(newlogin, newuser);
+                homeDAO.RegisterUser(newlogin, newuser);
 
-            MessageBox.Show("Successfuly created account! Go back to Log In!");
+                MessageBox.Show("Successfuly created account! Go back to Log In!");
 
-            SignUp.ActiveForm.Close();
-            LogIn log = new LogIn();
-            log.Activate();
-            log.Show();
+                SignUp.ActiveForm.Close();
+                LogInForm log = new LogInForm();
+                log.Activate();
+                log.Show();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Wrong parameters! Please try again");
+                tboxName.Text = "First Name";
+                tboxName.ForeColor = Color.Gray;
+                tboxLast.Text = "Last Name";
+                tboxLast.ForeColor = Color.Gray;
+                tboxPhone.Text = "Phone Number";
+                tboxPhone.ForeColor = Color.Gray;
+                tboxYears.Text = "Age";
+                tboxYears.ForeColor = Color.Gray;
+                tboxUsername.Text = "Username";
+                tboxUsername.ForeColor = Color.Gray;
+                tboxPassword.Text = "Password";
+                tboxPassword.ForeColor = Color.Gray;
+                comboCountry.Text = "Country";
+                comboCountry.ForeColor = Color.Gray;
+                comboTown.Text = "Town";
+                comboTown.ForeColor = Color.Gray;
+            }
+            
         }
 
         private void tboxName_Enter(object sender, EventArgs e)
@@ -112,7 +136,7 @@ namespace ADMshop
         private void label1_Click(object sender, EventArgs e)
         {
             SignUp.ActiveForm.Close();
-            LogIn log = new LogIn();
+            LogInForm log = new LogInForm();
             log.Activate(); 
             log.Show();
         }

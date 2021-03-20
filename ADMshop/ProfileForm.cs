@@ -18,7 +18,7 @@ namespace ADMshop
         {
             currentuser = null;
             ProfileForm.ActiveForm.Close();
-            LogIn log = new LogIn();
+            LogInForm log = new LogInForm();
             log.Activate(); 
             log.Show();
         }

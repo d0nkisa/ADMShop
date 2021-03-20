@@ -25,10 +25,8 @@ namespace ADMshop.DAO
             }
             catch (Exception)
             {
-                MessageBox.Show("An error occured! Please try again!");
+                return null;
             }
-
-            return default;
         }
 
         public string HashPassword(string password)

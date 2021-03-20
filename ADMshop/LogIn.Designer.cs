@@ -1,7 +1,7 @@
 ﻿
 namespace ADMshop
 {
-    partial class LogIn
+    partial class LogInForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace ADMshop
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogInForm));
             this.signUpLabel = new System.Windows.Forms.Label();
             this.LogInBtn = new System.Windows.Forms.Button();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
