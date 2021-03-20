@@ -60,9 +60,9 @@ namespace ADMshop
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.usernameLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.usernameLabel.Location = new System.Drawing.Point(118, 181);
+            this.usernameLabel.Location = new System.Drawing.Point(135, 241);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(108, 30);
+            this.usernameLabel.Size = new System.Drawing.Size(142, 37);
             this.usernameLabel.TabIndex = 0;
             this.usernameLabel.Text = "username";
             // 
@@ -72,9 +72,10 @@ namespace ADMshop
             this.profilePicBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.profilePicBox.ErrorImage = ((System.Drawing.Image)(resources.GetObject("profilePicBox.ErrorImage")));
             this.profilePicBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("profilePicBox.InitialImage")));
-            this.profilePicBox.Location = new System.Drawing.Point(105, 51);
+            this.profilePicBox.Location = new System.Drawing.Point(120, 68);
+            this.profilePicBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.profilePicBox.Name = "profilePicBox";
-            this.profilePicBox.Size = new System.Drawing.Size(136, 127);
+            this.profilePicBox.Size = new System.Drawing.Size(155, 169);
             this.profilePicBox.TabIndex = 1;
             this.profilePicBox.TabStop = false;
             // 
@@ -83,9 +84,9 @@ namespace ADMshop
             this.editLabel.AutoSize = true;
             this.editLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.editLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.editLabel.Location = new System.Drawing.Point(12, 9);
+            this.editLabel.Location = new System.Drawing.Point(14, 12);
             this.editLabel.Name = "editLabel";
-            this.editLabel.Size = new System.Drawing.Size(36, 20);
+            this.editLabel.Size = new System.Drawing.Size(46, 25);
             this.editLabel.TabIndex = 2;
             this.editLabel.Text = "Edit";
             this.editLabel.Click += new System.EventHandler(this.editLabel_Click);
@@ -95,9 +96,9 @@ namespace ADMshop
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label3.Location = new System.Drawing.Point(12, 295);
+            this.label3.Location = new System.Drawing.Point(14, 393);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(144, 30);
+            this.label3.Size = new System.Drawing.Size(190, 37);
             this.label3.TabIndex = 3;
             this.label3.Text = "Posted items:";
             // 
@@ -106,9 +107,9 @@ namespace ADMshop
             this.postedCountLabel.AutoSize = true;
             this.postedCountLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.postedCountLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.postedCountLabel.Location = new System.Drawing.Point(300, 295);
+            this.postedCountLabel.Location = new System.Drawing.Point(343, 393);
             this.postedCountLabel.Name = "postedCountLabel";
-            this.postedCountLabel.Size = new System.Drawing.Size(37, 30);
+            this.postedCountLabel.Size = new System.Drawing.Size(49, 37);
             this.postedCountLabel.TabIndex = 4;
             this.postedCountLabel.Text = "10";
             // 
@@ -117,9 +118,9 @@ namespace ADMshop
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label5.Location = new System.Drawing.Point(-5, 273);
+            this.label5.Location = new System.Drawing.Point(-6, 364);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(358, 21);
+            this.label5.Size = new System.Drawing.Size(476, 28);
             this.label5.TabIndex = 25;
             this.label5.Text = "----------------------------------------------------------";
             // 
@@ -128,9 +129,9 @@ namespace ADMshop
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label6.Location = new System.Drawing.Point(-5, 323);
+            this.label6.Location = new System.Drawing.Point(-6, 431);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(358, 21);
+            this.label6.Size = new System.Drawing.Size(476, 28);
             this.label6.TabIndex = 26;
             this.label6.Text = "----------------------------------------------------------";
             // 
@@ -139,9 +140,9 @@ namespace ADMshop
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label7.Location = new System.Drawing.Point(-5, 377);
+            this.label7.Location = new System.Drawing.Point(-6, 503);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(358, 21);
+            this.label7.Size = new System.Drawing.Size(476, 28);
             this.label7.TabIndex = 26;
             this.label7.Text = "----------------------------------------------------------";
             // 
@@ -150,9 +151,9 @@ namespace ADMshop
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label8.Location = new System.Drawing.Point(12, 347);
+            this.label8.Location = new System.Drawing.Point(14, 463);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 30);
+            this.label8.Size = new System.Drawing.Size(159, 37);
             this.label8.TabIndex = 3;
             this.label8.Text = "Sold items:";
             // 
@@ -161,9 +162,9 @@ namespace ADMshop
             this.soldCountLabel.AutoSize = true;
             this.soldCountLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.soldCountLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.soldCountLabel.Location = new System.Drawing.Point(312, 347);
+            this.soldCountLabel.Location = new System.Drawing.Point(357, 463);
             this.soldCountLabel.Name = "soldCountLabel";
-            this.soldCountLabel.Size = new System.Drawing.Size(25, 30);
+            this.soldCountLabel.Size = new System.Drawing.Size(33, 37);
             this.soldCountLabel.TabIndex = 4;
             this.soldCountLabel.Text = "3";
             // 
@@ -172,9 +173,9 @@ namespace ADMshop
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label10.Location = new System.Drawing.Point(12, 398);
+            this.label10.Location = new System.Drawing.Point(14, 531);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 30);
+            this.label10.Size = new System.Drawing.Size(201, 37);
             this.label10.TabIndex = 3;
             this.label10.Text = "Deleted posts:";
             // 
@@ -183,9 +184,9 @@ namespace ADMshop
             this.deletedCountLabel.AutoSize = true;
             this.deletedCountLabel.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.deletedCountLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.deletedCountLabel.Location = new System.Drawing.Point(312, 398);
+            this.deletedCountLabel.Location = new System.Drawing.Point(357, 531);
             this.deletedCountLabel.Name = "deletedCountLabel";
-            this.deletedCountLabel.Size = new System.Drawing.Size(25, 30);
+            this.deletedCountLabel.Size = new System.Drawing.Size(33, 37);
             this.deletedCountLabel.TabIndex = 4;
             this.deletedCountLabel.Text = "0";
             // 
@@ -194,9 +195,9 @@ namespace ADMshop
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label12.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label12.Location = new System.Drawing.Point(-5, 428);
+            this.label12.Location = new System.Drawing.Point(-6, 571);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(358, 21);
+            this.label12.Size = new System.Drawing.Size(476, 28);
             this.label12.TabIndex = 26;
             this.label12.Text = "----------------------------------------------------------";
             // 
@@ -206,9 +207,10 @@ namespace ADMshop
             this.sellBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sellBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.sellBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sellBtn.Location = new System.Drawing.Point(105, 234);
+            this.sellBtn.Location = new System.Drawing.Point(120, 312);
+            this.sellBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sellBtn.Name = "sellBtn";
-            this.sellBtn.Size = new System.Drawing.Size(136, 36);
+            this.sellBtn.Size = new System.Drawing.Size(155, 48);
             this.sellBtn.TabIndex = 27;
             this.sellBtn.Text = "Sell new item";
             this.sellBtn.UseVisualStyleBackColor = false;
@@ -219,9 +221,9 @@ namespace ADMshop
             this.logOutLabel.AutoSize = true;
             this.logOutLabel.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.logOutLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.logOutLabel.Location = new System.Drawing.Point(274, 9);
+            this.logOutLabel.Location = new System.Drawing.Point(313, 12);
             this.logOutLabel.Name = "logOutLabel";
-            this.logOutLabel.Size = new System.Drawing.Size(63, 20);
+            this.logOutLabel.Size = new System.Drawing.Size(82, 25);
             this.logOutLabel.TabIndex = 28;
             this.logOutLabel.Text = "Log out";
             this.logOutLabel.Click += new System.EventHandler(this.logOutLabel_Click);
@@ -231,9 +233,9 @@ namespace ADMshop
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(-5, 584);
+            this.label4.Location = new System.Drawing.Point(-6, 779);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(358, 21);
+            this.label4.Size = new System.Drawing.Size(476, 28);
             this.label4.TabIndex = 32;
             this.label4.Text = "----------------------------------------------------------";
             // 
@@ -242,9 +244,9 @@ namespace ADMshop
             this.profileLabel.AutoSize = true;
             this.profileLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.profileLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(51)))), ((int)(((byte)(0)))));
-            this.profileLabel.Location = new System.Drawing.Point(253, 604);
+            this.profileLabel.Location = new System.Drawing.Point(289, 805);
             this.profileLabel.Name = "profileLabel";
-            this.profileLabel.Size = new System.Drawing.Size(84, 25);
+            this.profileLabel.Size = new System.Drawing.Size(104, 32);
             this.profileLabel.TabIndex = 31;
             this.profileLabel.Text = "PROFILE";
             // 
@@ -253,9 +255,9 @@ namespace ADMshop
             this.sellLabel.AutoSize = true;
             this.sellLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.sellLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.sellLabel.Location = new System.Drawing.Point(141, 604);
+            this.sellLabel.Location = new System.Drawing.Point(161, 805);
             this.sellLabel.Name = "sellLabel";
-            this.sellLabel.Size = new System.Drawing.Size(68, 25);
+            this.sellLabel.Size = new System.Drawing.Size(87, 32);
             this.sellLabel.TabIndex = 30;
             this.sellLabel.Text = "SELL +";
             this.sellLabel.Click += new System.EventHandler(this.sellLabel_Click);
@@ -265,19 +267,19 @@ namespace ADMshop
             this.homeLabel.AutoSize = true;
             this.homeLabel.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.homeLabel.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.homeLabel.Location = new System.Drawing.Point(12, 604);
+            this.homeLabel.Location = new System.Drawing.Point(14, 805);
             this.homeLabel.Name = "homeLabel";
-            this.homeLabel.Size = new System.Drawing.Size(68, 25);
+            this.homeLabel.Size = new System.Drawing.Size(84, 32);
             this.homeLabel.TabIndex = 29;
             this.homeLabel.Text = "HOME";
             this.homeLabel.Click += new System.EventHandler(this.homeLabel_Click);
             // 
             // ProfileForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
-            this.ClientSize = new System.Drawing.Size(349, 638);
+            this.ClientSize = new System.Drawing.Size(399, 851);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.profileLabel);
             this.Controls.Add(this.sellLabel);
@@ -297,8 +299,10 @@ namespace ADMshop
             this.Controls.Add(this.editLabel);
             this.Controls.Add(this.profilePicBox);
             this.Controls.Add(this.usernameLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";
+            this.Load += new System.EventHandler(this.ProfileForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.profilePicBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

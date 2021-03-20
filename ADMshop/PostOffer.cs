@@ -28,19 +28,7 @@ namespace ADMshop
             prof.Show();
         }
         Users currentuser;
-        public  byte[] ImageToByte(PictureBox img)
-        {ImageConverter converter = new ImageConverter();
-            Bitmap bmp=default;
-            try
-            {
-                 bmp = (Bitmap)img.Image;
-
-            }
-            catch {
-                MessageBox.Show("Please insert image");
-            }
-            return (byte[])converter.ConvertTo(bmp, typeof(byte[]));
-        }
+        
 
         public PostOffer(Users Currentuser)
         {
@@ -81,8 +69,9 @@ namespace ADMshop
             newoffer.Category = this.categoryDAO.GetCategory(getCtg(comboCategory.SelectedItem.ToString())).Id;
             newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
             newoffer.UserId = currentuser.UserId;
+            newoffer.Phone = currentuser.Phone;
             newoffer.OfferId = ID+1;
-            newoffer.Image = ImageToByte(picture);
+            newoffer.Image = this.offerDAO.ImageToByte(picture);
             
             offerDAO.CreateOffer(newoffer);
 
