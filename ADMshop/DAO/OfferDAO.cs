@@ -50,10 +50,13 @@ namespace ADMshop.DAO
             mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
             Bitmap bm = new Bitmap(mStream, false);
             mStream.Dispose();
+
             return bm;
         }
         public int OfferCount(adm_dbContext context)
-        { return context.Offers.Count(); }
+        {
+            return context.Offers.Count(); 
+        }
 
         public List<Users> GetAllOffersByUserId(int userId)
         {

@@ -143,5 +143,22 @@ namespace ADMshop
             if (page - 1 == 1) { PreviousPage.Hide(); page--; LoadOffers(); }
             else { page--; LoadOffers(); }
         }
+
+        private void picBoxOfferOne_Click(object sender, EventArgs e)
+        {
+
+            HomeScreen.ActiveForm.Close();
+            OfferForm offerForrm = new OfferForm(currentuser, page);
+            offerForrm.Activate();
+            offerForrm.Show();
+        }
+
+        private void picBoxOfferTwo_Click(object sender, EventArgs e)
+        {
+            HomeScreen.ActiveForm.Close();
+            OfferForm offerForrm = new OfferForm(currentuser, page);
+            offerForrm.Activate();
+            offerForrm.Show();
+        }
     }
 }
