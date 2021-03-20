@@ -13,17 +13,15 @@ namespace ADMshop
     public partial class OfferForm : Form
     {
         Users currentuser;
-        int id;
         private OfferDAO offerDAO;
         private Offers offer;
-        public OfferForm(Users Currentuser, int page)
+        public OfferForm(Users Currentuser, int page,Offers offers)
         {
             InitializeComponent();
             adm_dbContext context = new adm_dbContext();
             currentuser = Currentuser;
             offerDAO = new OfferDAO(context);
-            id = page;
-            offer = offerDAO.GetOfferById(id);
+            offer = offers;
         }
 
         private void goBackToHome_Click(object sender, EventArgs e)

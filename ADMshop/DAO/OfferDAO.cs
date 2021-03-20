@@ -16,12 +16,41 @@ namespace ADMshop.DAO
             this.context.Offers.Add(newoffer);
             return this.context.SaveChanges();
         }
+        public List<Offers> AllOffers()
+        {   
+            return this.context.Offers.ToList();
+        }
         public Offers GetOfferById(int id)
         {
             return this.context.Offers
                  .Where(o => o.OfferId.Equals(id))
                  .FirstOrDefault();
         }
+        public List<Offers> GetOfferByCat(List<int> id)
+        {
+            List<Offers> x = new List<Offers>();
+            foreach (var item in id)
+            {
+                x.AddRange(this.context.Offers
+                   .Where(o => o.Category.Equals(item)));
+            }
+            return x;
+        }
+        public List<Offers> SearchByName(string name)
+        {
+            List<Offers> x = new List<Offers>();
+            
+                x.AddRange(this.context.Offers
+                .Where(o => o.OfferHeading.Contains(name)));      
+            return x;
+        }
+        public Offers GetOfferById(int id,int cat)
+        {
+            return this.context.Offers
+                 .Where(o => o.OfferId.Equals(id) && o.Category.Equals(cat))
+                 .FirstOrDefault();
+        }
+
         public int DeleteOffer(int id)
         {
             this.context.Offers.Remove(GetOfferById(id));
@@ -77,14 +106,14 @@ namespace ADMshop.DAO
             this.context = context;
         }
 
-        public void CheckIfOfferIsNull(Offers offer, Users currentuser, int id)
+        public void CheckIfOfferIsNull( Users currentuser, int id,List<Offers> Offers )
         {
-
-            offer = GetOfferById(id);
+            List<Offers> offers = Offers;
+            Offers offer = offers[id - 1];
             if (offer != null)
             {
                 HomeScreen.ActiveForm.Close();
-                OfferForm offerForrm = new OfferForm(currentuser, id);
+                OfferForm offerForrm = new OfferForm(currentuser, id,offer);
                 offerForrm.Activate();
                 offerForrm.Show();
             }
