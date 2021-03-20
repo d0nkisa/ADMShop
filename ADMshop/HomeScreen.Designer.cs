@@ -62,8 +62,8 @@ namespace ADMshop
             this.label2 = new System.Windows.Forms.Label();
             this.sellLabel = new System.Windows.Forms.Label();
             this.profileLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.PreviousPage = new System.Windows.Forms.Button();
+            this.NextPage = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -178,6 +178,7 @@ namespace ADMshop
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.picBoxOfferOne);
             this.panel1.Location = new System.Drawing.Point(12, 236);
@@ -217,14 +218,17 @@ namespace ADMshop
             // 
             // picBoxOfferOne
             // 
-            this.picBoxOfferOne.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferOne.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxOfferOne.BackgroundImage")));
+            this.picBoxOfferOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxOfferOne.Location = new System.Drawing.Point(0, 0);
             this.picBoxOfferOne.Name = "picBoxOfferOne";
-            this.picBoxOfferOne.Size = new System.Drawing.Size(155, 123);
+            this.picBoxOfferOne.Size = new System.Drawing.Size(154, 123);
             this.picBoxOfferOne.TabIndex = 0;
             this.picBoxOfferOne.TabStop = false;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.picBoxOfferTwo);
             this.panel3.Location = new System.Drawing.Point(181, 236);
@@ -264,6 +268,8 @@ namespace ADMshop
             // 
             // picBoxOfferTwo
             // 
+            this.picBoxOfferTwo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxOfferTwo.BackgroundImage")));
+            this.picBoxOfferTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxOfferTwo.Location = new System.Drawing.Point(1, 0);
             this.picBoxOfferTwo.Name = "picBoxOfferTwo";
             this.picBoxOfferTwo.Size = new System.Drawing.Size(155, 123);
@@ -272,6 +278,7 @@ namespace ADMshop
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.picBoxOfferFour);
             this.panel5.Location = new System.Drawing.Point(181, 408);
@@ -311,6 +318,8 @@ namespace ADMshop
             // 
             // picBoxOfferFour
             // 
+            this.picBoxOfferFour.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxOfferFour.BackgroundImage")));
+            this.picBoxOfferFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxOfferFour.Location = new System.Drawing.Point(1, 0);
             this.picBoxOfferFour.Name = "picBoxOfferFour";
             this.picBoxOfferFour.Size = new System.Drawing.Size(155, 123);
@@ -319,6 +328,7 @@ namespace ADMshop
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.picBoxOfferThree);
             this.panel7.Location = new System.Drawing.Point(12, 408);
@@ -359,7 +369,9 @@ namespace ADMshop
             // 
             // picBoxOfferThree
             // 
-            this.picBoxOfferThree.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferThree.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picBoxOfferThree.BackgroundImage")));
+            this.picBoxOfferThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxOfferThree.Location = new System.Drawing.Point(0, 0);
             this.picBoxOfferThree.Name = "picBoxOfferThree";
             this.picBoxOfferThree.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferThree.TabIndex = 0;
@@ -414,31 +426,34 @@ namespace ADMshop
             this.profileLabel.Text = "PROFILE";
             this.profileLabel.Click += new System.EventHandler(this.profileLabel_Click);
             // 
-            // button2
+            // PreviousPage
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button2.Location = new System.Drawing.Point(247, 191);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "<-";
-            this.button2.UseVisualStyleBackColor = false;
+            this.PreviousPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
+            this.PreviousPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PreviousPage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.PreviousPage.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.PreviousPage.Location = new System.Drawing.Point(247, 191);
+            this.PreviousPage.Name = "PreviousPage";
+            this.PreviousPage.Size = new System.Drawing.Size(36, 23);
+            this.PreviousPage.TabIndex = 18;
+            this.PreviousPage.Text = "<-";
+            this.PreviousPage.UseVisualStyleBackColor = false;
+            this.PreviousPage.Visible = false;
+            this.PreviousPage.Click += new System.EventHandler(this.PreviousPage_Click);
             // 
-            // button3
+            // NextPage
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button3.Location = new System.Drawing.Point(301, 191);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(36, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "->";
-            this.button3.UseVisualStyleBackColor = false;
+            this.NextPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
+            this.NextPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextPage.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.NextPage.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.NextPage.Location = new System.Drawing.Point(301, 191);
+            this.NextPage.Name = "NextPage";
+            this.NextPage.Size = new System.Drawing.Size(36, 23);
+            this.NextPage.TabIndex = 18;
+            this.NextPage.Text = "->";
+            this.NextPage.UseVisualStyleBackColor = false;
+            this.NextPage.Click += new System.EventHandler(this.NextPage_Click);
             // 
             // label5
             // 
@@ -458,8 +473,8 @@ namespace ADMshop
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(349, 638);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.NextPage);
+            this.Controls.Add(this.PreviousPage);
             this.Controls.Add(this.profileLabel);
             this.Controls.Add(this.sellLabel);
             this.Controls.Add(this.label2);
@@ -478,6 +493,7 @@ namespace ADMshop
             this.Controls.Add(this.searchBar);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
+            this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -533,8 +549,9 @@ namespace ADMshop
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label sellLabel;
         private System.Windows.Forms.Label profileLabel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button PreviousPage;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button NextPage;
     }
 }

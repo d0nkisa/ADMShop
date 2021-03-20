@@ -92,22 +92,17 @@ namespace ADMshop
             switch (name)
             {
                 case "Cars & Parts":
-                    return "Koli";
+                    return "Cars";
                 case "Electronics":
-                    return "Elektronika";
+                    return "Electronics";
                 case "Sport items":
                     return "Sport";
                 case "Furniture":
-                    return "Mebeli";
+                    return "Furniture";
 
-                default: return "Koli";
+                default: return "Cars";
 
             }
-        }
-
-        private void PostOffer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
