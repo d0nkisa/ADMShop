@@ -12,6 +12,12 @@ namespace ADMshop
     {
         Users currentuser;
         adm_dbContext context = default;
+        
+        private Offers offer;
+        private OfferDAO offerDAO;
+        
+        int page = 1;
+
         public HomeScreen(Users Currentuser)
         {
             InitializeComponent();
@@ -19,8 +25,7 @@ namespace ADMshop
             offerDAO = new OfferDAO(context);
             currentuser = Currentuser;
         }
-        private OfferDAO offerDAO;
-        int page = 1;
+
         private void HomeScreen_Load(object sender, EventArgs e)
         {
             picBoxOfferOne.SizeMode = PictureBoxSizeMode.Zoom;
@@ -29,6 +34,7 @@ namespace ADMshop
             picBoxOfferFour.SizeMode = PictureBoxSizeMode.Zoom;
             LoadOffers();
         }
+
         private void SearchByCategoryBtn_Click(object sender, EventArgs e)
         {
             if (radioCars.Checked == true)
@@ -57,15 +63,18 @@ namespace ADMshop
         {
             HomeScreen.ActiveForm.Close();
             PostOffer postOffer = new PostOffer(currentuser);
-            postOffer.Activate(); postOffer.Show();
+            postOffer.Activate();
+            postOffer.Show();
         }
 
         private void profileLabel_Click(object sender, EventArgs e)
         {
             HomeScreen.ActiveForm.Close();
             ProfileForm profile = new ProfileForm(currentuser);
-            profile.Activate(); profile.Show();
+            profile.Activate();
+            profile.Show();
         }
+
         private void LoadOffers()
         {
             Offers offer1, offer2, offer3, offer4;
@@ -128,7 +137,9 @@ namespace ADMshop
 
         private void NextPage_Click(object sender, EventArgs e)
         {
-            if (page != 1 && PreviousPage.Visible == false) { PreviousPage.Show(); }
+            if (page != 1 && PreviousPage.Visible == false)
+                PreviousPage.Show();
+
             if (page + 1 == this.offerDAO.OfferCount(context))
             {
                 NextPage.Hide(); page++; LoadOffers();
@@ -138,7 +149,8 @@ namespace ADMshop
 
         private void PreviousPage_Click(object sender, EventArgs e)
         {
-            if (page != this.offerDAO.OfferCount(context) && NextPage.Visible == false) { NextPage.Show(); }
+            if (page != this.offerDAO.OfferCount(context) && NextPage.Visible == false)
+                NextPage.Show();
 
             if (page - 1 == 1) { PreviousPage.Hide(); page--; LoadOffers(); }
             else { page--; LoadOffers(); }
@@ -146,19 +158,26 @@ namespace ADMshop
 
         private void picBoxOfferOne_Click(object sender, EventArgs e)
         {
-
-            HomeScreen.ActiveForm.Close();
-            OfferForm offerForrm = new OfferForm(currentuser, page);
-            offerForrm.Activate();
-            offerForrm.Show();
+            int id = page * 4 - 3;
+            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
         }
 
         private void picBoxOfferTwo_Click(object sender, EventArgs e)
         {
-            HomeScreen.ActiveForm.Close();
-            OfferForm offerForrm = new OfferForm(currentuser, page);
-            offerForrm.Activate();
-            offerForrm.Show();
+            int id = page * 4 - 2;
+            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+        }
+
+        private void picBoxOfferThree_Click(object sender, EventArgs e)
+        {
+            int id = page * 4 - 1;
+            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+        }
+
+        private void picBoxOfferFour_Click(object sender, EventArgs e)
+        {
+            int id = page * 4;
+            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
         }
     }
 }

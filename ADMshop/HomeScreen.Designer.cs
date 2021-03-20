@@ -324,6 +324,7 @@ namespace ADMshop
             this.picBoxOfferFour.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferFour.TabIndex = 0;
             this.picBoxOfferFour.TabStop = false;
+            this.picBoxOfferFour.Click += new System.EventHandler(this.picBoxOfferFour_Click);
             // 
             // panel7
             // 
@@ -374,6 +375,7 @@ namespace ADMshop
             this.picBoxOfferThree.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferThree.TabIndex = 0;
             this.picBoxOfferThree.TabStop = false;
+            this.picBoxOfferThree.Click += new System.EventHandler(this.picBoxOfferThree_Click);
             // 
             // SearchByCategoryBtn
             // 

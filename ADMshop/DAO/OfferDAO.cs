@@ -77,6 +77,20 @@ namespace ADMshop.DAO
             this.context = context;
         }
 
+        public void CheckIfOfferIsNull(Offers offer, Users currentuser, int id)
+        {
+
+            offer = GetOfferById(id);
+            if (offer != null)
+            {
+                HomeScreen.ActiveForm.Close();
+                OfferForm offerForrm = new OfferForm(currentuser, id);
+                offerForrm.Activate();
+                offerForrm.Show();
+            }
+            else MessageBox.Show("No Offer! Try something different!");
+        }
+
         internal Image ByteToImage(Bitmap no_photo)
         {        
             return (Image)no_photo;

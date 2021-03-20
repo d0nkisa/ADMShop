@@ -13,7 +13,7 @@ namespace ADMshop
     public partial class OfferForm : Form
     {
         Users currentuser;
-        int id = 1;
+        int id;
         private OfferDAO offerDAO;
         private Offers offer;
         public OfferForm(Users Currentuser, int page)
@@ -22,7 +22,7 @@ namespace ADMshop
             adm_dbContext context = new adm_dbContext();
             currentuser = Currentuser;
             offerDAO = new OfferDAO(context);
-            id = page * 4 - 3;
+            id = page;
             offer = offerDAO.GetOfferById(id);
         }
 
@@ -36,13 +36,15 @@ namespace ADMshop
 
         private void OfferForm_Load(object sender, EventArgs e)
         {
-            OfferImage.Image = this.offerDAO.ByteToImage(offer.Image);
-            title.Text = offer.OfferHeading;
-            price.Text = offer.OfferPrice + " " + "lv.";
-            description.Text = "Description: \n" + offer.OfferDescription;
-            fname.Text = currentuser.Firstname;
-            phone.Text = currentuser.Phone.ToString();
-            location.Text = currentuser.Town + ", " + currentuser.Country;
+                OfferImage.Image = this.offerDAO.ByteToImage(offer.Image);
+                title.Text = offer.OfferHeading;
+                price.Text = offer.OfferPrice + " " + "lv.";
+                description.Size = new Size(271, 130);
+                description.AutoSize = false;
+                description.Text = "Description: \n" + offer.OfferDescription;
+                fname.Text = currentuser.Firstname;
+                phone.Text = currentuser.Phone.ToString();
+                location.Text = currentuser.Town + ", " + currentuser.Country;
         }
     }
 }
