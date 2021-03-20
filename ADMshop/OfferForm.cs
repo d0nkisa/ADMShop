@@ -15,6 +15,7 @@ namespace ADMshop
         Users currentuser;
         private OfferDAO offerDAO;
         private Offers offer;
+        public OfferForm(Users Currentuser, int page,Offers offers)
         public OfferForm(Users Currentuser, int page, Offers offers)
         {
             InitializeComponent();
