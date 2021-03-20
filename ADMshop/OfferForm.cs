@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ADMshop.DAO;
+using ADMshop.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,14 +12,36 @@ namespace ADMshop
 {
     public partial class OfferForm : Form
     {
-        public OfferForm()
+        Users currentuser;
+        int id = 0;
+        private OfferDAO offerDAO;
+        private Offers offer;
+        public OfferForm(Users Currentuser)
         {
             InitializeComponent();
+            adm_dbContext context = new adm_dbContext();
+            currentuser = Currentuser;
+            offerDAO = new OfferDAO(context);
+            offer = offerDAO.GetOfferById(id);
         }
 
-        private void OfferForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void goBackToHome_Click(object sender, EventArgs e)
         {
-            Environment.Exit(1);
+            OfferForm.ActiveForm.Close();
+            HomeScreen home = new HomeScreen(currentuser);
+            home.Activate();
+            home.Close();
+        }
+
+        private void OfferForm_Load(object sender, EventArgs e)
+        {
+            //OfferImage = offer.Image;
+            title.Text = offer.OfferHeading;
+            price.Text = offer.OfferPrice + " " + "lv.";
+            description.Text = "Description: \n" +offer.OfferDescription;
+            fname.Text = currentuser.Firstname;
+            phone.Text = currentuser.Phone.ToString();
+            location.Text = currentuser.Town + ", " + currentuser.Country;
         }
     }
 }

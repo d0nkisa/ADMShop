@@ -15,6 +15,7 @@ namespace ADMshop.Models
         {
         }
 
+        public virtual DbSet<Admins> Admins { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Countries> Countries { get; set; }
         public virtual DbSet<Login> Login { get; set; }
@@ -34,13 +35,27 @@ namespace ADMshop.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Admins>(entity =>
+            {
+                entity.HasKey(e => e.AdminId)
+                    .HasName("PRIMARY");
+
+                entity.ToTable("admins");
+
+                entity.Property(e => e.AdminId).HasColumnName("admin_id");
+
+                entity.HasOne(d => d.Admin)
+                    .WithOne(p => p.Admins)
+                    .HasForeignKey<Admins>(d => d.AdminId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("fk_admins_users");
+            });
+
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.ToTable("category");
 
-                entity.Property(e => e.Id)
-                    .HasColumnName("id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.CategoryName)
                     .IsRequired()
@@ -55,9 +70,7 @@ namespace ADMshop.Models
 
                 entity.ToTable("countries");
 
-                entity.Property(e => e.CountryId)
-                    .HasColumnName("country_id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.CountryId).HasColumnName("country_id");
 
                 entity.Property(e => e.CountryName)
                     .IsRequired()
@@ -69,9 +82,7 @@ namespace ADMshop.Models
             {
                 entity.ToTable("login");
 
-                entity.Property(e => e.LoginId)
-                    .HasColumnName("login_id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.LoginId).HasColumnName("login_id");
 
                 entity.Property(e => e.Pasword)
                     .IsRequired()
@@ -93,23 +104,19 @@ namespace ADMshop.Models
                     .HasName("fk_offers_category_idx");
 
                 entity.HasIndex(e => e.TownId)
-                    .HasName("fk_offers_users_idx");
+                    .HasName("fk_offers_users");
 
-                entity.HasIndex(e => new { e.UserId, e.TownId })
+                entity.HasIndex(e => e.UserId)
                     .HasName("fk_offers");
 
-                entity.Property(e => e.OfferId)
-                    .HasColumnName("offer_id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.OfferId).HasColumnName("offer_id");
 
-                entity.Property(e => e.Category)
-                    .HasColumnName("category")
-                    .HasColumnType("int(4)");
+                entity.Property(e => e.Category).HasColumnName("category");
 
                 entity.Property(e => e.Image)
                     .IsRequired()
                     .HasColumnName("image")
-                    .HasColumnType("longblob");
+                    .HasColumnType("blob");
 
                 entity.Property(e => e.ItemState).HasColumnName("item_state");
 
@@ -127,17 +134,11 @@ namespace ADMshop.Models
                     .HasColumnName("offer_price")
                     .HasColumnType("decimal(11,0)");
 
-                entity.Property(e => e.Phone)
-                    .HasColumnName("phone")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.Phone).HasColumnName("phone");
 
-                entity.Property(e => e.TownId)
-                    .HasColumnName("town_ID")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.TownId).HasColumnName("town_ID");
 
-                entity.Property(e => e.UserId)
-                    .HasColumnName("user_ID")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.UserId).HasColumnName("user_ID");
 
                 entity.HasOne(d => d.CategoryNavigation)
                     .WithMany(p => p.Offers)
@@ -165,9 +166,7 @@ namespace ADMshop.Models
 
                 entity.ToTable("roles");
 
-                entity.Property(e => e.RoleId)
-                    .HasColumnName("role_id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.RoleId).HasColumnName("role_id");
 
                 entity.Property(e => e.Role)
                     .IsRequired()
@@ -185,13 +184,9 @@ namespace ADMshop.Models
                 entity.HasIndex(e => e.CountryCode)
                     .HasName("fk_towns_counries");
 
-                entity.Property(e => e.TownId)
-                    .HasColumnName("town_id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.TownId).HasColumnName("town_id");
 
-                entity.Property(e => e.CountryCode)
-                    .HasColumnName("country_code")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.CountryCode).HasColumnName("country_code");
 
                 entity.Property(e => e.TownName)
                     .IsRequired()
@@ -212,7 +207,7 @@ namespace ADMshop.Models
                 entity.ToTable("users");
 
                 entity.HasIndex(e => e.CountryId)
-                    .HasName("fk_users_countries_idx");
+                    .HasName("fk_users_countries");
 
                 entity.HasIndex(e => e.RoleId)
                     .HasName("fk_users_roles");
@@ -220,17 +215,11 @@ namespace ADMshop.Models
                 entity.HasIndex(e => e.TownId)
                     .HasName("fk_users_towns");
 
-                entity.Property(e => e.UserId)
-                    .HasColumnName("user_id")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.UserId).HasColumnName("user_id");
 
-                entity.Property(e => e.Age)
-                    .HasColumnName("age")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.Age).HasColumnName("age");
 
-                entity.Property(e => e.CountryId)
-                    .HasColumnName("country_ID")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.CountryId).HasColumnName("country_ID");
 
                 entity.Property(e => e.Firstname)
                     .IsRequired()
@@ -242,17 +231,11 @@ namespace ADMshop.Models
                     .HasColumnName("lastname")
                     .HasMaxLength(50);
 
-                entity.Property(e => e.Phone)
-                    .HasColumnName("phone")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.Phone).HasColumnName("phone");
 
-                entity.Property(e => e.RoleId)
-                    .HasColumnName("role_ID")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.RoleId).HasColumnName("role_ID");
 
-                entity.Property(e => e.TownId)
-                    .HasColumnName("town_ID")
-                    .HasColumnType("int(11)");
+                entity.Property(e => e.TownId).HasColumnName("town_ID");
 
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Users)

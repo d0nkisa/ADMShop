@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using ADMshop.Models;
 using ADMshop.DAO;
+using ADMshop.Properties;
 
 namespace ADMshop
 {
@@ -78,6 +79,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferOne.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferOnePrice.Text = "";
                 OfferOneTitle.Text = "";
             }
@@ -91,6 +93,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferTwo.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferTwoPrice.Text = "";
                 OfferTwoTitle.Text = "";
             }
@@ -104,6 +107,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferThree.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferThreePrice.Text = "";
                 OfferThreeTitle.Text = "";
             }
@@ -116,6 +120,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferFour.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferFourPrice.Text = "";
                 OfferFourTitle.Text = "";
             }
@@ -123,41 +128,20 @@ namespace ADMshop
 
         private void NextPage_Click(object sender, EventArgs e)
         {
-            if (page != 1 && PreviousPage.Visible == false)
-                PreviousPage.Show();
-
+            if (page != 1 && PreviousPage.Visible == false) { PreviousPage.Show(); }
             if (page + 1 == this.offerDAO.OfferCount(context))
             {
                 NextPage.Hide(); page++; LoadOffers();
             }
-            else
-            {
-                page++;
-                LoadOffers();
-            }
+            else { page++; LoadOffers(); }
         }
 
         private void PreviousPage_Click(object sender, EventArgs e)
         {
-            if (page != this.offerDAO.OfferCount(context) && NextPage.Visible == false)
-                NextPage.Show();
+            if (page != this.offerDAO.OfferCount(context) && NextPage.Visible == false) { NextPage.Show(); }
 
-            if (page - 1 == 1)
-            {
-                PreviousPage.Hide();
-                page--;
-                LoadOffers();
-            }
-            else
-            {
-                page--;
-                LoadOffers();
-            }
-        }
-
-        private void picBoxOfferOne_Click(object sender, EventArgs e)
-        {
-
+            if (page - 1 == 1) { PreviousPage.Hide(); page--; LoadOffers(); }
+            else { page--; LoadOffers(); }
         }
     }
 }

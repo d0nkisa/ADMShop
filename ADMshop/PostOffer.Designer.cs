@@ -59,12 +59,16 @@ namespace ADMshop
             // comboCategory
             // 
             this.comboCategory.FormattingEnabled = true;
+            this.comboCategory.Items.AddRange(new object[] {
+            "Cars & Parts",
+            "Electronics",
+            "Sport items",
+            "Furniture"});
             this.comboCategory.Location = new System.Drawing.Point(26, 301);
             this.comboCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(162, 23);
             this.comboCategory.TabIndex = 0;
-            this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -152,6 +156,24 @@ namespace ADMshop
             // comboTown
             // 
             this.comboTown.FormattingEnabled = true;
+            this.comboTown.Items.AddRange(new object[] {
+            "Sofia",
+            "Plovdiv",
+            "Varna",
+            "Ruse",
+            "Madrid",
+            "Barcelona",
+            "Valencia",
+            "Seville",
+            "Berlin",
+            "Hamburg",
+            "Munchen",
+            "Paris",
+            "Lion",
+            "Nice",
+            "London",
+            "Manchester",
+            "Shcefield"});
             this.comboTown.Location = new System.Drawing.Point(208, 244);
             this.comboTown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboTown.Name = "comboTown";

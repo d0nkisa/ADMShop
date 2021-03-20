@@ -184,6 +184,7 @@ namespace ADMshop
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.picBoxOfferOne);
             this.panel1.Location = new System.Drawing.Point(14, 315);
@@ -225,15 +226,17 @@ namespace ADMshop
             // 
             // picBoxOfferOne
             // 
-            this.picBoxOfferOne.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxOfferOne.Location = new System.Drawing.Point(0, 0);
             this.picBoxOfferOne.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferOne.Name = "picBoxOfferOne";
-            this.picBoxOfferOne.Size = new System.Drawing.Size(177, 164);
+            this.picBoxOfferOne.Size = new System.Drawing.Size(176, 164);
             this.picBoxOfferOne.TabIndex = 0;
             this.picBoxOfferOne.TabStop = false;
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.picBoxOfferTwo);
             this.panel3.Location = new System.Drawing.Point(207, 315);
@@ -275,7 +278,8 @@ namespace ADMshop
             // 
             // picBoxOfferTwo
             // 
-            this.picBoxOfferTwo.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferTwo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxOfferTwo.Location = new System.Drawing.Point(0, 0);
             this.picBoxOfferTwo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferTwo.Name = "picBoxOfferTwo";
             this.picBoxOfferTwo.Size = new System.Drawing.Size(177, 164);
@@ -284,6 +288,7 @@ namespace ADMshop
             // 
             // panel5
             // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel5.Controls.Add(this.panel6);
             this.panel5.Controls.Add(this.picBoxOfferFour);
             this.panel5.Location = new System.Drawing.Point(207, 544);
@@ -325,6 +330,7 @@ namespace ADMshop
             // 
             // picBoxOfferFour
             // 
+            this.picBoxOfferFour.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxOfferFour.Location = new System.Drawing.Point(1, 0);
             this.picBoxOfferFour.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferFour.Name = "picBoxOfferFour";
@@ -334,6 +340,7 @@ namespace ADMshop
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(120)))));
             this.panel7.Controls.Add(this.panel8);
             this.panel7.Controls.Add(this.picBoxOfferThree);
             this.panel7.Location = new System.Drawing.Point(14, 544);
@@ -376,7 +383,8 @@ namespace ADMshop
             // 
             // picBoxOfferThree
             // 
-            this.picBoxOfferThree.Location = new System.Drawing.Point(1, 0);
+            this.picBoxOfferThree.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picBoxOfferThree.Location = new System.Drawing.Point(0, 0);
             this.picBoxOfferThree.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.picBoxOfferThree.Name = "picBoxOfferThree";
             this.picBoxOfferThree.Size = new System.Drawing.Size(177, 164);
