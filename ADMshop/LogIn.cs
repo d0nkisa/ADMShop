@@ -45,7 +45,7 @@ namespace ADMshop
             }
             else
             {
-                MessageBox.Show("metoda raboti");
+                MessageBox.Show("Wrong creditentials! Try again!");
                 textBoxEmail.Text = "";
                 textBoxPassword.Text = "";
             }
