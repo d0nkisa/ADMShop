@@ -127,17 +127,7 @@ namespace ADMshop
             this.SearchButton.TabIndex = 9;
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(300, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 34);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+           
             // 
             // panel1
             // 
@@ -513,10 +503,7 @@ namespace ADMshop
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Controls.Add(this.radioFurniture);
-            this.Controls.Add(this.radioSports);
-            this.Controls.Add(this.radioElectronics);
-            this.Controls.Add(this.radioCars);
+            
             this.Controls.Add(this.searchBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "HomeScreen";
