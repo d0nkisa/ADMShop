@@ -8,6 +8,12 @@ namespace ADMshop
 {
     public partial class SignUp : Form
     {
+        private static int ID;
+        private HomeDAO homeDAO;
+        private CountryDAO countryDAO;
+        private TownDAO townDAO;
+        private RoleDAO roleDAO;
+
         public SignUp()
         {
             InitializeComponent();
@@ -21,19 +27,19 @@ namespace ADMshop
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            Users newuser = new Users(); 
+            Users newuser = new Users();
             Login newlogin = new Login();
 
-            newuser.Firstname = tboxName.Text; 
+            newuser.Firstname = tboxName.Text;
             newuser.Lastname = tboxLast.Text;
-            newuser.Age = int.Parse(tboxYears.Text); 
+            newuser.Age = int.Parse(tboxYears.Text);
             newuser.Phone = int.Parse(tboxPhone.Text);
             newuser.Country = this.countryDAO.GetCoutry(comboCountry.SelectedItem.ToString());
             newuser.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
             newuser.Role = this.roleDAO.GetRole("user");
-            newlogin.Username = tboxUsername.Text; 
+            newlogin.Username = tboxUsername.Text;
             newlogin.Pasword = this.homeDAO.HashPassword(tboxPassword.Text);
-            
+
             newlogin.Users = newuser;
 
             newlogin.LoginId = ID + 1;
@@ -48,12 +54,6 @@ namespace ADMshop
             log.Activate();
             log.Show();
         }
-
-        private static int ID;
-        private HomeDAO homeDAO;
-        private CountryDAO countryDAO;
-        private TownDAO townDAO;
-        private RoleDAO roleDAO;
 
         private void tboxName_Enter(object sender, EventArgs e)
         {
@@ -113,17 +113,8 @@ namespace ADMshop
         {
             SignUp.ActiveForm.Close();
             LogIn log = new LogIn();
-            log.Activate(); log.Show();
-        }
-
-        private void SignUp_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            //Environment.Exit(1);
-        }
-
-        private void SignUp_Load(object sender, EventArgs e)
-        {
-
+            log.Activate(); 
+            log.Show();
         }
     }
 }

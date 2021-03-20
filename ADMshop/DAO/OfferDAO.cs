@@ -11,23 +11,27 @@ namespace ADMshop.DAO
 {
     class OfferDAO
     {
+        private adm_dbContext context;
+
         public int CreateOffer(Offers newoffer)
         {
             this.context.Offers.Add(newoffer);
             return this.context.SaveChanges();
         }
+
         public Offers GetOfferById(int id)
         {
             return this.context.Offers
                  .Where(o => o.OfferId.Equals(id))
                  .FirstOrDefault();
         }
+
         public int DeleteOffer(int id)
         {
             this.context.Offers.Remove(GetOfferById(id));
             return this.context.SaveChanges();
-
         }
+
         public byte[] ImageToByte(PictureBox img)
         {
             ImageConverter converter = new ImageConverter();
@@ -35,7 +39,6 @@ namespace ADMshop.DAO
             try
             {
                 bmp = (Bitmap)img.Image;
-
             }
             catch
             {
@@ -43,6 +46,7 @@ namespace ADMshop.DAO
             }
             return (byte[])converter.ConvertTo(bmp, typeof(byte[]));
         }
+
         public Bitmap ByteToImage(byte[] blob)
         {
             MemoryStream mStream = new MemoryStream();
@@ -53,33 +57,22 @@ namespace ADMshop.DAO
 
             return bm;
         }
+
         public int OfferCount(adm_dbContext context)
         {
             return context.Offers.Count(); 
         }
 
-        public List<Users> GetAllOffersByUserId(int userId)
-        {
-            var offers = this.context.Users
-                        .Include(j => j.Firstname)
-                        .Include(j => j.Offers)
-                        .ThenInclude(ja => ja.User)
-                        .Where(j => j.UserId.Equals(userId))
-                        .ToList();
-            return offers;
-        }
-
-        private adm_dbContext context;
         public OfferDAO(adm_dbContext context)
         {
-            if (context == null) throw new ArgumentNullException("context");
+            if (context == null) 
+            throw new ArgumentNullException("context");
 
             this.context = context;
         }
 
         public void CheckIfOfferIsNull(Offers offer, Users currentuser, int id)
         {
-
             offer = GetOfferById(id);
             if (offer != null)
             {

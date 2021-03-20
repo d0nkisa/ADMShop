@@ -58,7 +58,6 @@ namespace ADMshop
             this.OfferThreePrice = new System.Windows.Forms.Label();
             this.OfferThreeTitle = new System.Windows.Forms.Label();
             this.picBoxOfferThree = new System.Windows.Forms.PictureBox();
-            this.SearchByCategoryBtn = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.sellLabel = new System.Windows.Forms.Label();
             this.profileLabel = new System.Windows.Forms.Label();
@@ -221,7 +220,7 @@ namespace ADMshop
             this.picBoxOfferOne.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.picBoxOfferOne.Location = new System.Drawing.Point(0, 0);
             this.picBoxOfferOne.Name = "picBoxOfferOne";
-            this.picBoxOfferOne.Size = new System.Drawing.Size(154, 123);
+            this.picBoxOfferOne.Size = new System.Drawing.Size(155, 123);
             this.picBoxOfferOne.TabIndex = 0;
             this.picBoxOfferOne.TabStop = false;
             this.picBoxOfferOne.Click += new System.EventHandler(this.picBoxOfferOne_Click);
@@ -377,20 +376,6 @@ namespace ADMshop
             this.picBoxOfferThree.TabStop = false;
             this.picBoxOfferThree.Click += new System.EventHandler(this.picBoxOfferThree_Click);
             // 
-            // SearchByCategoryBtn
-            // 
-            this.SearchByCategoryBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
-            this.SearchByCategoryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SearchByCategoryBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.SearchByCategoryBtn.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.SearchByCategoryBtn.Location = new System.Drawing.Point(270, 70);
-            this.SearchByCategoryBtn.Name = "SearchByCategoryBtn";
-            this.SearchByCategoryBtn.Size = new System.Drawing.Size(67, 31);
-            this.SearchByCategoryBtn.TabIndex = 14;
-            this.SearchByCategoryBtn.Text = "Search";
-            this.SearchByCategoryBtn.UseVisualStyleBackColor = false;
-            this.SearchByCategoryBtn.Click += new System.EventHandler(this.SearchByCategoryBtn_Click);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -478,7 +463,6 @@ namespace ADMshop
             this.Controls.Add(this.profileLabel);
             this.Controls.Add(this.sellLabel);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.SearchByCategoryBtn);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
@@ -545,7 +529,6 @@ namespace ADMshop
         private System.Windows.Forms.Label OfferThreePrice;
         private System.Windows.Forms.Label OfferThreeTitle;
         private System.Windows.Forms.PictureBox picBoxOfferThree;
-        private System.Windows.Forms.Button SearchByCategoryBtn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label sellLabel;
         private System.Windows.Forms.Label profileLabel;

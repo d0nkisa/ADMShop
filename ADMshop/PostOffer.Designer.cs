@@ -33,7 +33,7 @@ namespace ADMshop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PostOffer));
             this.comboCategory = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picOfTheOffer = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.textBoxName = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@ namespace ADMshop
             this.label1 = new System.Windows.Forms.Label();
             this.comboTown = new System.Windows.Forms.ComboBox();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.postOfferButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.profileLabel = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@ namespace ADMshop
             this.Title = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOfTheOffer)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,16 +70,16 @@ namespace ADMshop
             this.comboCategory.Size = new System.Drawing.Size(162, 23);
             this.comboCategory.TabIndex = 0;
             // 
-            // pictureBox1
+            // picOfTheOffer
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(26, 45);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(297, 172);
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.picOfTheOffer.Image = ((System.Drawing.Image)(resources.GetObject("picOfTheOffer.Image")));
+            this.picOfTheOffer.Location = new System.Drawing.Point(26, 45);
+            this.picOfTheOffer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picOfTheOffer.Name = "picOfTheOffer";
+            this.picOfTheOffer.Size = new System.Drawing.Size(297, 172);
+            this.picOfTheOffer.TabIndex = 1;
+            this.picOfTheOffer.TabStop = false;
+            this.picOfTheOffer.Click += new System.EventHandler(this.picOfTheOffer_Click);
             // 
             // radioButton1
             // 
@@ -188,20 +188,20 @@ namespace ADMshop
             this.textBoxPrice.Size = new System.Drawing.Size(65, 23);
             this.textBoxPrice.TabIndex = 7;
             // 
-            // button1
+            // postOfferButton
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(233, 573);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 42);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Post!";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.postOfferButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(91)))), ((int)(((byte)(0)))));
+            this.postOfferButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.postOfferButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.postOfferButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.postOfferButton.Location = new System.Drawing.Point(233, 573);
+            this.postOfferButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.postOfferButton.Name = "postOfferButton";
+            this.postOfferButton.Size = new System.Drawing.Size(90, 42);
+            this.postOfferButton.TabIndex = 8;
+            this.postOfferButton.Text = "Post!";
+            this.postOfferButton.UseVisualStyleBackColor = false;
+            this.postOfferButton.Click += new System.EventHandler(this.postOfferButton_Click);
             // 
             // label2
             // 
@@ -319,20 +319,20 @@ namespace ADMshop
             this.Controls.Add(this.homeLabel);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.postOfferButton);
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.textBoxName);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picOfTheOffer);
             this.Controls.Add(this.comboTown);
             this.Controls.Add(this.comboCategory);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PostOffer";
             this.Text = "PostOffer";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picOfTheOffer)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -344,7 +344,7 @@ namespace ADMshop
         #endregion
 
         private System.Windows.Forms.ComboBox comboCategory;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picOfTheOffer;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBoxName;
@@ -353,7 +353,7 @@ namespace ADMshop
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboTown;
         private System.Windows.Forms.TextBox textBoxPrice;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button postOfferButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label profileLabel;

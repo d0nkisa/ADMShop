@@ -7,12 +7,11 @@ namespace ADMshop
     public partial class ProfileForm : Form
     {
         Users currentuser;
+
         public ProfileForm(Users Currentuser)
         {
             InitializeComponent();
             currentuser = Currentuser;
-            usernameLabel.Text = Currentuser.Firstname + " " + Currentuser.Lastname;
-            postedCountLabel.Text = Currentuser.Offers.Count.ToString();
         }
 
         private void logOutLabel_Click(object sender, EventArgs e)
@@ -20,7 +19,8 @@ namespace ADMshop
             currentuser = null;
             ProfileForm.ActiveForm.Close();
             LogIn log = new LogIn();
-            log.Activate(); log.Show();
+            log.Activate(); 
+            log.Show();
         }
 
         private void editLabel_Click(object sender, EventArgs e)
@@ -32,26 +32,30 @@ namespace ADMshop
         {
             ProfileForm.ActiveForm.Close();
             HomeScreen home = new HomeScreen(currentuser);
-            home.Activate(); home.Show();
+            home.Activate(); 
+            home.Show();
         }
 
         private void sellLabel_Click(object sender, EventArgs e)
         {
             ProfileForm.ActiveForm.Hide();
             PostOffer postOffer = new PostOffer(currentuser);
-            postOffer.Activate(); postOffer.Show();
+            postOffer.Activate(); 
+            postOffer.Show();
         }
 
         private void sellBtn_Click(object sender, EventArgs e)
         {
             ProfileForm.ActiveForm.Hide();
             PostOffer postOffer = new PostOffer(currentuser);
-            postOffer.Activate(); postOffer.Show();
+            postOffer.Activate(); 
+            postOffer.Show();
         }
 
         private void ProfileForm_Load(object sender, EventArgs e)
         {
-
+            usernameLabel.Text = currentuser.Firstname + " " + currentuser.Lastname;
+            postedCountLabel.Text = currentuser.Offers.Count.ToString();
         }
     }
 }

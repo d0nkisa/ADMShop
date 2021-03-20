@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using ADMshop.Models;
 using System.Linq;
@@ -11,6 +10,8 @@ namespace ADMshop.DAO
 {
     class HomeDAO
     {
+        private adm_dbContext context;
+
         public Users LogIn(string username, string password)
         {
             try
@@ -36,20 +37,22 @@ namespace ADMshop.DAO
             var encoding = new UnicodeEncoding();
             return Convert.ToBase64String(provider.ComputeHash(encoding.GetBytes(password)));
         }
+
         public void RegisterUser(Login login ,Users user)
         {            
             this.context.Login.Add(login);
             this.context.SaveChanges();
         }
+
         public int GetID(adm_dbContext context)
         {
             return context.Users.Count();
         }
         
-        private adm_dbContext context;
         public HomeDAO(adm_dbContext context)
         {
-            if (context == null) throw new ArgumentNullException("context");
+            if (context == null) 
+            throw new ArgumentNullException("context");
 
             this.context = context;
         }

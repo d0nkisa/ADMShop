@@ -7,6 +7,16 @@ namespace ADMshop.DAO
 {
     class UserDAO
     {
+        private adm_dbContext context;
+        
+        public UserDAO(adm_dbContext context)
+        {
+            if (context == null) 
+            throw new ArgumentNullException("context");
+
+            this.context = context;
+        }
+
         public Users GetUserById(int id)
         {
             return this.context.Users
@@ -14,14 +24,6 @@ namespace ADMshop.DAO
                  .Include(u => u.Country)
                  .Where(u => u.UserId.Equals(id))
                  .FirstOrDefault();
-        }
-
-        private adm_dbContext context;
-        public UserDAO(adm_dbContext context)
-        {
-            if (context == null) throw new ArgumentNullException("context");
-
-            this.context = context;
         }
     }
 }
