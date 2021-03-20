@@ -4,6 +4,7 @@ using System.Text;
 using System.Windows.Forms;
 using ADMshop.Models;
 using ADMshop.DAO;
+using ADMshop.Properties;
 
 namespace ADMshop
 {
@@ -78,6 +79,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferOne.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferOnePrice.Text = "";
                 OfferOneTitle.Text = "";
             }
@@ -91,6 +93,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferTwo.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferTwoPrice.Text = "";
                 OfferTwoTitle.Text = "";
             }
@@ -104,6 +107,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferThree.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferThreePrice.Text = "";
                 OfferThreeTitle.Text = "";
             }
@@ -116,6 +120,7 @@ namespace ADMshop
             }
             catch (Exception)
             {
+                picBoxOfferFour.Image = offerDAO.ByteToImage(Resources.no_photo);
                 OfferFourPrice.Text = "";
                 OfferFourTitle.Text = "";
             }

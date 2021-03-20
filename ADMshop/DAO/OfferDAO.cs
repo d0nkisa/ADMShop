@@ -73,5 +73,10 @@ namespace ADMshop.DAO
 
             this.context = context;
         }
+
+        internal Image ByteToImage(Bitmap no_photo)
+        {        
+            return (Image)no_photo;
+        }
     }
 }
