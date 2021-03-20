@@ -70,30 +70,52 @@ namespace ADMshop
                 picOfTheOffer.SizeMode = PictureBoxSizeMode.Zoom;
                 picOfTheOffer.Image = new Bitmap(open.FileName);
                 picture = picOfTheOffer;
-
             }
         }
 
         private void postOfferButton_Click(object sender, EventArgs e)
         {
-            Offers newoffer = new Offers();
+            try
+            {
+                Offers newoffer = new Offers();
 
-            newoffer.OfferHeading = textBoxName.Text;
-            newoffer.OfferDescription = richTextBox1.Text;
+                newoffer.OfferHeading = textBoxTitle.Text;
+                newoffer.OfferDescription = richTextBox1.Text;
 
-            if (radioButton1.Checked == true)
-                newoffer.ItemState = true;
+                if (radioButton1.Checked == true)
+                    newoffer.ItemState = true;
 
-            else newoffer.ItemState = false;
+                else newoffer.ItemState = false;
 
-            newoffer.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
-            newoffer.Category = this.categoryDAO.GetCategory(getCtg(comboCategory.SelectedItem.ToString())).Id;
-            newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
-            newoffer.UserId = currentuser.UserId;
-            newoffer.OfferId = ID + 1;
-            newoffer.Image = this.offerDAO.ImageToByte(picture);
+                newoffer.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
+                newoffer.Category = this.categoryDAO.GetCategory(getCtg(comboCategory.SelectedItem.ToString())).Id;
+                newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
+                newoffer.UserId = currentuser.UserId;
+                newoffer.OfferId = ID + 1;
+                newoffer.Image = this.offerDAO.ImageToByte(picture);
 
-            offerDAO.CreateOffer(newoffer);
+                offerDAO.CreateOffer(newoffer);
+
+                MessageBox.Show("Your offer is successfuly posted in our app!");
+                PostOffer.ActiveForm.Close();
+                HomeScreen home = new HomeScreen(currentuser);
+                home.Activate();
+                home.Show();
+            }
+            catch (Exception) 
+            {
+                Exception ex = new Exception();
+                MessageBox.Show(ex.ToString());
+                PostOffer.ActiveForm.Close();
+                PostOffer newWindow = new PostOffer(currentuser);
+                newWindow.Activate();
+                newWindow.Show();
+            }
+        }
+
+        private void PostOffer_Load(object sender, EventArgs e)
+        {
+            Location = new Point(600, 250);
         }
     }
 }

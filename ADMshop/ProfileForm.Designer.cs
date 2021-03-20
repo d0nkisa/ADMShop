@@ -297,6 +297,7 @@ namespace ADMshop
             this.Controls.Add(this.editLabel);
             this.Controls.Add(this.profilePicBox);
             this.Controls.Add(this.usernameLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";
             this.Load += new System.EventHandler(this.ProfileForm_Load);

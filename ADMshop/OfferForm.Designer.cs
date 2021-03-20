@@ -37,7 +37,6 @@ namespace ADMshop
             this.description = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.phone = new System.Windows.Forms.Label();
-            this.location = new System.Windows.Forms.Label();
             this.goBackToHome = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.OfferImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -45,6 +44,8 @@ namespace ADMshop
             // 
             // OfferImage
             // 
+            this.OfferImage.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.OfferImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.OfferImage.Location = new System.Drawing.Point(10, 34);
             this.OfferImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OfferImage.Name = "OfferImage";
@@ -66,7 +67,7 @@ namespace ADMshop
             // 
             this.fname.AutoSize = true;
             this.fname.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.fname.Location = new System.Drawing.Point(94, 510);
+            this.fname.Location = new System.Drawing.Point(94, 521);
             this.fname.Name = "fname";
             this.fname.Size = new System.Drawing.Size(71, 17);
             this.fname.TabIndex = 2;
@@ -106,20 +107,11 @@ namespace ADMshop
             // phone
             // 
             this.phone.AutoSize = true;
-            this.phone.Location = new System.Drawing.Point(94, 534);
+            this.phone.Location = new System.Drawing.Point(94, 545);
             this.phone.Name = "phone";
             this.phone.Size = new System.Drawing.Size(67, 15);
             this.phone.TabIndex = 5;
             this.phone.Text = "0812345678";
-            // 
-            // location
-            // 
-            this.location.AutoSize = true;
-            this.location.Location = new System.Drawing.Point(94, 557);
-            this.location.Name = "location";
-            this.location.Size = new System.Drawing.Size(81, 15);
-            this.location.TabIndex = 6;
-            this.location.Text = "Ruse, Bulgaria";
             // 
             // goBackToHome
             // 
@@ -138,7 +130,6 @@ namespace ADMshop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(349, 591);
-            this.Controls.Add(this.location);
             this.Controls.Add(this.goBackToHome);
             this.Controls.Add(this.phone);
             this.Controls.Add(this.pictureBox2);
@@ -147,6 +138,7 @@ namespace ADMshop
             this.Controls.Add(this.price);
             this.Controls.Add(this.title);
             this.Controls.Add(this.OfferImage);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "OfferForm";
             this.Text = "Offer";
@@ -167,7 +159,6 @@ namespace ADMshop
         private System.Windows.Forms.Label description;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label phone;
-        private System.Windows.Forms.Label location;
         private System.Windows.Forms.Label goBackToHome;
     }
 }

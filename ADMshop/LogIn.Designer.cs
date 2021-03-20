@@ -80,7 +80,7 @@ namespace ADMshop
             this.textBoxEmail.Size = new System.Drawing.Size(209, 23);
             this.textBoxEmail.TabIndex = 6;
             // 
-            // LogIn
+            // LogInForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -92,9 +92,11 @@ namespace ADMshop
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxEmail);
             this.DoubleBuffered = true;
-            this.Name = "LogIn";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Name = "LogInForm";
             this.Text = "Log In";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LogIn_FormClosing);
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

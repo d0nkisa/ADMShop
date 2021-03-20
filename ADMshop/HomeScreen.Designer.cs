@@ -174,6 +174,7 @@ namespace ADMshop
             this.button1.Size = new System.Drawing.Size(36, 34);
             this.button1.TabIndex = 9;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel1
             // 
@@ -475,6 +476,7 @@ namespace ADMshop
             this.Controls.Add(this.radioElectronics);
             this.Controls.Add(this.radioCars);
             this.Controls.Add(this.searchBar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
             this.Load += new System.EventHandler(this.HomeScreen_Load);

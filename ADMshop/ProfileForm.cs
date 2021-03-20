@@ -1,5 +1,6 @@
 ﻿using ADMshop.Models;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ADMshop
@@ -7,7 +8,7 @@ namespace ADMshop
     public partial class ProfileForm : Form
     {
         Users currentuser;
-
+        private PictureBox ptofilePicture;
         public ProfileForm(Users Currentuser)
         {
             InitializeComponent();
@@ -19,12 +20,28 @@ namespace ADMshop
             currentuser = null;
             ProfileForm.ActiveForm.Close();
             LogInForm log = new LogInForm();
-            log.Activate(); 
+            log.Activate();
             log.Show();
         }
 
         private void editLabel_Click(object sender, EventArgs e)
         {
+            try
+            {
+                OpenFileDialog open = new OpenFileDialog();
+                open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+                if (open.ShowDialog() == DialogResult.OK)
+                {
+                    profilePicBox.SizeMode = PictureBoxSizeMode.Zoom;
+                    profilePicBox.Image = new Bitmap(open.FileName);
+                    ptofilePicture = profilePicBox;
+                }
+            }
+            catch (Exception)
+            {
+                Exception ex = new Exception();
+                MessageBox.Show(ex.ToString());
+            }
 
         }
 
@@ -32,7 +49,7 @@ namespace ADMshop
         {
             ProfileForm.ActiveForm.Close();
             HomeScreen home = new HomeScreen(currentuser);
-            home.Activate(); 
+            home.Activate();
             home.Show();
         }
 
@@ -40,7 +57,7 @@ namespace ADMshop
         {
             ProfileForm.ActiveForm.Hide();
             PostOffer postOffer = new PostOffer(currentuser);
-            postOffer.Activate(); 
+            postOffer.Activate();
             postOffer.Show();
         }
 
@@ -48,12 +65,13 @@ namespace ADMshop
         {
             ProfileForm.ActiveForm.Hide();
             PostOffer postOffer = new PostOffer(currentuser);
-            postOffer.Activate(); 
+            postOffer.Activate();
             postOffer.Show();
         }
 
         private void ProfileForm_Load(object sender, EventArgs e)
         {
+            Location = new Point(600, 250);
             usernameLabel.Text = currentuser.Firstname + " " + currentuser.Lastname;
             postedCountLabel.Text = currentuser.Offers.Count.ToString();
         }

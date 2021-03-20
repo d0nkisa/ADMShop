@@ -36,7 +36,7 @@ namespace ADMshop
             this.picOfTheOffer = new System.Windows.Forms.PictureBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxTitle = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,6 +58,7 @@ namespace ADMshop
             // 
             // comboCategory
             // 
+            this.comboCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCategory.FormattingEnabled = true;
             this.comboCategory.Items.AddRange(new object[] {
             "Cars & Parts",
@@ -110,14 +111,14 @@ namespace ADMshop
             this.radioButton2.Text = "Used";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBoxName
+            // textBoxTitle
             // 
-            this.textBoxName.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxName.Location = new System.Drawing.Point(26, 241);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(162, 27);
-            this.textBoxName.TabIndex = 3;
+            this.textBoxTitle.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBoxTitle.Location = new System.Drawing.Point(26, 241);
+            this.textBoxTitle.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTitle.Name = "textBoxTitle";
+            this.textBoxTitle.Size = new System.Drawing.Size(162, 27);
+            this.textBoxTitle.TabIndex = 3;
             // 
             // groupBox1
             // 
@@ -155,6 +156,7 @@ namespace ADMshop
             // 
             // comboTown
             // 
+            this.comboTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTown.FormattingEnabled = true;
             this.comboTown.Items.AddRange(new object[] {
             "Sofia",
@@ -323,15 +325,17 @@ namespace ADMshop
             this.Controls.Add(this.textBoxPrice);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBoxName);
+            this.Controls.Add(this.textBoxTitle);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.picOfTheOffer);
             this.Controls.Add(this.comboTown);
             this.Controls.Add(this.comboCategory);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "PostOffer";
             this.Text = "PostOffer";
+            this.Load += new System.EventHandler(this.PostOffer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picOfTheOffer)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -347,7 +351,7 @@ namespace ADMshop
         private System.Windows.Forms.PictureBox picOfTheOffer;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label1;

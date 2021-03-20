@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace ADMshop.Models
 {
@@ -26,6 +28,7 @@ namespace ADMshop.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseMySQL("Server=127.0.0.1;Database=adm_db; uID=test; pwd=ecse40e3; persistsecurityinfo=True");
             }
         }
@@ -233,6 +236,10 @@ namespace ADMshop.Models
                 entity.Property(e => e.RoleId).HasColumnName("role_ID");
 
                 entity.Property(e => e.TownId).HasColumnName("town_ID");
+
+                entity.Property(e => e.UserImage)
+                    .HasColumnName("user_image")
+                    .HasColumnType("mediumblob");
 
                 entity.HasOne(d => d.Country)
                     .WithMany(p => p.Users)

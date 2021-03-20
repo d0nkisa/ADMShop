@@ -18,6 +18,7 @@ namespace ADMshop.Models
         public int RoleId { get; set; }
         public int TownId { get; set; }
         public int CountryId { get; set; }
+        public byte[] UserImage { get; set; }
 
         public virtual Countries Country { get; set; }
         public virtual Roles Role { get; set; }

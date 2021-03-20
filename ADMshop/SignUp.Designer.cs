@@ -44,6 +44,7 @@ namespace ADMshop
             // 
             // comboCountry
             // 
+            this.comboCountry.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboCountry.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboCountry.ForeColor = System.Drawing.SystemColors.GrayText;
             this.comboCountry.FormattingEnabled = true;
@@ -57,10 +58,10 @@ namespace ADMshop
             this.comboCountry.Name = "comboCountry";
             this.comboCountry.Size = new System.Drawing.Size(100, 28);
             this.comboCountry.TabIndex = 16;
-            this.comboCountry.Text = "Country";
             // 
             // comboTown
             // 
+            this.comboTown.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboTown.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.comboTown.ForeColor = System.Drawing.SystemColors.GrayText;
             this.comboTown.FormattingEnabled = true;
@@ -86,7 +87,6 @@ namespace ADMshop
             this.comboTown.Name = "comboTown";
             this.comboTown.Size = new System.Drawing.Size(106, 28);
             this.comboTown.TabIndex = 15;
-            this.comboTown.Text = "Town";
             // 
             // tboxYears
             // 
@@ -197,8 +197,10 @@ namespace ADMshop
             this.Controls.Add(this.tboxName);
             this.Controls.Add(this.registerBtn);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SignUp";
             this.Text = "SignUp";
+            this.Load += new System.EventHandler(this.SignUp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

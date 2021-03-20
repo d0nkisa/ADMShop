@@ -2,6 +2,7 @@
 using ADMshop.Models;
 using ADMshop.Properties;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ADMshop
@@ -27,6 +28,7 @@ namespace ADMshop
 
         private void HomeScreen_Load(object sender, EventArgs e)
         {
+            Location = new Point(600, 250);
             picBoxOfferOne.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxOfferTwo.SizeMode = PictureBoxSizeMode.Zoom;
             picBoxOfferThree.SizeMode = PictureBoxSizeMode.Zoom;
@@ -58,55 +60,55 @@ namespace ADMshop
                 offer1 = this.offerDAO.GetOfferById(page * 4 - 3);
                 OfferOneTitle.Text = offer1.OfferHeading;
                 picBoxOfferOne.Image = this.offerDAO.ByteToImage(offer1.Image);
-                OfferOnePrice.Text = offer1.OfferPrice.ToString();
+                OfferOnePrice.Text = offer1.OfferPrice.ToString() + " lv.";
 
             }
             catch (Exception)
             {
                 picBoxOfferOne.Image = offerDAO.ByteToImage(Resources.no_photo);
-                OfferOnePrice.Text = "";
-                OfferOneTitle.Text = "";
+                OfferOnePrice.Text = "000 lv.";
+                OfferOneTitle.Text = "no offer";
             }
             try
             {
                 offer2 = this.offerDAO.GetOfferById(page * 4 - 2);
                 picBoxOfferTwo.Image = this.offerDAO.ByteToImage(offer2.Image);
                 OfferTwoTitle.Text = offer2.OfferHeading;
-                OfferTwoPrice.Text = offer2.OfferPrice.ToString();
+                OfferTwoPrice.Text = offer2.OfferPrice.ToString() + " lv.";
 
             }
             catch (Exception)
             {
                 picBoxOfferTwo.Image = offerDAO.ByteToImage(Resources.no_photo);
-                OfferTwoPrice.Text = "";
-                OfferTwoTitle.Text = "";
+                OfferTwoPrice.Text = "000 lv.";
+                OfferTwoTitle.Text = "no offer";
             }
             try
             {
                 offer3 = this.offerDAO.GetOfferById(page * 4 - 1);
                 picBoxOfferThree.Image = this.offerDAO.ByteToImage(offer3.Image);
                 OfferThreeTitle.Text = offer3.OfferHeading;
-                OfferThreePrice.Text = offer3.OfferPrice.ToString();
+                OfferThreePrice.Text = offer3.OfferPrice.ToString() + " lv.";
 
             }
             catch (Exception)
             {
                 picBoxOfferThree.Image = offerDAO.ByteToImage(Resources.no_photo);
-                OfferThreePrice.Text = "";
-                OfferThreeTitle.Text = "";
+                OfferThreePrice.Text = "000 lv.";
+                OfferThreeTitle.Text = "no offer";
             }
             try
             {
                 offer4 = this.offerDAO.GetOfferById(page * 4);
                 picBoxOfferFour.Image = this.offerDAO.ByteToImage(offer4.Image);
                 OfferFourTitle.Text = offer4.OfferHeading;
-                OfferFourPrice.Text = offer4.OfferPrice.ToString();
+                OfferFourPrice.Text = offer4.OfferPrice.ToString() + " lv.";
             }
             catch (Exception)
             {
                 picBoxOfferFour.Image = offerDAO.ByteToImage(Resources.no_photo);
-                OfferFourPrice.Text = "";
-                OfferFourTitle.Text = "";
+                OfferFourPrice.Text = "000 lv.";
+                OfferFourTitle.Text = "no offer";
             }
         }
 
@@ -167,6 +169,11 @@ namespace ADMshop
         {
             id = page * 4;
             this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

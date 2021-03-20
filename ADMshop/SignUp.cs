@@ -2,6 +2,7 @@
 using ADMshop.Models;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace ADMshop
@@ -13,6 +14,8 @@ namespace ADMshop
         private CountryDAO countryDAO;
         private TownDAO townDAO;
         private RoleDAO roleDAO;
+        private Regex regexPass;
+        private Regex regexNames;
 
         public SignUp()
         {
@@ -27,56 +30,67 @@ namespace ADMshop
 
         private void registerBtn_Click(object sender, EventArgs e)
         {
-            try
+            regexPass = new Regex("^([a-zA-Z0-9])*$");
+            regexNames = new Regex("^([a-zA-Z])*$");
+
+            if (regexPass.IsMatch(tboxPassword.Text))
             {
-                Users newuser = new Users();
-                Login newlogin = new Login();
+                if (regexNames.IsMatch(tboxName.Text) && regexNames.IsMatch(tboxLast.Text))
+                {
+                    try
+                    {
+                        Users newuser = new Users();
+                        Login newlogin = new Login();
 
-                newuser.Firstname = tboxName.Text;
-                newuser.Lastname = tboxLast.Text;
-                newuser.Age = int.Parse(tboxYears.Text);
-                newuser.Phone = int.Parse(tboxPhone.Text);
-                newuser.Country = this.countryDAO.GetCoutry(comboCountry.SelectedItem.ToString());
-                newuser.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
-                newuser.Role = this.roleDAO.GetRole("user");
-                newlogin.Username = tboxUsername.Text;
-                newlogin.Pasword = this.homeDAO.HashPassword(tboxPassword.Text);
+                        newuser.Firstname = tboxName.Text;
+                        newuser.Lastname = tboxLast.Text;
+                        newuser.Age = int.Parse(tboxYears.Text);
+                        newuser.Phone = int.Parse(tboxPhone.Text);
+                        newuser.Country = this.countryDAO.GetCoutry(comboCountry.SelectedItem.ToString());
+                        newuser.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
+                        newuser.Role = this.roleDAO.GetRole("user");
+                        newlogin.Username = tboxUsername.Text;
+                        newlogin.Pasword = this.homeDAO.HashPassword(tboxPassword.Text);
 
-                newlogin.Users = newuser;
+                        newlogin.Users = newuser;
 
-                newlogin.LoginId = ID + 1;
-                newlogin.Users.UserId = ID + 1;
+                        newlogin.LoginId = ID + 1;
+                        newlogin.Users.UserId = ID + 1;
 
-                homeDAO.RegisterUser(newlogin, newuser);
+                        homeDAO.RegisterUser(newlogin, newuser);
 
-                MessageBox.Show("Successfuly created account! Go back to Log In!");
+                        MessageBox.Show("Successfuly created account! Go back to Log In!");
 
-                SignUp.ActiveForm.Close();
-                LogInForm log = new LogInForm();
-                log.Activate();
-                log.Show();
+                        SignUp.ActiveForm.Close();
+                        LogInForm log = new LogInForm();
+                        log.Activate();
+                        log.Show();
+                    }
+                    catch (Exception)
+                    {
+                        Exception ex = new Exception();
+                        MessageBox.Show(ex.ToString());
+                        tboxName.Text = "First Name";
+                        tboxName.ForeColor = Color.Gray;
+                        tboxLast.Text = "Last Name";
+                        tboxLast.ForeColor = Color.Gray;
+                        tboxPhone.Text = "Phone Number";
+                        tboxPhone.ForeColor = Color.Gray;
+                        tboxYears.Text = "Age";
+                        tboxYears.ForeColor = Color.Gray;
+                        tboxUsername.Text = "Username";
+                        tboxUsername.ForeColor = Color.Gray;
+                        tboxPassword.Text = "Password";
+                        tboxPassword.ForeColor = Color.Gray;
+                        comboCountry.Text = "Country";
+                        comboCountry.ForeColor = Color.Gray;
+                        comboTown.Text = "Town";
+                        comboTown.ForeColor = Color.Gray;
+                    }
+                }
+                else MessageBox.Show("Names only contain symbols from A to Z!");
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Wrong parameters! Please try again");
-                tboxName.Text = "First Name";
-                tboxName.ForeColor = Color.Gray;
-                tboxLast.Text = "Last Name";
-                tboxLast.ForeColor = Color.Gray;
-                tboxPhone.Text = "Phone Number";
-                tboxPhone.ForeColor = Color.Gray;
-                tboxYears.Text = "Age";
-                tboxYears.ForeColor = Color.Gray;
-                tboxUsername.Text = "Username";
-                tboxUsername.ForeColor = Color.Gray;
-                tboxPassword.Text = "Password";
-                tboxPassword.ForeColor = Color.Gray;
-                comboCountry.Text = "Country";
-                comboCountry.ForeColor = Color.Gray;
-                comboTown.Text = "Town";
-                comboTown.ForeColor = Color.Gray;
-            }
-            
+            else MessageBox.Show("Password cannot contains special symbols!");
         }
 
         private void tboxName_Enter(object sender, EventArgs e)
@@ -139,6 +153,11 @@ namespace ADMshop
             LogInForm log = new LogInForm();
             log.Activate(); 
             log.Show();
+        }
+
+        private void SignUp_Load(object sender, EventArgs e)
+        {
+            Location = new Point(600, 250);
         }
     }
 }

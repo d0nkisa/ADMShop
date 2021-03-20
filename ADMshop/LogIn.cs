@@ -1,6 +1,7 @@
 ﻿using ADMshop.DAO;
 using ADMshop.Models;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ADMshop
@@ -52,6 +53,11 @@ namespace ADMshop
         private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
             Environment.Exit(1);
+        }
+
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+            Location = new Point(600, 250);
         }
     }
 }

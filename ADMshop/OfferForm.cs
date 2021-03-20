@@ -35,6 +35,7 @@ namespace ADMshop
 
         private void OfferForm_Load(object sender, EventArgs e)
         {
+            Location = new Point(600, 250);
             OfferImage.Image = this.offerDAO.ByteToImage(offer.Image);
             title.Text = offer.OfferHeading;
             price.Text = offer.OfferPrice + " " + "lv.";
@@ -43,7 +44,6 @@ namespace ADMshop
             description.Text = "Description: \n" + offer.OfferDescription;
             fname.Text = currentuser.Firstname;
             phone.Text = currentuser.Phone.ToString();
-            location.Text = currentuser.Town + ", " + currentuser.Country;
         }
     }
 }
