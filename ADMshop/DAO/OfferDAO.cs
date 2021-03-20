@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using ADMshop.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Drawing;
+using System.Windows.Forms;
+using System.IO;
+
 namespace ADMshop.DAO
 {
     class OfferDAO
@@ -15,9 +19,6 @@ namespace ADMshop.DAO
         public Offers GetOfferById(int id)
         {
             return this.context.Offers
-                 .Include(o => o.OfferPrice)
-                 .Include(o => o.OfferHeading)
-                 .Include(o => o.Image)
                  .Where(o => o.OfferId.Equals(id))
                  .FirstOrDefault();
         }
@@ -26,6 +27,30 @@ namespace ADMshop.DAO
             this.context.Offers.Remove(GetOfferById(id));
             return this.context.SaveChanges();
 
+        }
+        public byte[] ImageToByte(PictureBox img)
+        {
+            ImageConverter converter = new ImageConverter();
+            Bitmap bmp = default;
+            try
+            {
+                bmp = (Bitmap)img.Image;
+
+            }
+            catch
+            {
+                MessageBox.Show("Can't load image!");
+            }
+            return (byte[])converter.ConvertTo(bmp, typeof(byte[]));
+        }
+        public Bitmap ByteToImage(byte[] blob)
+        {
+            MemoryStream mStream = new MemoryStream();
+            byte[] pData = blob;
+            mStream.Write(pData, 0, Convert.ToInt32(pData.Length));
+            Bitmap bm = new Bitmap(mStream, false);
+            mStream.Dispose();
+            return bm;
         }
         public int OfferCount(adm_dbContext context)
         { return context.Offers.Count(); }

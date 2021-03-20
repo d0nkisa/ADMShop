@@ -10,12 +10,23 @@ namespace ADMshop
     public partial class HomeScreen : Form
     {
         Users currentuser;
+        adm_dbContext context=default;
         public HomeScreen(Users Currentuser)
         {
             InitializeComponent();
+             context = new adm_dbContext();
+            offerDAO = new OfferDAO(context);
             currentuser = Currentuser;
         }
-
+private OfferDAO offerDAO;
+        int page = 1; 
+        private void HomeScreen_Load(object sender, EventArgs e)
+        {   picBoxOfferOne.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxOfferTwo.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxOfferThree.SizeMode = PictureBoxSizeMode.Zoom;
+            picBoxOfferFour.SizeMode = PictureBoxSizeMode.Zoom;
+            LoadOffers();
+        }
         private void SearchByCategoryBtn_Click(object sender, EventArgs e)
         {
             if (radioCars.Checked == true)
@@ -42,7 +53,7 @@ namespace ADMshop
 
         private void sellLabel_Click(object sender, EventArgs e)
         {
-            HomeScreen.ActiveForm.Hide();
+            HomeScreen.ActiveForm.Close();
             PostOffer postOffer = new PostOffer(currentuser);
             postOffer.Activate(); postOffer.Show();
         }
@@ -53,5 +64,86 @@ namespace ADMshop
             ProfileForm profile = new ProfileForm(currentuser);
             profile.Activate(); profile.Show();
         }
+        private void LoadOffers()
+        {
+            Offers offer1,offer2,offer3,offer4;
+            try
+            {
+             offer1 =this.offerDAO.GetOfferById(page*4-3);
+                OfferOneTitle.Text = offer1.OfferHeading;
+                picBoxOfferOne.Image = this.offerDAO.ByteToImage(offer1.Image);
+                OfferOnePrice.Text = offer1.OfferPrice.ToString();
+
+            }
+            catch (Exception)
+            {
+                picBoxOfferOne.ImageLocation = @"D:\ADM Shop\ADMshop\bin\Debug\no photo.png";
+                OfferOnePrice.Text = "";
+                OfferOneTitle.Text = "";
+            }
+            try
+            {
+             offer2 = this.offerDAO.GetOfferById(page * 4 - 2);
+                picBoxOfferTwo.Image = this.offerDAO.ByteToImage(offer2.Image);
+                OfferTwoTitle.Text = offer2.OfferHeading;
+                OfferTwoPrice.Text = offer2.OfferPrice.ToString();
+
+            }
+            catch (Exception)
+            {
+picBoxOfferTwo.ImageLocation = @"D:\ADM Shop\ADMshop\bin\Debug\no photo.png";
+                OfferTwoPrice.Text = "";
+                OfferTwoTitle.Text = "";
+            }
+            try
+            {
+             offer3 = this.offerDAO.GetOfferById(page * 4 - 1);
+                picBoxOfferThree.Image = this.offerDAO.ByteToImage(offer3.Image);
+                OfferThreeTitle.Text = offer3.OfferHeading;
+                OfferThreePrice.Text = offer3.OfferPrice.ToString();
+
+            }
+            catch (Exception)
+            {
+picBoxOfferThree.ImageLocation = @"D:\ADM Shop\ADMshop\bin\Debug\no photo.png";
+                OfferThreePrice.Text = "";
+                OfferThreeTitle.Text = "";            }
+            try
+            {
+             offer4 = this.offerDAO.GetOfferById(page * 4);
+            picBoxOfferFour.Image = this.offerDAO.ByteToImage(offer4.Image);
+            OfferFourTitle.Text = offer4.OfferHeading;
+            OfferFourPrice.Text = offer4.OfferPrice.ToString();
+            }
+            catch (Exception)
+            {
+                picBoxOfferFour.ImageLocation = @"D:\ADM Shop\ADMshop\bin\Debug\no photo.png";
+                OfferFourPrice.Text = "";
+                OfferFourTitle.Text = "";
+            }
+        }
+
+       
+        
+
+        private void NextPage_Click(object sender, EventArgs e)
+        {
+            if (page != 1 && PreviousPage.Visible==false) { PreviousPage.Show(); }
+            if (page + 1 == this.offerDAO.OfferCount(context))
+            {
+                NextPage.Hide(); page++; LoadOffers();
+            }
+            else {page++;LoadOffers(); }
+        }
+
+        private void PreviousPage_Click(object sender, EventArgs e)
+        {
+            if (page != this.offerDAO.OfferCount(context) && NextPage.Visible == false) { NextPage.Show(); }
+
+            if (page-1 == 1) { PreviousPage.Hide();page--;LoadOffers(); }
+            else {page--; LoadOffers(); }
+        }
+
+        
     }
 }

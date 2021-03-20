@@ -64,6 +64,7 @@ namespace ADMshop
             this.comboCategory.Name = "comboCategory";
             this.comboCategory.Size = new System.Drawing.Size(162, 23);
             this.comboCategory.TabIndex = 0;
+            this.comboCategory.SelectedIndexChanged += new System.EventHandler(this.comboCategory_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
