@@ -9,6 +9,9 @@ namespace ADMshop
 {
     public partial class SignUp : Form
     {
+        /// <summary>
+        /// Деклариране на DAO-та, за връзка с базата данни;
+        /// </summary>
         private static int ID;
         private HomeDAO homeDAO;
         private CountryDAO countryDAO;
@@ -17,6 +20,9 @@ namespace ADMshop
         private Regex regexPass;
         private Regex regexNames;
 
+        /// <summary>
+        /// Конструктор;
+        /// </summary>
         public SignUp()
         {
             InitializeComponent();
@@ -28,6 +34,13 @@ namespace ADMshop
             ID = this.homeDAO.GetID(context);
         }
 
+        /// <summary>
+        /// Проверява за стойностите на всичко въведено, ако има нещо неподходящо, 
+        /// връща съобщение за грешка, а ако всичко е наред, връща съобщение, че потрнителя е 
+        /// регистриран успешно и го връша във формата за логване;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void registerBtn_Click(object sender, EventArgs e)
         {
             regexPass = new Regex("^([a-zA-Z0-9])*$");
@@ -93,6 +106,12 @@ namespace ADMshop
             else MessageBox.Show("Password cannot contains special symbols!");
         }
 
+        /// <summary>
+        /// При клик изпразва текст бокса за да може да се въвежда и 
+        /// променя цвета на текста на черен;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tboxName_Enter(object sender, EventArgs e)
         {
             if (tboxName.Text == "First Name...")

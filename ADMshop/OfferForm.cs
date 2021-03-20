@@ -12,9 +12,20 @@ namespace ADMshop
 {
     public partial class OfferForm : Form
     {
+        /// <summary>
+        /// Деклариране на променливи нужни за работа с методите и създаване на обект и DAO,
+        /// което ни свързва с базата данни
+        /// </summary>
         Users currentuser;
         private OfferDAO offerDAO;
         private Offers offer;
+
+        /// <summary>
+        /// Конструктор, инициализира се формата, подава се контекст на DAO-тата 
+        /// към базата данни;
+        /// </summary>
+        /// <param name="Currentuser">Съдържа данни за текущия потребител</param>
+        /// <param name="page">показва номера на текущата страница с обяви</param>
         public OfferForm(Users Currentuser, int page, Offers offers)
         {
             InitializeComponent();
@@ -24,6 +35,11 @@ namespace ADMshop
             offer = offers;
         }
 
+        /// <summary>
+        /// затваря обявата и се връща към списъка от обяви
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void goBackToHome_Click(object sender, EventArgs e)
         {
             OfferForm.ActiveForm.Close();
@@ -32,6 +48,13 @@ namespace ADMshop
             home.Show();
         }
 
+        /// <summary>
+        /// при зареждане на формата, задава стойности на променливите, според
+        /// това коя обява е избрана;
+        /// Също така карантира точно определено местоположение на формата върху екрана;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OfferForm_Load(object sender, EventArgs e)
         {
             OfferImage.Image = this.offerDAO.ByteToImage(offer.Image);

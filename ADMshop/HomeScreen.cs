@@ -11,14 +11,21 @@ namespace ADMshop
 {
     public partial class HomeScreen : Form
     {
+        /// <summary>
+        /// Деклариране на променливи нужни за работа с методите и създаване на обект и DAO,
+        /// което ни свързва с базата данни
+        /// </summary>
         Users currentuser;
-        adm_dbContext context = default;
-
+        adm_dbContext context;
         private Offers offer;
         private OfferDAO offerDAO;
-
         int page = 1;
 
+        /// <summary>
+        /// Конструктор, инициализира се формата, подава се контекст на DAO-тата 
+        /// към базата данни;
+        /// </summary>
+        /// <param name="Currentuser">Съдържа данни за текущия потребител</param>
         public HomeScreen(Users Currentuser)
         {
             InitializeComponent();
@@ -35,8 +42,6 @@ namespace ADMshop
             picBoxOfferFour.SizeMode = PictureBoxSizeMode.Zoom;
             LoadOffers(this.offerDAO.AllOffers());
         }
-
-
 
         private void sellLabel_Click(object sender, EventArgs e)
         {
