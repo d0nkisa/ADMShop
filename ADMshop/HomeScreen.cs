@@ -137,23 +137,37 @@ namespace ADMshop
 
         private void NextPage_Click(object sender, EventArgs e)
         {
-            if (page != 1 && PreviousPage.Visible == false)
-                PreviousPage.Show();
-
-            if (page + 1 == this.offerDAO.OfferCount(context))
+            if (page == this.offerDAO.OfferCount(context) / 4)
             {
-                NextPage.Hide(); page++; LoadOffers();
+                NextPage.Hide(); 
+                page++; LoadOffers(); 
+                PreviousPage.Show();
             }
-            else { page++; LoadOffers(); }
+            else 
+            { 
+                page++; 
+                LoadOffers(); 
+                PreviousPage.Show();
+            }
         }
 
         private void PreviousPage_Click(object sender, EventArgs e)
         {
-            if (page != this.offerDAO.OfferCount(context) && NextPage.Visible == false)
-                NextPage.Show();
+            if (page == this.offerDAO.OfferCount(context) / 4 + 1) 
+            { 
+                NextPage.Show(); 
+            }
 
-            if (page - 1 == 1) { PreviousPage.Hide(); page--; LoadOffers(); }
-            else { page--; LoadOffers(); }
+            if (page - 1 == 1) 
+            { 
+                PreviousPage.Hide(); 
+                page--; LoadOffers(); 
+            }
+            else 
+            { 
+                page--; 
+                LoadOffers(); 
+            }
         }
 
         private void picBoxOfferOne_Click(object sender, EventArgs e)
