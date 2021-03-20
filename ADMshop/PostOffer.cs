@@ -75,8 +75,6 @@ namespace ADMshop
 
         private void postOfferButton_Click(object sender, EventArgs e)
         {
-            try
-            {
                 Offers newoffer = new Offers();
 
                 newoffer.OfferHeading = textBoxTitle.Text;
@@ -90,9 +88,9 @@ namespace ADMshop
                 newoffer.Town = this.townDAO.GetTown(comboTown.SelectedItem.ToString());
                 newoffer.Category = this.categoryDAO.GetCategory(getCtg(comboCategory.SelectedItem.ToString())).Id;
                 newoffer.OfferPrice = decimal.Parse(textBoxPrice.Text);
+                newoffer.Image = this.offerDAO.ImageToByte(picture);
                 newoffer.UserId = currentuser.UserId;
                 newoffer.OfferId = ID + 1;
-                newoffer.Image = this.offerDAO.ImageToByte(picture);
 
                 offerDAO.CreateOffer(newoffer);
 
@@ -101,16 +99,6 @@ namespace ADMshop
                 HomeScreen home = new HomeScreen(currentuser);
                 home.Activate();
                 home.Show();
-            }
-            catch (Exception) 
-            {
-                Exception ex = new Exception();
-                MessageBox.Show(ex.ToString());
-                PostOffer.ActiveForm.Close();
-                PostOffer newWindow = new PostOffer(currentuser);
-                newWindow.Activate();
-                newWindow.Show();
-            }
         }
 
         private void PostOffer_Load(object sender, EventArgs e)

@@ -130,6 +130,7 @@ namespace ADMshop
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(349, 591);
+            this.ControlBox = false;
             this.Controls.Add(this.goBackToHome);
             this.Controls.Add(this.phone);
             this.Controls.Add(this.pictureBox2);

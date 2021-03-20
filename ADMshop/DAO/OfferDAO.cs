@@ -71,9 +71,9 @@ namespace ADMshop.DAO
             this.context = context;
         }
 
-        public void CheckIfOfferIsNull(Offers offer, Users currentuser, int id)
+        public void CheckIfOfferIsNull(Users currentuser, int id)
         {
-            offer = GetOfferById(id);
+            Offers offer = GetOfferById(id);
             if (offer != null)
             {
                 HomeScreen.ActiveForm.Close();

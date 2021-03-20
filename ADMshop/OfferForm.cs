@@ -42,8 +42,8 @@ namespace ADMshop
             description.Size = new Size(271, 130);
             description.AutoSize = false;
             description.Text = "Description: \n" + offer.OfferDescription;
-            fname.Text = currentuser.Firstname;
-            phone.Text = currentuser.Phone.ToString();
+            fname.Text = offer.User.Firstname;
+            phone.Text = offer.User.Phone.ToString();
         }
     }
 }

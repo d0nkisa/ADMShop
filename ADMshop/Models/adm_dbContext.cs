@@ -116,7 +116,7 @@ namespace ADMshop.Models
                 entity.Property(e => e.Image)
                     .IsRequired()
                     .HasColumnName("image")
-                    .HasColumnType("blob");
+                    .HasColumnType("longblob");
 
                 entity.Property(e => e.ItemState).HasColumnName("item_state");
 

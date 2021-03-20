@@ -150,25 +150,25 @@ namespace ADMshop
         private void picBoxOfferOne_Click(object sender, EventArgs e)
         {
             id = page * 4 - 3;
-            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+            this.offerDAO.CheckIfOfferIsNull(currentuser, id);
         }
 
         private void picBoxOfferTwo_Click(object sender, EventArgs e)
         {
             id = page * 4 - 2;
-            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+            this.offerDAO.CheckIfOfferIsNull(currentuser, id);
         }
 
         private void picBoxOfferThree_Click(object sender, EventArgs e)
         {
             id = page * 4 - 1;
-            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+            this.offerDAO.CheckIfOfferIsNull(currentuser, id);
         }
 
         private void picBoxOfferFour_Click(object sender, EventArgs e)
         {
             id = page * 4;
-            this.offerDAO.CheckIfOfferIsNull(offer, currentuser, id);
+            this.offerDAO.CheckIfOfferIsNull(currentuser, id);
         }
 
         private void button1_Click(object sender, EventArgs e)
