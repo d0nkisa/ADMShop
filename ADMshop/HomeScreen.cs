@@ -60,7 +60,7 @@ namespace ADMshop
             postOffer.Show();
         }
         /// <summary>
-        /// 
+        /// Отваря Профил формата
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -73,7 +73,7 @@ namespace ADMshop
         }
 
         /// <summary>
-        /// 
+        /// Намира обявите по checkboxovete
         /// </summary>
         /// <returns></returns>
         private List<Offers> SearchCheckBox()
@@ -95,6 +95,10 @@ namespace ADMshop
             if (cat.Count() == 0) { return this.offerDAO.AllOffers(); }
             return offerticat;
         }
+        /// <summary>
+        /// Намира обявете по име
+        /// </summary>
+        /// <returns></returns>
         private List<Offers> SearchName()
         {
             List<Offers> offertiime = new List<Offers>();
@@ -114,18 +118,34 @@ namespace ADMshop
             }
             return offertiime;
         }
+
+        /// <summary>
+        /// Намира общите обяви между checkboxovete и обявите по име
+        /// </summary>
+        /// <returns></returns>
         private List<Offers> MixSearch()
         {
             var commons1 = from a in SearchName()
                            join b in SearchCheckBox()
-    on a.OfferHeading equals b.OfferHeading
+            on a.OfferHeading equals b.OfferHeading
                            select a;
             return commons1.ToList();
         }
+
+        /// <summary>
+        /// Зарежда обявете по дадените критерии
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SearchButton_Click(object sender, EventArgs e)
         {
             LoadOffers(MixSearch());
         }
+
+        /// <summary>
+        /// Главния метод за зареждане на обявите
+        /// </summary>
+        /// <param name="offers"></param>
         public void LoadOffers(List<Offers> offers)
         {
 
@@ -187,6 +207,11 @@ namespace ADMshop
             }
         }
 
+        /// <summary>
+        /// Сменя на нселдващата страница
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextPage_Click(object sender, EventArgs e)
         {
             if (page == MixSearch().Count() / 4)
@@ -203,6 +228,11 @@ namespace ADMshop
             }
         }
 
+        /// <summary>
+        /// Връща на задната страница
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void PreviousPage_Click(object sender, EventArgs e)
         {
             if (page == MixSearch().Count() / 4 + 1)
@@ -222,6 +252,11 @@ namespace ADMshop
             }
         }
 
+        /// <summary>
+        /// Зареждат offer формите
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void picBoxOfferOne_Click(object sender, EventArgs e)
         {
             int id = page * 4 - 3;
@@ -245,7 +280,5 @@ namespace ADMshop
             int id = page * 4;
             this.offerDAO.CheckIfOfferIsNull(currentuser, id, MixSearch());
         }
-
-
     }
 }

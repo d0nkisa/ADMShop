@@ -108,7 +108,7 @@ namespace ADMshop
         {
             Location = new Point(600, 250);
             usernameLabel.Text = currentuser.Firstname + " " + currentuser.Lastname;
-            profilePicBox.Image = this.offerDAO.ByteToImage(currentuser.UserImage);
+          //  profilePicBox.Image = this.offerDAO.ByteToImage(currentuser.UserImage);
             postedCountLabel.Text = currentuser.Offers.Count.ToString();
         }
     }
