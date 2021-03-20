@@ -31,13 +31,9 @@ namespace ADMshop
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeScreen));
             this.searchBar = new System.Windows.Forms.TextBox();
-            this.radioCars = new System.Windows.Forms.RadioButton();
-            this.radioElectronics = new System.Windows.Forms.RadioButton();
-            this.radioSports = new System.Windows.Forms.RadioButton();
-            this.radioFurniture = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.headerLabel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.SearchButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.OfferOnePrice = new System.Windows.Forms.Label();
@@ -64,6 +60,11 @@ namespace ADMshop
             this.PreviousPage = new System.Windows.Forms.Button();
             this.NextPage = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.checkBoxFurniture = new System.Windows.Forms.CheckBox();
+            this.checkBoxSport = new System.Windows.Forms.CheckBox();
+            this.checkBoxElectronics = new System.Windows.Forms.CheckBox();
+            this.checkBoxCars = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferOne)).BeginInit();
@@ -76,6 +77,7 @@ namespace ADMshop
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferThree)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // searchBar
@@ -88,64 +90,12 @@ namespace ADMshop
             this.searchBar.TabIndex = 0;
             this.searchBar.Text = "Search ...";
             // 
-            // radioCars
-            // 
-            this.radioCars.AutoSize = true;
-            this.radioCars.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioCars.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioCars.Location = new System.Drawing.Point(41, 112);
-            this.radioCars.Name = "radioCars";
-            this.radioCars.Size = new System.Drawing.Size(52, 21);
-            this.radioCars.TabIndex = 1;
-            this.radioCars.TabStop = true;
-            this.radioCars.Text = "Cars";
-            this.radioCars.UseVisualStyleBackColor = true;
-            // 
-            // radioElectronics
-            // 
-            this.radioElectronics.AutoSize = true;
-            this.radioElectronics.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioElectronics.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioElectronics.Location = new System.Drawing.Point(200, 112);
-            this.radioElectronics.Name = "radioElectronics";
-            this.radioElectronics.Size = new System.Drawing.Size(92, 21);
-            this.radioElectronics.TabIndex = 2;
-            this.radioElectronics.TabStop = true;
-            this.radioElectronics.Text = "Electronics";
-            this.radioElectronics.UseVisualStyleBackColor = true;
-            // 
-            // radioSports
-            // 
-            this.radioSports.AutoSize = true;
-            this.radioSports.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioSports.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioSports.Location = new System.Drawing.Point(41, 146);
-            this.radioSports.Name = "radioSports";
-            this.radioSports.Size = new System.Drawing.Size(153, 21);
-            this.radioSports.TabIndex = 3;
-            this.radioSports.TabStop = true;
-            this.radioSports.Text = "Sport, Books, Hobby";
-            this.radioSports.UseVisualStyleBackColor = true;
-            // 
-            // radioFurniture
-            // 
-            this.radioFurniture.AutoSize = true;
-            this.radioFurniture.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.radioFurniture.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.radioFurniture.Location = new System.Drawing.Point(200, 146);
-            this.radioFurniture.Name = "radioFurniture";
-            this.radioFurniture.Size = new System.Drawing.Size(83, 21);
-            this.radioFurniture.TabIndex = 4;
-            this.radioFurniture.TabStop = true;
-            this.radioFurniture.Text = "Furniture";
-            this.radioFurniture.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(12, 73);
+            this.label1.Location = new System.Drawing.Point(18, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 21);
             this.label1.TabIndex = 5;
@@ -162,19 +112,19 @@ namespace ADMshop
             this.headerLabel.TabIndex = 6;
             this.headerLabel.Text = "Suggested items";
             // 
-            // button1
+            // SearchButton
             // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(300, 25);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(36, 34);
-            this.button1.TabIndex = 9;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.SearchButton.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SearchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("SearchButton.BackgroundImage")));
+            this.SearchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SearchButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SearchButton.Location = new System.Drawing.Point(300, 25);
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.Size = new System.Drawing.Size(36, 34);
+            this.SearchButton.TabIndex = 9;
+            this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // panel1
             // 
@@ -348,7 +298,7 @@ namespace ADMshop
             // OfferThreePrice
             // 
             this.OfferThreePrice.AutoSize = true;
-            this.OfferThreePrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(184)))), ((int)(((byte)(100)))));
+            this.OfferThreePrice.BackColor = System.Drawing.Color.Transparent;
             this.OfferThreePrice.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.OfferThreePrice.Location = new System.Drawing.Point(94, 13);
             this.OfferThreePrice.Name = "OfferThreePrice";
@@ -452,6 +402,70 @@ namespace ADMshop
             this.label5.TabIndex = 24;
             this.label5.Text = "----------------------------------------------------------";
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.checkBoxFurniture);
+            this.panel9.Controls.Add(this.checkBoxSport);
+            this.panel9.Controls.Add(this.checkBoxElectronics);
+            this.panel9.Controls.Add(this.checkBoxCars);
+            this.panel9.Location = new System.Drawing.Point(18, 104);
+            this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(294, 76);
+            this.panel9.TabIndex = 25;
+            // 
+            // checkBoxFurniture
+            // 
+            this.checkBoxFurniture.AutoSize = true;
+            this.checkBoxFurniture.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxFurniture.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxFurniture.Location = new System.Drawing.Point(176, 50);
+            this.checkBoxFurniture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxFurniture.Name = "checkBoxFurniture";
+            this.checkBoxFurniture.Size = new System.Drawing.Size(93, 24);
+            this.checkBoxFurniture.TabIndex = 3;
+            this.checkBoxFurniture.Text = "Furniture";
+            this.checkBoxFurniture.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxSport
+            // 
+            this.checkBoxSport.AutoSize = true;
+            this.checkBoxSport.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxSport.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxSport.Location = new System.Drawing.Point(14, 50);
+            this.checkBoxSport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxSport.Name = "checkBoxSport";
+            this.checkBoxSport.Size = new System.Drawing.Size(66, 24);
+            this.checkBoxSport.TabIndex = 1;
+            this.checkBoxSport.Text = "Sport";
+            this.checkBoxSport.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxElectronics
+            // 
+            this.checkBoxElectronics.AutoSize = true;
+            this.checkBoxElectronics.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxElectronics.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxElectronics.Location = new System.Drawing.Point(176, 13);
+            this.checkBoxElectronics.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxElectronics.Name = "checkBoxElectronics";
+            this.checkBoxElectronics.Size = new System.Drawing.Size(103, 24);
+            this.checkBoxElectronics.TabIndex = 2;
+            this.checkBoxElectronics.Text = "Electronics";
+            this.checkBoxElectronics.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxCars
+            // 
+            this.checkBoxCars.AutoSize = true;
+            this.checkBoxCars.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxCars.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.checkBoxCars.Location = new System.Drawing.Point(14, 13);
+            this.checkBoxCars.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.checkBoxCars.Name = "checkBoxCars";
+            this.checkBoxCars.Size = new System.Drawing.Size(58, 24);
+            this.checkBoxCars.TabIndex = 0;
+            this.checkBoxCars.Text = "Cars";
+            this.checkBoxCars.UseVisualStyleBackColor = true;
+            // 
             // HomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -469,13 +483,10 @@ namespace ADMshop
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.headerLabel);
+            this.Controls.Add(this.panel9);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.radioFurniture);
-            this.Controls.Add(this.radioSports);
-            this.Controls.Add(this.radioElectronics);
-            this.Controls.Add(this.radioCars);
             this.Controls.Add(this.searchBar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "HomeScreen";
@@ -497,6 +508,8 @@ namespace ADMshop
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxOfferThree)).EndInit();
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,13 +518,9 @@ namespace ADMshop
         #endregion
 
         private System.Windows.Forms.TextBox searchBar;
-        private System.Windows.Forms.RadioButton radioCars;
-        private System.Windows.Forms.RadioButton radioElectronics;
-        private System.Windows.Forms.RadioButton radioSports;
-        private System.Windows.Forms.RadioButton radioFurniture;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label headerLabel;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label OfferOnePrice;
@@ -539,5 +548,10 @@ namespace ADMshop
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button NextPage;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.CheckBox checkBoxSport;
+        private System.Windows.Forms.CheckBox checkBoxCars;
+        private System.Windows.Forms.CheckBox checkBoxFurniture;
+        private System.Windows.Forms.CheckBox checkBoxElectronics;
     }
 }
