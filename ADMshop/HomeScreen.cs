@@ -33,7 +33,12 @@ namespace ADMshop
             offerDAO = new OfferDAO(context);
             currentuser = Currentuser;
         }
-
+        /// <summary>
+        /// Сетва се правилен размер на снимките според пикчър боксовете;
+        /// Зареждат се офертите;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void HomeScreen_Load(object sender, EventArgs e)
         {
             picBoxOfferOne.SizeMode = PictureBoxSizeMode.Zoom;
@@ -42,7 +47,11 @@ namespace ADMshop
             picBoxOfferFour.SizeMode = PictureBoxSizeMode.Zoom;
             LoadOffers(this.offerDAO.AllOffers());
         }
-
+        /// <summary>
+        /// Препраща към качване на обява;
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void sellLabel_Click(object sender, EventArgs e)
         {
             HomeScreen.ActiveForm.Close();
@@ -50,7 +59,11 @@ namespace ADMshop
             postOffer.Activate();
             postOffer.Show();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void profileLabel_Click(object sender, EventArgs e)
         {
             HomeScreen.ActiveForm.Close();
@@ -59,7 +72,10 @@ namespace ADMshop
             profile.Show();
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         private List<Offers> SearchCheckBox()
         {
             List<CheckBox> checkBoxes = new List<CheckBox>();

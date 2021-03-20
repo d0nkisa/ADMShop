@@ -45,7 +45,7 @@ namespace ADMshop
             // OfferImage
             // 
             this.OfferImage.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.OfferImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.OfferImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.OfferImage.Location = new System.Drawing.Point(10, 34);
             this.OfferImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OfferImage.Name = "OfferImage";
