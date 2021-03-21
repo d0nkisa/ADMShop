@@ -11,21 +11,11 @@ namespace ADMshop.DAO
 {
     class OfferDAO
     {
-        public int CreateOffer(Offers newoffer)
-        {
-            this.context.Offers.Add(newoffer);
-            return this.context.SaveChanges();
-        }
-        public List<Offers> AllOffers()
-        {   
-            return this.context.Offers.ToList();
-        }
-        public Offers GetOfferById(int id)
-        {
-            return this.context.Offers
-                 .Where(o => o.OfferId.Equals(id))
-                 .FirstOrDefault();
-        }
+        /// <summary>
+        /// Метод който връща списък с оферти според категориите;
+        /// </summary>
+        /// <param name="id">номер на обява</param>
+        /// <returns>списък с обяви</returns>
         public List<Offers> GetOfferByCat(List<int> id)
         {
             List<Offers> x = new List<Offers>();
@@ -36,6 +26,11 @@ namespace ADMshop.DAO
             }
             return x;
         }
+        /// <summary>
+        /// търси обявата според текст с сърч бара;
+        /// </summary>
+        /// <param name="name">текста от сърч бара</param>
+        /// <returns>обява която съвпада</returns>
         public List<Offers> SearchByName(string name)
         {
             List<Offers> x = new List<Offers>();
@@ -50,13 +45,23 @@ namespace ADMshop.DAO
                  .Where(o => o.OfferId.Equals(id) && o.Category.Equals(cat))
                  .FirstOrDefault();
         }
-
+        /// <summary>
+        /// метод за изтриване на обява, според нейния номер;
+        /// </summary>
+        /// <param name="id">номер на обява</param>
+        /// <returns>променената база данни</returns>
         public int DeleteOffer(int id)
         {
             this.context.Offers.Remove(GetOfferById(id));
             return this.context.SaveChanges();
 
         }
+        /// <summary>
+        /// метод за конвертиране на снимката от какъвто формат е към поток от байтове, за да
+        /// може да се запише в базата данни;
+        /// </summary>
+        /// <param name="img">снимка подадена от потребителя</param>
+        /// <returns>поток от байтове, който се записва в базата</returns>
         public byte[] ImageToByte(PictureBox img)
         {
             ImageConverter converter = new ImageConverter();
@@ -64,7 +69,6 @@ namespace ADMshop.DAO
             try
             {
                 bmp = (Bitmap)img.Image;
-
             }
             catch
             {
@@ -72,6 +76,11 @@ namespace ADMshop.DAO
             }
             return (byte[])converter.ConvertTo(bmp, typeof(byte[]));
         }
+        /// <summary>
+        /// Метод за конвертиране на снимките от byte към bmp;
+        /// </summary>
+        /// <param name="blob">променлива която съдтржа снимката във формат байт</param>
+        /// <returns>снимка във bmp формат</returns>
         public Bitmap ByteToImage(byte[] blob)
         {
             MemoryStream mStream = new MemoryStream();
@@ -82,30 +91,35 @@ namespace ADMshop.DAO
 
             return bm;
         }
+
+        /// <summary>
+        /// Следеи за индекса на всяка оферта и брои офертите;
+        /// </summary>
+        /// <param name="context">връзка с базата</param>
+        /// <returns>номера на офертата</returns>
         public int OfferCount(adm_dbContext context)
         {
             return context.Offers.Count(); 
         }
 
-        public List<Users> GetAllOffersByUserId(int userId)
-        {
-            var offers = this.context.Users
-                        .Include(j => j.Firstname)
-                        .Include(j => j.Offers)
-                        .ThenInclude(ja => ja.User)
-                        .Where(j => j.UserId.Equals(userId))
-                        .ToList();
-            return offers;
-        }
-
         private adm_dbContext context;
+        /// <summary>
+        /// Ако контекста не е null, дава връзка на DAO-то към базата данни
+        /// </summary>
+        /// <param name="context">контекст към базата данни</param>
         public OfferDAO(adm_dbContext context)
         {
-            if (context == null) throw new ArgumentNullException("context");
+            if (context == null) 
+                throw new ArgumentNullException("context");
 
             this.context = context;
         }
-
+        /// <summary>
+        /// проверява дали офертата е null, ако не е връща нова форма с текущата избрана оферта;
+        /// </summary>
+        /// <param name="currentuser">съдържа данни за текущия потребител</param>
+        /// <param name="id"> номер на обява</param>
+        /// <param name="Offers"> списък от обявите</param>
         public void CheckIfOfferIsNull( Users currentuser, int id,List<Offers> Offers )
         {
             List<Offers> offers = Offers;
@@ -119,10 +133,29 @@ namespace ADMshop.DAO
             }
             else MessageBox.Show("No Offer! Try something different!");
         }
-
+        /// <summary>
+        /// Ако тяма подадена снимка която да се преобразува връща снимка по подразбиране;
+        /// </summary>
+        /// <param name="no_photo">снимка по подразбиране</param>
+        /// <returns></returns>
         internal Image ByteToImage(Bitmap no_photo)
         {        
             return (Image)no_photo;
+        }
+        public int CreateOffer(Offers newoffer)
+        {
+            this.context.Offers.Add(newoffer);
+            return this.context.SaveChanges();
+        }
+        public List<Offers> AllOffers()
+        {
+            return this.context.Offers.ToList();
+        }
+        public Offers GetOfferById(int id)
+        {
+            return this.context.Offers
+                 .Where(o => o.OfferId.Equals(id))
+                 .FirstOrDefault();
         }
     }
 }
