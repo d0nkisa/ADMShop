@@ -186,7 +186,6 @@ namespace ADMshop
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(349, 591);
-            this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboCountry);
             this.Controls.Add(this.comboTown);
